@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Formatter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    body {
+      background-color: #f9fafb;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .input-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 32px;
+      height:40%;
+    }
+
+    .input-container textarea{
+      width:90%;
+    }
+
+    textarea {
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      width: 100%;
+      height: 200px;
+      resize: none;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    #previewContainer {
+      width: 600px;
+      height: 900px;
+      border: 1px solid #d1d5db;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+
+    #recipeTitle {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .preview-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .preview-top h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      padding-left: 0;
+      margin: 0;
+      list-style-position: outside;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    /* Fixed heights and hidden overflow for scaling */
+    #ingredientsList{
+      height: 200px;
+      overflow: hidden;
+    }
+
+    #instructionsList {
+      height: 400px;
+      overflow: hidden;
+    }
+
+    #imageDrop {
+      border: 2px solid #d1d5db;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #imageDrop p {
+      position: absolute;
+      top:40%;
+      pointer-events: none;
+      color: #9ca3af;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    #previewImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .preview-bottom {
+      margin-top: 24px;
+      width: 100%;
+      overflow-y: auto;
+      height: 100%;
+    }
+
+    button {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      color: white;
+      margin-right: 8px;
+    }
+
+    #exportBtn { background-color: #2563eb; }
+    #exportBtn:hover { background-color: #1e40af; }
+
+    #pdfBtn { background-color: #16a34a; }
+    #pdfBtn:hover { background-color: #15803d; }
+
+  </style>
+</head>
+<body>
+  <h1>Recipe Formatter</h1>
+
+  <div class="input-container">
+    <textarea id="ingredientsInput" placeholder="Enter ingredients (one per line or bullet)"></textarea>
+    <textarea id="instructionsInput" placeholder="Enter instructions (one per line or bullet)"></textarea>
+  </div>
+
+  <div id="previewContainer">
+    <h2 id="recipeTitle" contenteditable="true">Recipe Title</h2>
+
+    <div class="preview-top">
+      <div>
+        <h3>Ingredients</h3>
+        <ul id="ingredientsList" contenteditable="true"></ul>
+      </div>
+      <div id="imageDrop">
+        <p id="imagePlaceholder">Drag & Drop an image here</p>
+        <img id="previewImage" class="hidden" />
+      </div>
+    </div>
+
+    <div class="preview-bottom">
+      <h3>Instructions</h3>
+      <ol id="instructionsList" contenteditable="true"></ol>
+    </div>
+  </div>
+
+  <div style="margin-top: 32px;">
+    <button id="exportBtn">Export JSON</button>
+    <button id="pdfBtn">Export PDF</button>
+  </div>
+
+  <script>
+    const ingredientsInput = document.getElementById('ingredientsInput');
+    const instructionsInput = document.getElementById('instructionsInput');
+    const ingredientsList = document.getElementById('ingredientsList');
+    const instructionsList = document.getElementById('instructionsList');
+    const imageDrop = document.getElementById('imageDrop');
+    const previewImage = document.getElementById('previewImage');
+    const imagePlaceholder = document.getElementById('imagePlaceholder');
+    const exportBtn = document.getElementById('exportBtn');
+    const pdfBtn = document.getElementById('pdfBtn');
+    const recipeTitle = document.getElementById('recipeTitle');
+
+    let imageData = null;
+
+    function parseList(text) {
+      return text.split(/\n|•|\*/).map(item => item.trim()).filter(item => item.length > 0);
+    }
+
+    // Text scaling function
+    function fitTextToContainer(container, minFont = 10, maxFont = 16) {
+      const maxHeight = container.clientHeight;
+      let fontSize = maxFont;
+      container.style.fontSize = fontSize + 'px';
+      while (container.scrollHeight > maxHeight && fontSize > minFont) {
+        fontSize -= 1;
+        container.style.fontSize = fontSize + 'px';
+      }
+    }
+
+    function updatePreview() {
+      ingredientsList.innerHTML = '';
+      instructionsList.innerHTML = '';
+
+      parseList(ingredientsInput.value).forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        ingredientsList.appendChild(li);
+      });
+
+      parseList(instructionsInput.value).forEach(step => {
+        const li = document.createElement('li');
+        li.textContent = step;
+        instructionsList.appendChild(li);
+      });
+
+      fitTextToContainer(ingredientsList);
+      fitTextToContainer(instructionsList);
+    }
+
+    ingredientsInput.addEventListener('input', updatePreview);
+    instructionsInput.addEventListener('input', updatePreview);
+
+    imageDrop.addEventListener('dragover', e => e.preventDefault());
+    imageDrop.addEventListener('drop', e => {
+      e.preventDefault();
+      const file = e.dataTransfer.files[0];
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          imageData = reader.result;
+          previewImage.src = imageData;
+          previewImage.classList.remove('hidden');
+          imagePlaceholder.style.display = 'none';
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    function appendRecipeToFile(recipeData) {
+      let existingRecipes = [];
+      const fileName = 'recipes.json';
+      const fileInput = document.createElement('input');
+      fileInput.type = 'file';
+      fileInput.accept = 'application/json';
+      fileInput.onchange = e => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            try {
+              existingRecipes = JSON.parse(reader.result);
+              if (!Array.isArray(existingRecipes)) existingRecipes = [];
+            } catch { existingRecipes = []; }
+
+            existingRecipes.push(recipeData);
+            const blob = new Blob([JSON.stringify(existingRecipes, null, 2)], { type: 'application/json' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = fileName;
+            link.click();
+          };
+          reader.readAsText(file);
+        } else {
+          const blob = new Blob([JSON.stringify([recipeData], null, 2)], { type: 'application/json' });
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(blob);
+          link.download = fileName;
+          link.click();
+        }
+      };
+      fileInput.click();
+    }
+
+    exportBtn.addEventListener('click', () => {
+      const data = {
+        title: recipeTitle.textContent.trim(),
+        ingredients: Array.from(ingredientsList.children).map(li => li.textContent.trim()),
+        instructions: Array.from(instructionsList.children).map(li => li.textContent.trim()),
+        image: imageData || null
+      };
+      appendRecipeToFile(data);
+    });
+
+    pdfBtn.addEventListener('click', async () => {
+  const { jsPDF } = window.jspdf;
+  const container = document.getElementById('previewContainer');
+  const canvas = await html2canvas(container, { scale: 2 });
+  const imgData = canvas.toDataURL('image/png');
+
+  // Create landscape A4 PDF
+  const pdf = new jsPDF('l', 'pt', 'a4'); // 'l' = landscape
+  const pdfWidth = pdf.internal.pageSize.getWidth();
+  const pdfHeight = pdf.internal.pageSize.getHeight();
+
+  // Half-width for right side placement
+  const halfWidth = pdfWidth / 2;
+
+  // Original canvas dimensions
+  const canvasWidth = canvas.width;
+  const canvasHeight = canvas.height;
+
+  // Scale image to fit half-width while keeping aspect ratio
+  const scaledHeight = (canvasHeight * halfWidth) / canvasWidth;
+
+  // Place the image on the **right half** of the landscape PDF
+  pdf.addImage(imgData, 'PNG', halfWidth, 0, halfWidth, scaledHeight);
+
+  pdf.save(`${recipeTitle.textContent.trim() || 'recipe'}.pdf`);
+});
+    updatePreview();
+  </script>
+</body>
+</html>
