@@ -7,126 +7,447 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <style>
+    /* ==================== CSS Variables ==================== */
+    :root {
+      /* Colors */
+      --color-primary: #2563eb;
+      --color-primary-dark: #1e40af;
+      --color-success: #16a34a;
+      --color-success-dark: #15803d;
+      --color-danger: #dc2626;
+      --color-danger-dark: #b91c1c;
+      --color-secondary: #6b7280;
+      --color-secondary-dark: #4b5563;
+      --color-gray-light: #f9fafb;
+      --color-gray-border: #d1d5db;
+      --color-gray-text: #6b7280;
+      --color-gray-disabled: #9ca3af;
+      
+      /* Spacing */
+      --spacing-xs: 4px;
+      --spacing-sm: 8px;
+      --spacing-md: 12px;
+      --spacing-lg: 16px;
+      --spacing-xl: 24px;
+      --spacing-2xl: 32px;
+      
+      /* Sizing */
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 2px 6px rgba(0,0,0,0.1);
+      --shadow-lg: 0 4px 12px rgba(0,0,0,0.1);
+      
+      /* Transitions */
+      --transition-fast: 0.2s;
+      --transition-base: 0.3s;
+      
+      /* Layout */
+      --max-width: 1400px;
+      --preview-width: 600px;
+    }
+
+    /* ==================== Base Styles ==================== */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #f9fafb;
-      padding: 24px;
+      background: linear-gradient(135deg, var(--color-gray-light) 0%, #f3f4f6 100%);
+      padding: var(--spacing-lg);
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      font-family: 'Roboto', Arial, sans-serif;
+      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      margin: 0;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 4vw, 2rem);
       font-weight: 700;
-      margin-bottom: 24px;
+      margin: 0 0 var(--spacing-xl) 0;
+      /* background: linear-gradient(135deg, var(--color-primary), var(--color-success)); */
+      color:black;
+      /* -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text; */
     }
 
-    .input-container {
+    /* ==================== Layout ==================== */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      display: grid;
+      grid-template-columns: 1fr var(--preview-width);
+      gap: var(--spacing-xl);
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-lg);
+    }
+
+    .sidebar .section:nth-child(2),
+    .sidebar .section:nth-child(3) {
+      flex: 1;
+      min-height: 0;
+    }
+
+    .sidebar .section:nth-child(2) textarea,
+    .sidebar .section:nth-child(3) textarea {
+      flex: 1;
+      min-height: 0;
+    }
+
+    /* ==================== Sections ==================== */
+    .section {
+      background: white;
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-gray-border);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-fast) ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+    }
+
+    .section h2 {
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      font-weight: 600;
+      margin: 0 0 var(--spacing-md) 0;
+      color: #374151;
+      letter-spacing: -0.5px;
+    }
+
+    /* ==================== Form Elements ==================== */
+    .input-group {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      width: 100%;
-      max-width: 900px;
-      margin-bottom: 32px;
-      height:40%;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
     }
 
-    .input-container textarea{
-      width:90%;
+    .input-group.full {
+      grid-template-columns: 1fr;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      padding: var(--spacing-sm) var(--spacing-md);
+      border: 2px solid transparent;
+      border-color: var(--color-gray-border);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 14px;
+      background-color: #fff;
+      transition: all var(--transition-fast) ease;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      height: 40px;
     }
 
     textarea {
-      padding: 12px;
-      border: 1px solid #d1d5db;
-      border-radius: 8px;
-      width: 100%;
-      height: 200px;
-      resize: none;
-      font-family: 'Roboto', Arial, sans-serif;
-      font-size: 14px;
+      padding: var(--spacing-md);
+      height: 100%;
+      min-height: 500px;
+      resize: vertical;
     }
 
-    #previewContainer {
-      width: 600px;
-      height: 900px;
-      border: 1px solid #d1d5db;
-      background-color: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      padding: 16px;
+    textarea:focus,
+    input:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      background-color: #f9feff;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    /* ==================== Buttons ==================== */
+    .button-group {
+      display: flex;
+      gap: var(--spacing-sm);
+      flex-wrap: wrap;
+      margin-top: var(--spacing-md);
+    }
+
+    .recipe-list {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      overflow: hidden;
-      font-family: 'Roboto', Arial, sans-serif;
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-md);
     }
 
-    #recipeTitle {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      text-align: center;
-    }
-
-    .preview-top {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      width: 100%;
-    }
-
-    .preview-top h3 {
-      font-size: 1rem;
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
-
-    ul, ol {
-      padding-left: 0;
-      margin: 0;
-      list-style-position: outside;
-      word-wrap: break-word;
-      white-space: pre-wrap;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 4px;
-    }
-
-    /* Fixed heights and hidden overflow for scaling */
-    #ingredientsList{
-      height: 200px;
-      overflow: hidden;
-    }
-
-    #instructionsList {
-      height: 400px;
-      overflow: hidden;
-    }
-
-    #imageDrop {
-      border: 2px solid #d1d5db;
-      border-radius: 12px;
+    .recipe-list-item {
+      border: 1px solid var(--color-gray-border);
+      border-radius: var(--radius-sm);
+      padding: var(--spacing-sm);
       display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding-bottom: 100%;
+      flex-direction: column;
+      gap: var(--spacing-xs);
+      background: #fff;
+    }
+
+    .recipe-list-item.pending-delete {
+      border-color: rgba(220, 38, 38, 0.6);
+      background: rgba(220, 38, 38, 0.08);
+    }
+
+    .recipe-list-item.active {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .recipe-list-title {
+      font-weight: 600;
+      font-size: 13px;
+      color: #374151;
+    }
+
+    .recipe-list-meta {
+      font-size: 12px;
+      color: var(--color-gray-text);
+      display: flex;
+      gap: var(--spacing-sm);
+      flex-wrap: wrap;
+    }
+
+    .recipe-list-actions {
+      display: flex;
+      gap: var(--spacing-xs);
+      margin-top: var(--spacing-xs);
+    }
+
+    .recipe-list-empty {
+      font-size: 12px;
+      color: var(--color-gray-text);
+      text-align: center;
+      padding: var(--spacing-sm);
+      border: 1px dashed var(--color-gray-border);
+      border-radius: var(--radius-sm);
+    }
+
+    button {
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      color: white;
+      transition: all var(--transition-fast);
+      flex: 1;
+      min-width: 100px;
       position: relative;
       overflow: hidden;
     }
 
-    #imageDrop p {
+    button::before {
+      content: '';
       position: absolute;
-      top:40%;
-      pointer-events: none;
-      color: #9ca3af;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width var(--transition-fast), height var(--transition-fast);
+    }
+
+    button:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    button:active {
+      transform: translateY(0);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Button variants */
+    .btn-primary { background-color: var(--color-primary); }
+    .btn-primary:hover { background-color: var(--color-primary-dark); }
+
+    .btn-success { background-color: var(--color-success); }
+    .btn-success:hover { background-color: var(--color-success-dark); }
+
+    .btn-secondary { background-color: var(--color-secondary); }
+    .btn-secondary:hover { background-color: var(--color-secondary-dark); }
+
+    .btn-danger { background-color: var(--color-danger); }
+    .btn-danger:hover { background-color: var(--color-danger-dark); }
+
+    .btn-sm {
+      padding: var(--spacing-xs) var(--spacing-sm);
+      font-size: 12px;
+      min-width: auto;
+    }
+
+    /* ==================== Buttons ==================== */
+    .preview-container {
+      width: 100%;
+      max-width: var(--preview-width);
+      height: 900px;
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: var(--spacing-lg);
+      display: flex;
+      flex-direction: column;
+      font-family: 'Roboto', Arial, sans-serif;
+      overflow: hidden;
+      transition: box-shadow var(--transition-base);
+      position: sticky;
+      top: var(--spacing-lg);
+      color: #000000;
+    }
+
+    .preview-container:hover {
+      /* box-shadow: 0 6px 20px rgba(0,0,0,0.15); */
+    }
+
+    #recipeTitle {
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      font-weight: 700;
+      margin: 0 0 var(--spacing-sm) 0;
+      text-align: center;
+      word-break: break-word;
+      color: #000000;
+    }
+
+    .recipe-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: var(--spacing-sm);
       text-align: center;
       font-size: 12px;
+      margin-bottom: var(--spacing-md);
+      color: #000000;
+    }
+
+    .recipe-meta div {
+      padding: var(--spacing-xs) var(--spacing-sm);
+      /* background: var(--color-gray-light); */
+      border-radius: var(--radius-sm);
+    }
+
+
+    /* ==================== Preview Content ==================== */
+    .preview-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-lg);
+    }
+    #recipeTitle{
+      font-size: 1.1rem;
+      font-weight: 300;
+      margin: 0 0 var(--spacing-sm) 0;
+      color: #000000;
+    }
+
+     h3 {
+      font-size: 0.95rem;
+      font-weight: 300;
+      margin: 0 0 var(--spacing-sm) 0;
+      color: #000000;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin: 0;
+      list-style-position: outside;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+
+    li {
+      margin-bottom: 3px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #000000;
+    }
+
+    #ingredientsList {
+      height: 140px;
+      overflow: hidden;
+      font-size: 13px;
+    }
+
+    #ingredientsList p,
+    #instructionsList p {
+      margin: 0 0 8px 0;
+      padding-left: 20px;
+      position: relative;
+      word-wrap: break-word;
+      white-space: normal;
+      line-height: 1.5;
+      color: #000000;
+    }
+
+    #ingredientsList p::before {
+      content: '\2022';
+      position: absolute;
+      left: 0;
+    }
+
+    #instructionsList {
+      counter-reset: step-counter;
+    }
+
+    #instructionsList p {
+      counter-increment: step-counter;
+    }
+
+    #instructionsList p::before {
+      content: counter(step-counter) '. ';
+      position: absolute;
+      left: 0;
+    }
+
+    /* ==================== Image Drop ==================== */
+    #imageDrop {
+      border: 1px solid var(--color-gray-border);
+      border-radius: var(--radius-md);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      aspect-ratio: 1;
+      position: relative;
+      overflow: hidden;
+      /* background: linear-gradient(135deg, var(--color-gray-light), #f0f4ff); */
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+
+
+    #imageDrop p {
+      position: absolute;
+      pointer-events: none;
+      color: var(--color-gray-disabled);
+      text-align: center;
+      font-size: 12px;
+      z-index: 1;
+      transition: opacity var(--transition-fast);
     }
 
     #previewImage {
@@ -136,208 +457,911 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: none;
+      animation: fadeIn var(--transition-base);
+    }
+
+    #previewImage.active {
       display: block;
     }
 
+    /* ==================== Instructions ==================== */
     .preview-bottom {
-      margin-top: 24px;
-      width: 100%;
-      overflow-y: auto;
+      margin-top: var(--spacing-md);
+      flex: 1;
+      overflow: hidden;
+    }
+
+    #instructionsList {
       height: 100%;
+      overflow: hidden;
+      font-size: 13px;
     }
 
-    button {
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      color: white;
-      margin-right: 8px;
+    /* ==================== Utilities ==================== */
+    .hidden {
+      display: none !important;
     }
 
-    #exportBtn { background-color: #2563eb; }
-    #exportBtn:hover { background-color: #1e40af; }
+    body.exporting-pdf #previewImage {
+      opacity: 1 !important;
+      animation: none !important;
+      filter: none !important;
+    }
 
-    #pdfBtn { background-color: #16a34a; }
-    #pdfBtn:hover { background-color: #15803d; }
+    body.exporting-pdf #imageDrop {
+      background-color: #ffffff;
+    }
+
+    body.exporting-pdf #imageDrop p {
+      display: none !important;
+    }
+
+    /* ==================== Animations ==================== */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-10px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* ==================== Responsive Design ==================== */
+
+    @media (max-width: 1400px) {
+      .container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+      }
+
+      #previewContainer {
+        display: none !important;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      body {
+        padding: var(--spacing-md);
+      }
+
+      .section {
+        padding: var(--spacing-md);
+      }
+
+      .input-group {
+        grid-template-columns: 1fr;
+      }
+
+      .preview-top {
+        grid-template-columns: 1fr;
+      }
+
+      .recipe-meta {
+        grid-template-columns: 1fr;
+      }
+
+      button {
+        min-width: 80px;
+        padding: var(--spacing-sm) var(--spacing-md);
+      }
+
+      .recipe-item-btns {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: var(--spacing-sm);
+      }
+
+      .section {
+        padding: var(--spacing-md);
+      }
+
+      .button-group {
+        gap: var(--spacing-xs);
+      }
+
+      button {
+        font-size: 12px;
+        padding: 6px 8px;
+        min-width: 70px;
+      }
+
+      .recipe-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+      }
+
+      .recipe-item-btns {
+        width: 100%;
+        flex-direction: row;
+      }
+
+      .recipe-item-btns button {
+        flex: 1;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* ==================== Dark Mode (Optional) ==================== */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-gray-light: #1f2937;
+        --color-gray-border: #374151;
+      }
+
+      body {
+        background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+      }
+
+      .section {
+        background: #1f2937;
+        color: #f3f4f6;
+      }
+
+      input, textarea {
+        background-color: #374151;
+        color: #f3f4f6;
+        border-color: #4b5563;
+      }
+
+      input:focus, textarea:focus {
+        background-color: #1f2937;
+      }
+
+      .preview-container {
+        background: #1f2937;
+        color: #f3f4f6;
+      }
+
+      #recipeTitle {
+        color: #f3f4f6;
+      }
+
+      li {
+        color: #e5e7eb;
+      }
+    }
 
   </style>
 </head>
 <body>
   <h1>Recipe Formatter</h1>
 
-  <div class="input-container">
-    <textarea id="ingredientsInput" placeholder="Enter ingredients (one per line or bullet)"></textarea>
-    <textarea id="instructionsInput" placeholder="Enter instructions (one per line or bullet)"></textarea>
-  </div>
-
-  <div id="previewContainer">
-    <h2 id="recipeTitle" contenteditable="true">Recipe Title</h2>
-
-    <div class="preview-top">
-      <div>
-        <h3>Ingredients</h3>
-        <ul id="ingredientsList" contenteditable="true"></ul>
+  <div class="container">
+    <!-- Sidebar with inputs -->
+    <div class="sidebar">
+      <!-- Recipe Form -->
+      <div class="section">
+        <h2>Recipe Details</h2>
+        <div class="input-group full">
+          <input type="text" id="titleInput" placeholder="Recipe Title" value="Recipe Title">
+        </div>
+        <div class="input-group">
+          <input type="number" id="servingsInput" placeholder="Servings" value="4" min="1">
+          <input type="text" id="prepTimeInput" placeholder="Prep time (e.g., 15 min)">
+        </div>
+        <div class="input-group">
+          <input type="text" id="cookTimeInput" placeholder="Cook time (e.g., 30 min)">
+        </div>
+        <div class="input-group full">
+          <input type="text" id="originalUrlInput" placeholder="Original URL (optional)">
+        </div>
       </div>
-      <div id="imageDrop">
-        <p id="imagePlaceholder">Drag & Drop an image here</p>
-        <img id="previewImage" class="hidden" />
+
+      <!-- Ingredients -->
+      <div class="section">
+        <h2>Ingredients</h2>
+        <textarea id="ingredientsInput" placeholder="Enter ingredients (one per line or bullet)"></textarea>
+      </div>
+
+      <!-- Instructions -->
+      <div class="section">
+        <h2>Instructions</h2>
+        <textarea id="instructionsInput" placeholder="Enter instructions (one per line)"></textarea>
+      </div>
+
+      <!-- Image Upload -->
+      <div class="section">
+        <h2>Image</h2>
+        <div style="padding: 12px; background: #f9fafb; border-radius: 6px; text-align: center; cursor: pointer; border: 2px dashed #d1d5db;" id="imageUploadBtn">
+          Click to upload or drag & drop
+        </div>
+        <div id="imageName" style="margin-top: 8px; font-size: 12px; color: #6b7280; text-align: center;"></div>
+        <button class="btn-secondary btn-sm" id="pasteImageBtn" style="width: 100%; margin-top: 8px;">Paste from Clipboard</button>
+      </div>
+
+      <!-- Export Options -->
+      <div class="section">
+        <h2>Preview</h2>
+        <div class="button-group">
+          <button class="btn-primary" id="previewPdfBtn">Preview PDF</button>
+        </div>
+      </div>
+
+      <!-- Recipe Collection -->
+      <div class="section">
+        <h2>Recipe Collection</h2>
+        <input type="file" id="collectionZipInput" accept=".zip" style="display: none;">
+        <div class="button-group">
+          <button class="btn-secondary" id="saveCollectionZipBtn">Save Collection ZIP</button>
+          <button class="btn-secondary" id="loadCollectionZipBtn">Load Collection ZIP</button>
+          <button class="btn-secondary" id="addRecipeBtn">Add New Recipe</button>
+        </div>
+        <div id="recipeList" class="recipe-list">
+          <div class="recipe-list-empty">No recipes loaded yet.</div>
+        </div>
       </div>
     </div>
 
-    <div class="preview-bottom">
-      <h3>Instructions</h3>
-      <ol id="instructionsList" contenteditable="true"></ol>
+    <!-- Preview Container -->
+    <div id="previewContainer">
+      <h2 id="recipeTitle">Recipe Title</h2>
+      
+      <div class="recipe-meta">
+        <div id="metaOrigin" style="grid-column: 1 / -1; text-align: left;"></div>
+        <div><span id="metaServings">4</span> servings</div>
+        <div>Prep: <span id="metaPrepTime">-</span></div>
+        <div>Cook: <span id="metaCookTime">-</span></div>
+      </div>
+
+      <div class="preview-top">
+        <div>
+          <h3>Ingredients</h3>
+          <div id="ingredientsList"></div>
+        </div>
+        <div id="imageDrop">
+          <p id="imagePlaceholder"></p>
+          <img id="previewImage" />
+        </div>
+      </div>
+
+      <div class="preview-bottom">
+        <h3>Instructions</h3>
+        <div id="instructionsList"></div>
+      </div>
     </div>
   </div>
 
-  <div style="margin-top: 32px;">
-    <button id="exportBtn">Export JSON</button>
-    <button id="pdfBtn">Export PDF</button>
-  </div>
 
   <script>
+    // ==================== DOM Elements ====================
+    const titleInput = document.getElementById('titleInput');
+    const servingsInput = document.getElementById('servingsInput');
+    const prepTimeInput = document.getElementById('prepTimeInput');
+    const cookTimeInput = document.getElementById('cookTimeInput');
     const ingredientsInput = document.getElementById('ingredientsInput');
     const instructionsInput = document.getElementById('instructionsInput');
     const ingredientsList = document.getElementById('ingredientsList');
     const instructionsList = document.getElementById('instructionsList');
-    const imageDrop = document.getElementById('imageDrop');
+    const recipeTitle = document.getElementById('recipeTitle');
     const previewImage = document.getElementById('previewImage');
     const imagePlaceholder = document.getElementById('imagePlaceholder');
-    const exportBtn = document.getElementById('exportBtn');
-    const pdfBtn = document.getElementById('pdfBtn');
-    const recipeTitle = document.getElementById('recipeTitle');
+    const imageDrop = document.getElementById('imageDrop');
+    const imageUploadBtn = document.getElementById('imageUploadBtn');
+    const imageName = document.getElementById('imageName');
+    const pasteImageBtn = document.getElementById('pasteImageBtn');
+    const previewPdfBtn = document.getElementById('previewPdfBtn');
+    const metaServings = document.getElementById('metaServings');
+    const metaPrepTime = document.getElementById('metaPrepTime');
+    const metaCookTime = document.getElementById('metaCookTime');
+    const metaOrigin = document.getElementById('metaOrigin');
+    const originalUrlInput = document.getElementById('originalUrlInput');
+    const collectionZipInput = document.getElementById('collectionZipInput');
+    const saveCollectionZipBtn = document.getElementById('saveCollectionZipBtn');
+    const loadCollectionZipBtn = document.getElementById('loadCollectionZipBtn');
+    const addRecipeBtn = document.getElementById('addRecipeBtn');
+    const recipeList = document.getElementById('recipeList');
 
     let imageData = null;
+    let recipesCollection = [];
+    let currentRecipeId = null;
+    let isBatchExporting = false;
+    let pendingDeletionIds = new Set();
 
-    function parseList(text) {
-      return text.split(/\n|•|\*/).map(item => item.trim()).filter(item => item.length > 0);
+    // ==================== Current Recipe Function ====================
+    function buildRecipeObject(idOverride = null) {
+      const recipeId = idOverride || currentRecipeId || Date.now();
+      return {
+        id: recipeId,
+        title: titleInput.value.trim() || 'Untitled Recipe',
+        servings: parseInt(servingsInput.value) || 4,
+        prepTime: prepTimeInput.value.trim() || '-',
+        cookTime: cookTimeInput.value.trim() || '-',
+        ingredients: parseList(ingredientsInput.value),
+        instructions: parseList(instructionsInput.value),
+        image: imageData || null,
+        originalUrl: originalUrlInput.value.trim() || null,
+        lastModified: new Date().toISOString()
+      };
     }
 
-    // Text scaling function
-    function fitTextToContainer(container, minFont = 10, maxFont = 16) {
+    function getCurrentRecipe() {
+      return buildRecipeObject();
+    }
+
+    // ==================== Utility Functions ====================
+    function parseList(text) {
+      return text
+        .split(/\n|•|\*/)
+        .map(item => item.trim())
+        .filter(item => item.length > 0);
+    }
+
+    function fitTextToContainer(container, minFont = 10, maxFont = 14) {
       const maxHeight = container.clientHeight;
       let fontSize = maxFont;
       container.style.fontSize = fontSize + 'px';
       while (container.scrollHeight > maxHeight && fontSize > minFont) {
-        fontSize -= 1;
+        fontSize -= 0.5;
         container.style.fontSize = fontSize + 'px';
       }
     }
 
-    function updatePreview() {
-      ingredientsList.innerHTML = '';
-      instructionsList.innerHTML = '';
+    function generateFileName(title) {
+      return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'recipe';
+    }
 
+    function formatTimestamp(date = new Date()) {
+      const pad = (value) => String(value).padStart(2, '0');
+      const month = pad(date.getMonth() + 1);
+      const day = pad(date.getDate());
+      const year = date.getFullYear();
+      const hours = pad(date.getHours());
+      const minutes = pad(date.getMinutes());
+      const seconds = pad(date.getSeconds());
+      return `${month}-${day}-${year}-${hours}-${minutes}-${seconds}`;
+    }
+
+    function setPreviewImage(dataUrl, labelText) {
+      imageData = dataUrl;
+      if (dataUrl) {
+        previewImage.src = dataUrl;
+        previewImage.classList.add('active');
+        imagePlaceholder.style.display = 'none';
+        imageName.textContent = labelText || '';
+      } else {
+        clearPreviewImage();
+      }
+    }
+
+    function clearPreviewImage() {
+      imageData = null;
+      previewImage.src = '';
+      previewImage.classList.remove('active');
+      imagePlaceholder.style.display = '';
+      imageName.textContent = '';
+    }
+
+    function clearRecipeForm() {
+      titleInput.value = '';
+      servingsInput.value = '4';
+      prepTimeInput.value = '';
+      cookTimeInput.value = '';
+      originalUrlInput.value = '';
+      ingredientsInput.value = '';
+      instructionsInput.value = '';
+      clearPreviewImage();
+      currentRecipeId = null;
+      updatePreview();
+    }
+
+    function applyRecipeToForm(recipe) {
+      titleInput.value = recipe.title ?? '';
+      servingsInput.value = recipe.servings ?? 4;
+      prepTimeInput.value = recipe.prepTime ?? '';
+      cookTimeInput.value = recipe.cookTime ?? '';
+      originalUrlInput.value = recipe.originalUrl ?? '';
+      ingredientsInput.value = recipe.ingredients?.join('\n') ?? '';
+      instructionsInput.value = recipe.instructions?.join('\n') ?? '';
+
+      if (recipe.image) {
+        setPreviewImage(recipe.image, '✓ Image loaded');
+      } else {
+        clearPreviewImage();
+      }
+
+      currentRecipeId = recipe.id || currentRecipeId || Date.now();
+      updatePreview();
+    }
+
+    function syncCurrentRecipeToCollection() {
+      if (!currentRecipeId || recipesCollection.length === 0) return;
+      const index = recipesCollection.findIndex(recipe => recipe.id === currentRecipeId);
+      if (index === -1) return;
+      recipesCollection[index] = buildRecipeObject(currentRecipeId);
+      renderRecipeList();
+    }
+
+    function renderRecipeList() {
+      recipeList.innerHTML = '';
+
+      if (recipesCollection.length === 0) {
+        const emptyState = document.createElement('div');
+        emptyState.className = 'recipe-list-empty';
+        emptyState.textContent = 'No recipes loaded yet.';
+        recipeList.appendChild(emptyState);
+        return;
+      }
+
+      recipesCollection.forEach(recipe => {
+        const item = document.createElement('div');
+        item.className = 'recipe-list-item';
+        if (recipe.id === currentRecipeId) {
+          item.classList.add('active');
+        }
+        if (pendingDeletionIds.has(String(recipe.id))) {
+          item.classList.add('pending-delete');
+        }
+
+        const title = document.createElement('div');
+        title.className = 'recipe-list-title';
+        title.textContent = recipe.title || 'Untitled Recipe';
+
+        const meta = document.createElement('div');
+        meta.className = 'recipe-list-meta';
+        const origin = extractOrigin(recipe.originalUrl || '');
+        if (origin) {
+          const originSpan = document.createElement('span');
+          originSpan.textContent = origin;
+          meta.appendChild(originSpan);
+        }
+        if (recipe.servings) {
+          const servingsSpan = document.createElement('span');
+          servingsSpan.textContent = recipe.servings + ' servings';
+          meta.appendChild(servingsSpan);
+        }
+
+        const actions = document.createElement('div');
+        actions.className = 'recipe-list-actions';
+        const editBtn = document.createElement('button');
+        editBtn.className = 'btn-secondary btn-sm';
+        editBtn.textContent = 'Edit';
+        editBtn.dataset.recipeId = recipe.id;
+        actions.appendChild(editBtn);
+
+        const deleteBtn = document.createElement('button');
+        const isPendingDelete = pendingDeletionIds.has(String(recipe.id));
+        deleteBtn.className = (isPendingDelete ? 'btn-secondary' : 'btn-danger') + ' btn-sm';
+        deleteBtn.textContent = isPendingDelete ? 'Undo Delete' : 'Delete';
+        deleteBtn.dataset.deleteRecipeId = recipe.id;
+        actions.appendChild(deleteBtn);
+
+        item.appendChild(title);
+        item.appendChild(meta);
+        item.appendChild(actions);
+        recipeList.appendChild(item);
+      });
+    }
+
+    function selectRecipeById(recipeId) {
+      const recipe = recipesCollection.find(item => String(item.id) === String(recipeId));
+      if (!recipe) return;
+      currentRecipeId = recipe.id;
+      applyRecipeToForm(recipe);
+      renderRecipeList();
+    }
+
+    function createBlankRecipe() {
+      return {
+        id: Date.now(),
+        title: '',
+        servings: 4,
+        prepTime: '',
+        cookTime: '',
+        ingredients: [],
+        instructions: [],
+        image: null,
+        originalUrl: null,
+        lastModified: new Date().toISOString()
+      };
+    }
+
+    function getRecipeFileStem(recipe) {
+      const base = generateFileName(recipe.title || 'recipe');
+      return base + '-' + recipe.id;
+    }
+
+    function extractImageData(dataUrl) {
+      const parts = dataUrl.split(',');
+      const header = parts[0] || '';
+      const data = parts[1] || '';
+      const isPng = header.includes('image/png');
+      const isJpeg = header.includes('image/jpeg') || header.includes('image/jpg');
+      const isWebp = header.includes('image/webp');
+      const isGif = header.includes('image/gif');
+      const ext = isPng ? 'png' : isWebp ? 'webp' : isGif ? 'gif' : 'jpg';
+      return { data, ext };
+    }
+
+    function waitForPreviewImageLoad() {
+      return new Promise(resolve => {
+        if (!imageData) {
+          resolve();
+          return;
+        }
+        if (previewImage.complete) {
+          resolve();
+          return;
+        }
+        const handleDone = () => {
+          previewImage.removeEventListener('load', handleDone);
+          previewImage.removeEventListener('error', handleDone);
+          resolve();
+        };
+        previewImage.addEventListener('load', handleDone);
+        previewImage.addEventListener('error', handleDone);
+      });
+    }
+
+    async function createPdfBlobFromPreview() {
+      const { jsPDF } = window.jspdf;
+      const container = document.getElementById('previewContainer');
+      document.body.classList.add('exporting-pdf');
+      await new Promise(resolve => requestAnimationFrame(resolve));
+      const canvas = await html2canvas(container, {
+        scale: 2,
+        backgroundColor: '#ffffff',
+        logging: false,
+        useCORS: true,
+        allowTaint: true
+      });
+      document.body.classList.remove('exporting-pdf');
+
+      const imgData = canvas.toDataURL('image/jpeg', 1.0);
+      const pdf = new jsPDF('l', 'mm', 'letter');
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const padding = 8;
+      const rightHalfStartX = pdfWidth / 2;
+      const rightHalfWidth = (pdfWidth / 2) - padding;
+      const availableWidth = rightHalfWidth - padding;
+      const availableHeight = pdfHeight - (2 * padding);
+      const scale = Math.min(availableWidth / canvas.width, availableHeight / canvas.height);
+      const drawWidth = canvas.width * scale;
+      const drawHeight = canvas.height * scale;
+      const drawX = rightHalfStartX + padding + (availableWidth - drawWidth) / 2;
+      const drawY = padding + (availableHeight - drawHeight) / 2;
+
+      pdf.addImage(imgData, 'JPEG', drawX, drawY, drawWidth, drawHeight);
+
+      return pdf.output('blob');
+    }
+
+    function extractOrigin(url) {
+      if (!url) return '';
+      try {
+        // Try to parse as URL
+        const urlObj = new URL(url);
+        // Remove www. prefix if present
+        return urlObj.hostname.replace(/^www\./, '');
+      } catch (e) {
+        // Not a valid URL, return as-is
+        return url;
+      }
+    }
+
+    // ==================== Preview Updates ====================
+    function updatePreview() {
+      // Update title and meta
+      recipeTitle.textContent = titleInput.value.trim() || 'Recipe Title';
+      metaServings.textContent = servingsInput.value || '4';
+      metaPrepTime.textContent = prepTimeInput.value.trim() || '-';
+      metaCookTime.textContent = cookTimeInput.value.trim() || '-';
+      
+      // Update origin
+      const origin = extractOrigin(originalUrlInput.value.trim());
+      metaOrigin.textContent = origin || '';
+      metaOrigin.style.display = origin ? 'block' : 'none';
+
+      // Update ingredients
+      ingredientsList.innerHTML = '';
       parseList(ingredientsInput.value).forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        ingredientsList.appendChild(li);
+        const p = document.createElement('p');
+        p.textContent = item;
+        ingredientsList.appendChild(p);
       });
 
+      // Update instructions
+      instructionsList.innerHTML = '';
       parseList(instructionsInput.value).forEach(step => {
-        const li = document.createElement('li');
-        li.textContent = step;
-        instructionsList.appendChild(li);
+        const p = document.createElement('p');
+        p.textContent = step;
+        instructionsList.appendChild(p);
       });
 
       fitTextToContainer(ingredientsList);
       fitTextToContainer(instructionsList);
+
+      if (!isBatchExporting) {
+        syncCurrentRecipeToCollection();
+      }
     }
 
-    ingredientsInput.addEventListener('input', updatePreview);
-    instructionsInput.addEventListener('input', updatePreview);
+    // ==================== Image Handling ====================
+    imageUploadBtn.addEventListener('click', () => {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = handleImageUpload;
+      input.click();
+    });
 
-    imageDrop.addEventListener('dragover', e => e.preventDefault());
-    imageDrop.addEventListener('drop', e => {
-      e.preventDefault();
-      const file = e.dataTransfer.files[0];
+    function handleImageUpload(e) {
+      const file = e.target.files?.[0];
       if (file && file.type.startsWith('image/')) {
         const reader = new FileReader();
         reader.onload = () => {
           imageData = reader.result;
           previewImage.src = imageData;
-          previewImage.classList.remove('hidden');
+          previewImage.classList.add('active');
           imagePlaceholder.style.display = 'none';
+          imageName.textContent = '✓ ' + file.name;
         };
         reader.readAsDataURL(file);
       }
-    });
-
-    function appendRecipeToFile(recipeData) {
-      let existingRecipes = [];
-      const fileName = 'recipes.json';
-      const fileInput = document.createElement('input');
-      fileInput.type = 'file';
-      fileInput.accept = 'application/json';
-      fileInput.onchange = e => {
-        const file = e.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = () => {
-            try {
-              existingRecipes = JSON.parse(reader.result);
-              if (!Array.isArray(existingRecipes)) existingRecipes = [];
-            } catch { existingRecipes = []; }
-
-            existingRecipes.push(recipeData);
-            const blob = new Blob([JSON.stringify(existingRecipes, null, 2)], { type: 'application/json' });
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = fileName;
-            link.click();
-          };
-          reader.readAsText(file);
-        } else {
-          const blob = new Blob([JSON.stringify([recipeData], null, 2)], { type: 'application/json' });
-          const link = document.createElement('a');
-          link.href = URL.createObjectURL(blob);
-          link.download = fileName;
-          link.click();
-        }
-      };
-      fileInput.click();
     }
 
-    exportBtn.addEventListener('click', () => {
-      const data = {
-        title: recipeTitle.textContent.trim(),
-        ingredients: Array.from(ingredientsList.children).map(li => li.textContent.trim()),
-        instructions: Array.from(instructionsList.children).map(li => li.textContent.trim()),
-        image: imageData || null
-      };
-      appendRecipeToFile(data);
+    imageDrop.addEventListener('dragover', e => {
+      e.preventDefault();
+      imageDrop.style.borderColor = '#2563eb';
+      // imageDrop.style.backgroundColor = '#f0f9ff';
     });
 
-    pdfBtn.addEventListener('click', async () => {
-  const { jsPDF } = window.jspdf;
-  const container = document.getElementById('previewContainer');
-  const canvas = await html2canvas(container, { scale: 2 });
-  const imgData = canvas.toDataURL('image/png');
+    imageDrop.addEventListener('dragleave', () => {
+      imageDrop.style.borderColor = '#d1d5db';
+      // imageDrop.style.backgroundColor = '#fafafa';
+    });
 
-  // Create landscape A4 PDF
-  const pdf = new jsPDF('l', 'pt', 'a4'); // 'l' = landscape
-  const pdfWidth = pdf.internal.pageSize.getWidth();
-  const pdfHeight = pdf.internal.pageSize.getHeight();
+    imageDrop.addEventListener('drop', e => {
+      e.preventDefault();
+      imageDrop.style.borderColor = '#d1d5db';
+      // imageDrop.style.backgroundColor = '#fafafa';
+      const file = e.dataTransfer.files[0];
+      if (file) {
+        handleImageUpload({ target: { files: [file] } });
+      }
+    });
 
-  // Half-width for right side placement
-  const halfWidth = pdfWidth / 2;
+    pasteImageBtn.addEventListener('click', async () => {
+      try {
+        const items = await navigator.clipboard.read();
+        for (let item of items) {
+          if (item.types.includes('image/png')) {
+            const blob = await item.getType('image/png');
+            const reader = new FileReader();
+            reader.onload = () => {
+              imageData = reader.result;
+              previewImage.src = imageData;
+              previewImage.classList.add('active');
+              imagePlaceholder.style.display = 'none';
+              imageName.textContent = '✓ Image from clipboard';
+            };
+            reader.readAsDataURL(blob);
+            return;
+          } else if (item.types.includes('image/jpeg')) {
+            const blob = await item.getType('image/jpeg');
+            const reader = new FileReader();
+            reader.onload = () => {
+              imageData = reader.result;
+              previewImage.src = imageData;
+              previewImage.classList.add('active');
+              imagePlaceholder.style.display = 'none';
+              imageName.textContent = '✓ Image from clipboard';
+            };
+            reader.readAsDataURL(blob);
+            return;
+          }
+        }
+        alert('No image found in clipboard. Please copy an image first.');
+      } catch (error) {
+        alert('Unable to access clipboard. Make sure you have an image copied.');
+        console.error(error);
+      }
+    });
 
-  // Original canvas dimensions
-  const canvasWidth = canvas.width;
-  const canvasHeight = canvas.height;
+    // ==================== Event Listeners ====================
+    titleInput.addEventListener('input', updatePreview);
+    servingsInput.addEventListener('input', updatePreview);
+    prepTimeInput.addEventListener('input', updatePreview);
+    cookTimeInput.addEventListener('input', updatePreview);
+    originalUrlInput.addEventListener('input', updatePreview);
+    ingredientsInput.addEventListener('input', updatePreview);
+    instructionsInput.addEventListener('input', updatePreview);
 
-  // Scale image to fit half-width while keeping aspect ratio
-  const scaledHeight = (canvasHeight * halfWidth) / canvasWidth;
+    // ==================== Export Functions ====================
 
-  // Place the image on the **right half** of the landscape PDF
-  pdf.addImage(imgData, 'PNG', halfWidth, 0, halfWidth, scaledHeight);
+    previewPdfBtn.addEventListener('click', async () => {
+      try {
+        const pdfBlob = await createPdfBlobFromPreview();
+        const pdfUrl = URL.createObjectURL(pdfBlob);
+        window.open(pdfUrl, '_blank');
+      } catch (error) {
+        alert('Error generating PDF. Please try again.');
+        console.error(error);
+      }
+    });
 
-  pdf.save(`${recipeTitle.textContent.trim() || 'recipe'}.pdf`);
-});
+
+    // ==================== Initialization ====================
     updatePreview();
+    renderRecipeList();
+
+
+    recipeList.addEventListener('click', (event) => {
+      const deleteButton = event.target.closest('button[data-delete-recipe-id]');
+      if (deleteButton) {
+        const deleteId = String(deleteButton.dataset.deleteRecipeId);
+        if (pendingDeletionIds.has(deleteId)) {
+          pendingDeletionIds.delete(deleteId);
+        } else {
+          pendingDeletionIds.add(deleteId);
+        }
+        renderRecipeList();
+        return;
+      }
+
+      const button = event.target.closest('button[data-recipe-id]');
+      if (!button) return;
+      selectRecipeById(button.dataset.recipeId);
+    });
+
+    addRecipeBtn.addEventListener('click', () => {
+      const newRecipe = createBlankRecipe();
+      recipesCollection.unshift(newRecipe);
+      currentRecipeId = newRecipe.id;
+      applyRecipeToForm(newRecipe);
+      renderRecipeList();
+    });
+
+    loadCollectionZipBtn.addEventListener('click', () => {
+      collectionZipInput.click();
+    });
+
+    saveCollectionZipBtn.addEventListener('click', async () => {
+      try {
+        syncCurrentRecipeToCollection();
+
+        if (recipesCollection.length === 0) {
+          recipesCollection = [buildRecipeObject(Date.now())];
+          currentRecipeId = recipesCollection[0].id;
+        }
+
+        const previousRecipe = buildRecipeObject(currentRecipeId || Date.now());
+        const previousRecipeId = currentRecipeId;
+
+        isBatchExporting = true;
+
+        const zip = new JSZip();
+        const recipesToSave = recipesCollection
+          .filter(recipe => !pendingDeletionIds.has(String(recipe.id)))
+          .map(recipe => ({ ...recipe }));
+        const serializedRecipes = [];
+
+        for (const recipe of recipesToSave) {
+          const stem = getRecipeFileStem(recipe);
+          let imageFile = null;
+
+          if (recipe.image) {
+            const imageDataParts = extractImageData(recipe.image);
+            imageFile = 'images/' + stem + '.' + imageDataParts.ext;
+            zip.file(imageFile, imageDataParts.data, { base64: true });
+          }
+
+          applyRecipeToForm(recipe);
+          await waitForPreviewImageLoad();
+          const pdfBlob = await createPdfBlobFromPreview();
+          const pdfFile = 'pdfs/' + stem + '.pdf';
+          zip.file(pdfFile, pdfBlob);
+
+          serializedRecipes.push({
+            ...recipe,
+            image: null,
+            imageFile: imageFile,
+            pdfFile: pdfFile
+          });
+        }
+
+        zip.file('recipes.json', JSON.stringify(serializedRecipes, null, 2));
+
+        const zipBlob = await zip.generateAsync({ type: 'blob' });
+        const zipUrl = URL.createObjectURL(zipBlob);
+        const link = document.createElement('a');
+        link.href = zipUrl;
+        link.download = `recipe-collection-${formatTimestamp()}.zip`;
+        link.click();
+        URL.revokeObjectURL(zipUrl);
+
+        isBatchExporting = false;
+
+        if (previousRecipeId) {
+          selectRecipeById(previousRecipeId);
+        } else {
+          currentRecipeId = null;
+          applyRecipeToForm(previousRecipe);
+        }
+
+        pendingDeletionIds.clear();
+        renderRecipeList();
+      } catch (error) {
+        isBatchExporting = false;
+        alert('Error generating collection ZIP. Please try again.');
+        console.error(error);
+      }
+    });
+
+    collectionZipInput.addEventListener('change', async (event) => {
+      const file = event.target.files?.[0];
+      if (!file || file.type !== 'application/zip') {
+        alert('Please select a valid ZIP file.');
+        return;
+      }
+
+      try {
+        const zip = new JSZip();
+        await zip.loadAsync(file);
+        const recipesEntry = zip.file('recipes.json');
+        if (!recipesEntry) {
+          alert('No recipes.json found in the collection ZIP.');
+          return;
+        }
+
+        const recipesText = await recipesEntry.async('string');
+        const parsedRecipes = JSON.parse(recipesText);
+        const recipesArray = Array.isArray(parsedRecipes) ? parsedRecipes : parsedRecipes.recipes;
+
+        if (!Array.isArray(recipesArray)) {
+          alert('recipes.json does not contain a valid recipe list.');
+          return;
+        }
+
+        const hydratedRecipes = await Promise.all(
+          recipesArray.map(async (recipe) => {
+            const hydrated = { ...recipe };
+            if (recipe.imageFile && zip.file(recipe.imageFile)) {
+              const imageBlob = await zip.file(recipe.imageFile).async('blob');
+              hydrated.image = await new Promise(resolve => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result);
+                reader.readAsDataURL(imageBlob);
+              });
+            }
+            return hydrated;
+          })
+        );
+
+        recipesCollection = hydratedRecipes;
+        pendingDeletionIds.clear();
+        currentRecipeId = null;
+        renderRecipeList();
+      } catch (error) {
+        alert('Error loading collection ZIP. Please make sure it is valid.');
+        console.error(error);
+      }
+    });
   </script>
 </body>
 </html>
