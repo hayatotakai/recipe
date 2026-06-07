@@ -82,28 +82,35 @@
       width: 100%;
       max-width: var(--max-width);
       display: grid;
-      grid-template-columns: 1fr var(--preview-width);
+      grid-template-areas:
+        "topbar topbar"
+        "sidebar preview";
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: auto 1fr;
       gap: var(--spacing-xl);
       animation: fadeIn 0.5s ease-out;
     }
 
+    .top-bar {
+      grid-area: topbar;
+      display: flex;
+      gap: var(--spacing-lg);
+      flex-wrap: wrap;
+    }
+
+    .top-bar .section {
+      flex: 1;
+      min-width: 260px;
+    }
+
     .sidebar {
+      grid-area: sidebar;
       display: flex;
       flex-direction: column;
       gap: var(--spacing-lg);
     }
 
-    .sidebar .section:nth-child(2),
-    .sidebar .section:nth-child(3) {
-      flex: 1;
-      min-height: 0;
-    }
 
-    .sidebar .section:nth-child(2) textarea,
-    .sidebar .section:nth-child(3) textarea {
-      flex: 1;
-      min-height: 0;
-    }
 
     /* ==================== Sections ==================== */
     .section {
@@ -301,11 +308,12 @@
       min-width: auto;
     }
 
-    /* ==================== Buttons ==================== */
+    /* ==================== Editor/Preview ==================== */
     .preview-container {
+      grid-area: preview;
       width: 100%;
-      max-width: var(--preview-width);
-      height: 900px;
+      height: auto;
+      min-height: 300px;
       background: white;
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-lg);
@@ -313,16 +321,10 @@
       display: flex;
       flex-direction: column;
       font-family: 'Roboto', Arial, sans-serif;
-      overflow: hidden;
       transition: box-shadow var(--transition-base);
-      position: sticky;
-      top: var(--spacing-lg);
       color: #000000;
     }
 
-    .preview-container:hover {
-      /* box-shadow: 0 6px 20px rgba(0,0,0,0.15); */
-    }
 
     #recipeTitle {
       font-size: clamp(1.25rem, 3vw, 1.5rem);
@@ -387,8 +389,6 @@
     }
 
     #ingredientsList {
-      height: 140px;
-      overflow: hidden;
       font-size: 13px;
     }
 
@@ -468,14 +468,77 @@
     /* ==================== Instructions ==================== */
     .preview-bottom {
       margin-top: var(--spacing-md);
-      flex: 1;
-      overflow: hidden;
     }
 
     #instructionsList {
-      height: 100%;
-      overflow: hidden;
       font-size: 13px;
+    }
+
+    /* ==================== Editable Fields ==================== */
+    [contenteditable] {
+      outline: none;
+      border-radius: 3px;
+      transition: background-color var(--transition-fast);
+      cursor: text;
+    }
+
+    [contenteditable]:hover {
+      background-color: rgba(37, 99, 235, 0.04);
+    }
+
+    [contenteditable]:focus {
+      background-color: rgba(37, 99, 235, 0.06);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+
+    [contenteditable][data-placeholder]:empty::before {
+      content: attr(data-placeholder);
+      color: var(--color-gray-disabled);
+      pointer-events: none;
+      font-style: italic;
+    }
+
+    .recipe-meta span[contenteditable] {
+      display: inline-block;
+      min-width: 20px;
+    }
+
+    #metaOrigin[contenteditable] {
+      display: block;
+      padding: 2px 4px;
+    }
+
+    #ingredientsList p[contenteditable],
+    #instructionsList p[contenteditable] {
+      border-radius: 3px;
+      min-height: 1.4em;
+    }
+
+    .add-item-btn {
+      font-size: 12px;
+      color: var(--color-primary);
+      cursor: pointer;
+      padding: 4px 20px;
+      opacity: 0.5;
+      transition: opacity var(--transition-fast);
+      user-select: none;
+      margin-top: 2px;
+    }
+
+    .add-item-btn:hover {
+      opacity: 1;
+    }
+
+    body.exporting-pdf .add-item-btn {
+      display: none !important;
+    }
+
+    body.exporting-pdf [contenteditable][data-placeholder]:empty::before {
+      display: none !important;
+    }
+
+    body.exporting-pdf #metaOrigin:empty {
+      display: none !important;
     }
 
     /* ==================== Utilities ==================== */
@@ -524,12 +587,12 @@
 
     @media (max-width: 1400px) {
       .container {
+        grid-template-areas:
+          "topbar"
+          "sidebar"
+          "preview";
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
-      }
-
-      #previewContainer {
-        display: none !important;
       }
 
       h1 {
@@ -652,57 +715,41 @@
   <h1>Recipe Formatter</h1>
 
   <div class="container">
-    <!-- Sidebar with inputs -->
-    <div class="sidebar">
-      <!-- Recipe Form -->
-      <div class="section">
-        <h2>Recipe Details</h2>
-        <div class="input-group full">
-          <input type="text" id="titleInput" placeholder="Recipe Title" value="Recipe Title">
-        </div>
-        <div class="input-group">
-          <input type="number" id="servingsInput" placeholder="Servings" value="4" min="1">
-          <input type="text" id="prepTimeInput" placeholder="Prep time (e.g., 15 min)">
-        </div>
-        <div class="input-group">
-          <input type="text" id="cookTimeInput" placeholder="Cook time (e.g., 30 min)">
-        </div>
-        <div class="input-group full">
-          <input type="text" id="originalUrlInput" placeholder="Original URL (optional)">
-        </div>
-      </div>
-
-      <!-- Ingredients -->
-      <div class="section">
-        <h2>Ingredients</h2>
-        <textarea id="ingredientsInput" placeholder="Enter ingredients (one per line or bullet)"></textarea>
-      </div>
-
-      <!-- Instructions -->
-      <div class="section">
-        <h2>Instructions</h2>
-        <textarea id="instructionsInput" placeholder="Enter instructions (one per line)"></textarea>
-      </div>
-
-      <!-- Image Upload -->
-      <div class="section">
-        <h2>Image</h2>
-        <div style="padding: 12px; background: #f9fafb; border-radius: 6px; text-align: center; cursor: pointer; border: 2px dashed #d1d5db;" id="imageUploadBtn">
-          Click to upload or drag & drop
-        </div>
-        <div id="imageName" style="margin-top: 8px; font-size: 12px; color: #6b7280; text-align: center;"></div>
-        <button class="btn-secondary btn-sm" id="pasteImageBtn" style="width: 100%; margin-top: 8px;">Paste from Clipboard</button>
-      </div>
-
+    <!-- Top bar: Export + GitHub Sync -->
+    <div class="top-bar">
       <!-- Export Options -->
       <div class="section">
-        <h2>Preview</h2>
+        <h2>Export</h2>
         <div class="button-group">
           <button class="btn-primary" id="previewPdfBtn">Preview PDF</button>
         </div>
       </div>
 
-      <!-- Recipe Collection -->
+      <!-- GitHub Sync -->
+      <div class="section">
+        <h2>GitHub Sync</h2>
+        <div class="input-group full">
+          <input type="password" id="githubTokenInput" placeholder="Personal Access Token (contents: write)">
+        </div>
+        <div style="font-size: 11px; color: var(--color-gray-text); margin-bottom: var(--spacing-sm);">
+          Token is saved in browser localStorage only and never sent anywhere except api.github.com.
+          Images are excluded from GitHub pushes to stay within the 1 MB API limit; use ZIP export for full backups.<br><br>
+          To create a token: use a
+          <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">fine-grained token</a>
+          (set <em>Contents → Read and write</em> for your repo) or a
+          <a href="https://github.com/settings/tokens/new" target="_blank" rel="noopener noreferrer">classic token</a>
+          with the <code>repo</code> scope.
+        </div>
+        <div id="githubStatus" style="font-size: 12px; min-height: 18px; margin-bottom: var(--spacing-sm);"></div>
+        <div class="button-group">
+          <button class="btn-primary" id="githubPullBtn">Pull from GitHub</button>
+          <button class="btn-success" id="githubPushBtn">Push to GitHub</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar: Recipe Collection -->
+    <div class="sidebar">
       <div class="section">
         <h2>Recipe Collection</h2>
         <input type="file" id="collectionZipInput" accept=".zip" style="display: none;">
@@ -717,31 +764,41 @@
       </div>
     </div>
 
-    <!-- Preview Container -->
-    <div id="previewContainer">
-      <h2 id="recipeTitle">Recipe Title</h2>
-      
+    <!-- Editable Recipe Card -->
+    <div id="previewContainer" class="preview-container">
+      <h2 id="recipeTitle" contenteditable="true" data-placeholder="Recipe Title"></h2>
+
       <div class="recipe-meta">
-        <div id="metaOrigin" style="grid-column: 1 / -1; text-align: left;"></div>
-        <div><span id="metaServings">4</span> servings</div>
-        <div>Prep: <span id="metaPrepTime">-</span></div>
-        <div>Cook: <span id="metaCookTime">-</span></div>
+        <div id="metaOrigin" contenteditable="true" data-placeholder="Source URL (optional)" style="grid-column: 1 / -1; text-align: left;"></div>
+        <div><span id="metaServings" contenteditable="true" data-placeholder="4">4</span> servings</div>
+        <div>Prep: <span id="metaPrepTime" contenteditable="true" data-placeholder="-">-</span></div>
+        <div>Cook: <span id="metaCookTime" contenteditable="true" data-placeholder="-">-</span></div>
+        <div>Season: <span id="metaSeason" contenteditable="true" data-placeholder="Season"></span></div>
+        <div><span id="metaCalories" contenteditable="true" data-placeholder="-"></span> kcal</div>
+        <div><span id="metaProtein" contenteditable="true" data-placeholder="-"></span>g protein</div>
+        <div><span id="metaCarbs" contenteditable="true" data-placeholder="-"></span>g carbs</div>
       </div>
 
       <div class="preview-top">
         <div>
           <h3>Ingredients</h3>
           <div id="ingredientsList"></div>
+          <div class="add-item-btn" id="addIngredientBtn">+ Add ingredient</div>
         </div>
-        <div id="imageDrop">
-          <p id="imagePlaceholder"></p>
-          <img id="previewImage" />
+        <div>
+          <div id="imageDrop">
+            <p id="imagePlaceholder">Click or drop image</p>
+            <img id="previewImage" />
+          </div>
+          <div id="imageName" style="font-size: 11px; color: var(--color-gray-text); text-align: center; margin-top: 4px; min-height: 14px;"></div>
+          <button class="btn-secondary btn-sm" id="pasteImageBtn" style="width: 100%; margin-top: 4px;">Paste from Clipboard</button>
         </div>
       </div>
 
       <div class="preview-bottom">
         <h3>Instructions</h3>
         <div id="instructionsList"></div>
+        <div class="add-item-btn" id="addInstructionBtn">+ Add step</div>
       </div>
     </div>
   </div>
@@ -749,27 +806,23 @@
 
   <script>
     // ==================== DOM Elements ====================
-    const titleInput = document.getElementById('titleInput');
-    const servingsInput = document.getElementById('servingsInput');
-    const prepTimeInput = document.getElementById('prepTimeInput');
-    const cookTimeInput = document.getElementById('cookTimeInput');
-    const ingredientsInput = document.getElementById('ingredientsInput');
-    const instructionsInput = document.getElementById('instructionsInput');
     const ingredientsList = document.getElementById('ingredientsList');
     const instructionsList = document.getElementById('instructionsList');
     const recipeTitle = document.getElementById('recipeTitle');
     const previewImage = document.getElementById('previewImage');
     const imagePlaceholder = document.getElementById('imagePlaceholder');
     const imageDrop = document.getElementById('imageDrop');
-    const imageUploadBtn = document.getElementById('imageUploadBtn');
     const imageName = document.getElementById('imageName');
     const pasteImageBtn = document.getElementById('pasteImageBtn');
     const previewPdfBtn = document.getElementById('previewPdfBtn');
-    const metaServings = document.getElementById('metaServings');
-    const metaPrepTime = document.getElementById('metaPrepTime');
-    const metaCookTime = document.getElementById('metaCookTime');
-    const metaOrigin = document.getElementById('metaOrigin');
-    const originalUrlInput = document.getElementById('originalUrlInput');
+    const metaServings  = document.getElementById('metaServings');
+    const metaPrepTime  = document.getElementById('metaPrepTime');
+    const metaCookTime  = document.getElementById('metaCookTime');
+    const metaOrigin    = document.getElementById('metaOrigin');
+    const metaSeason    = document.getElementById('metaSeason');
+    const metaCalories  = document.getElementById('metaCalories');
+    const metaProtein   = document.getElementById('metaProtein');
+    const metaCarbs     = document.getElementById('metaCarbs');
     const collectionZipInput = document.getElementById('collectionZipInput');
     const saveCollectionZipBtn = document.getElementById('saveCollectionZipBtn');
     const loadCollectionZipBtn = document.getElementById('loadCollectionZipBtn');
@@ -781,20 +834,26 @@
     let currentRecipeId = null;
     let isBatchExporting = false;
     let pendingDeletionIds = new Set();
+    let dirtyImageIds = new Set();  // recipe IDs whose images were changed locally
+    let lastSyncedJsonStr = null;   // last pushed/pulled recipes.json content
 
     // ==================== Current Recipe Function ====================
     function buildRecipeObject(idOverride = null) {
       const recipeId = idOverride || currentRecipeId || Date.now();
       return {
         id: recipeId,
-        title: titleInput.value.trim() || 'Untitled Recipe',
-        servings: parseInt(servingsInput.value) || 4,
-        prepTime: prepTimeInput.value.trim() || '-',
-        cookTime: cookTimeInput.value.trim() || '-',
-        ingredients: parseList(ingredientsInput.value),
-        instructions: parseList(instructionsInput.value),
+        title: recipeTitle.textContent.trim() || 'Untitled Recipe',
+        servings: parseInt(metaServings.textContent) || 4,
+        prepTime: metaPrepTime.textContent.trim() || '-',
+        cookTime: metaCookTime.textContent.trim() || '-',
+        season: metaSeason.textContent.trim() || null,
+        calories: parseInt(metaCalories.textContent) || null,
+        protein: parseInt(metaProtein.textContent) || null,
+        carbs: parseInt(metaCarbs.textContent) || null,
+        ingredients: getListItems(ingredientsList),
+        instructions: getListItems(instructionsList),
         image: imageData || null,
-        originalUrl: originalUrlInput.value.trim() || null,
+        originalUrl: metaOrigin.textContent.trim() || null,
         lastModified: new Date().toISOString()
       };
     }
@@ -809,6 +868,67 @@
         .split(/\n|•|\*/)
         .map(item => item.trim())
         .filter(item => item.length > 0);
+    }
+
+    function getListItems(container) {
+      return Array.from(container.querySelectorAll('p[contenteditable]'))
+        .map(p => p.textContent.trim())
+        .filter(text => text.length > 0);
+    }
+
+    function moveCursorToEnd(el) {
+      el.focus();
+      const range = document.createRange();
+      const sel = window.getSelection();
+      range.selectNodeContents(el);
+      range.collapse(false);
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+
+    function createEditableItem(text, container) {
+      const p = document.createElement('p');
+      p.contentEditable = 'true';
+      if (text) p.textContent = text;
+      p.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          const newP = createEditableItem('', container);
+          p.after(newP);
+          newP.focus();
+          syncCurrentRecipeToCollection();
+        }
+        if (e.key === 'Backspace' && p.textContent === '') {
+          e.preventDefault();
+          const prev = p.previousElementSibling;
+          const next = p.nextElementSibling;
+          p.remove();
+          if (prev) moveCursorToEnd(prev);
+          else if (next) next.focus();
+          syncCurrentRecipeToCollection();
+        }
+      });
+      p.addEventListener('input', () => syncCurrentRecipeToCollection());
+      p.addEventListener('paste', (e) => {
+        e.preventDefault();
+        const plain = (e.clipboardData || window.clipboardData).getData('text/plain');
+        document.execCommand('insertText', false, plain);
+      });
+      return p;
+    }
+
+    function renderIngredients(items) {
+      ingredientsList.innerHTML = '';
+      (items.length > 0 ? items : ['']).forEach(text => {
+        ingredientsList.appendChild(createEditableItem(text, ingredientsList));
+      });
+    }
+
+    function renderInstructions(items) {
+      instructionsList.innerHTML = '';
+      (items.length > 0 ? items : ['']).forEach(text => {
+        instructionsList.appendChild(createEditableItem(text, instructionsList));
+      });
     }
 
     function fitTextToContainer(container, minFont = 10, maxFont = 14) {
@@ -857,26 +977,33 @@
     }
 
     function clearRecipeForm() {
-      titleInput.value = '';
-      servingsInput.value = '4';
-      prepTimeInput.value = '';
-      cookTimeInput.value = '';
-      originalUrlInput.value = '';
-      ingredientsInput.value = '';
-      instructionsInput.value = '';
+      recipeTitle.textContent  = '';
+      metaServings.textContent = '4';
+      metaPrepTime.textContent = '-';
+      metaCookTime.textContent = '-';
+      metaSeason.textContent   = '';
+      metaCalories.textContent = '';
+      metaProtein.textContent  = '';
+      metaCarbs.textContent    = '';
+      metaOrigin.textContent   = '';
+      renderIngredients([]);
+      renderInstructions([]);
       clearPreviewImage();
       currentRecipeId = null;
-      updatePreview();
     }
 
     function applyRecipeToForm(recipe) {
-      titleInput.value = recipe.title ?? '';
-      servingsInput.value = recipe.servings ?? 4;
-      prepTimeInput.value = recipe.prepTime ?? '';
-      cookTimeInput.value = recipe.cookTime ?? '';
-      originalUrlInput.value = recipe.originalUrl ?? '';
-      ingredientsInput.value = recipe.ingredients?.join('\n') ?? '';
-      instructionsInput.value = recipe.instructions?.join('\n') ?? '';
+      recipeTitle.textContent = recipe.title ?? '';
+      metaServings.textContent = recipe.servings ?? 4;
+      metaPrepTime.textContent = recipe.prepTime ?? '-';
+      metaCookTime.textContent = recipe.cookTime ?? '-';
+      metaSeason.textContent   = recipe.season    ?? '';
+      metaCalories.textContent = recipe.calories  ?? '';
+      metaProtein.textContent  = recipe.protein   ?? '';
+      metaCarbs.textContent    = recipe.carbs     ?? '';
+      metaOrigin.textContent   = recipe.originalUrl ?? '';
+      renderIngredients(recipe.ingredients ?? []);
+      renderInstructions(recipe.instructions ?? []);
 
       if (recipe.image) {
         setPreviewImage(recipe.image, '✓ Image loaded');
@@ -885,7 +1012,6 @@
       }
 
       currentRecipeId = recipe.id || currentRecipeId || Date.now();
-      updatePreview();
     }
 
     function syncCurrentRecipeToCollection() {
@@ -958,6 +1084,7 @@
     }
 
     function selectRecipeById(recipeId) {
+      syncCurrentRecipeToCollection(); // save current edits before switching
       const recipe = recipesCollection.find(item => String(item.id) === String(recipeId));
       if (!recipe) return;
       currentRecipeId = recipe.id;
@@ -1066,43 +1193,14 @@
 
     // ==================== Preview Updates ====================
     function updatePreview() {
-      // Update title and meta
-      recipeTitle.textContent = titleInput.value.trim() || 'Recipe Title';
-      metaServings.textContent = servingsInput.value || '4';
-      metaPrepTime.textContent = prepTimeInput.value.trim() || '-';
-      metaCookTime.textContent = cookTimeInput.value.trim() || '-';
-      
-      // Update origin
-      const origin = extractOrigin(originalUrlInput.value.trim());
-      metaOrigin.textContent = origin || '';
-      metaOrigin.style.display = origin ? 'block' : 'none';
-
-      // Update ingredients
-      ingredientsList.innerHTML = '';
-      parseList(ingredientsInput.value).forEach(item => {
-        const p = document.createElement('p');
-        p.textContent = item;
-        ingredientsList.appendChild(p);
-      });
-
-      // Update instructions
-      instructionsList.innerHTML = '';
-      parseList(instructionsInput.value).forEach(step => {
-        const p = document.createElement('p');
-        p.textContent = step;
-        instructionsList.appendChild(p);
-      });
-
-      fitTextToContainer(ingredientsList);
-      fitTextToContainer(instructionsList);
-
       if (!isBatchExporting) {
         syncCurrentRecipeToCollection();
       }
     }
 
     // ==================== Image Handling ====================
-    imageUploadBtn.addEventListener('click', () => {
+    imageDrop.addEventListener('click', (e) => {
+      if (e.target === previewImage) return;
       const input = document.createElement('input');
       input.type = 'file';
       input.accept = 'image/*';
@@ -1120,6 +1218,8 @@
           previewImage.classList.add('active');
           imagePlaceholder.style.display = 'none';
           imageName.textContent = '✓ ' + file.name;
+          if (currentRecipeId) dirtyImageIds.add(String(currentRecipeId));
+          syncCurrentRecipeToCollection();
         };
         reader.readAsDataURL(file);
       }
@@ -1159,6 +1259,8 @@
               previewImage.classList.add('active');
               imagePlaceholder.style.display = 'none';
               imageName.textContent = '✓ Image from clipboard';
+              if (currentRecipeId) dirtyImageIds.add(String(currentRecipeId));
+              syncCurrentRecipeToCollection();
             };
             reader.readAsDataURL(blob);
             return;
@@ -1171,6 +1273,8 @@
               previewImage.classList.add('active');
               imagePlaceholder.style.display = 'none';
               imageName.textContent = '✓ Image from clipboard';
+              if (currentRecipeId) dirtyImageIds.add(String(currentRecipeId));
+              syncCurrentRecipeToCollection();
             };
             reader.readAsDataURL(blob);
             return;
@@ -1184,13 +1288,28 @@
     });
 
     // ==================== Event Listeners ====================
-    titleInput.addEventListener('input', updatePreview);
-    servingsInput.addEventListener('input', updatePreview);
-    prepTimeInput.addEventListener('input', updatePreview);
-    cookTimeInput.addEventListener('input', updatePreview);
-    originalUrlInput.addEventListener('input', updatePreview);
-    ingredientsInput.addEventListener('input', updatePreview);
-    instructionsInput.addEventListener('input', updatePreview);
+    [recipeTitle, metaServings, metaPrepTime, metaCookTime, metaOrigin, metaSeason, metaCalories, metaProtein, metaCarbs].forEach(el => {
+      el.addEventListener('input', updatePreview);
+    });
+
+    // Only allow digits in numeric fields
+    [metaServings, metaCalories, metaProtein, metaCarbs].forEach(el => {
+      el.addEventListener('keydown', (e) => {
+        if (e.key.length === 1 && !/[0-9]/.test(e.key)) e.preventDefault();
+      });
+    });
+
+    document.getElementById('addIngredientBtn').addEventListener('click', () => {
+      const p = createEditableItem('', ingredientsList);
+      ingredientsList.appendChild(p);
+      p.focus();
+    });
+
+    document.getElementById('addInstructionBtn').addEventListener('click', () => {
+      const p = createEditableItem('', instructionsList);
+      instructionsList.appendChild(p);
+      p.focus();
+    });
 
     // ==================== Export Functions ====================
 
@@ -1207,7 +1326,8 @@
 
 
     // ==================== Initialization ====================
-    updatePreview();
+    renderIngredients([]);
+    renderInstructions([]);
     renderRecipeList();
 
 
@@ -1362,6 +1482,236 @@
         console.error(error);
       }
     });
+
+    // ==================== GitHub Sync ====================
+    const GITHUB_OWNER    = 'hayatotakai';
+    const GITHUB_REPO     = 'recipe';
+    const GITHUB_BRANCH   = 'main';
+    const GITHUB_FILEPATH = 'recipes.json';
+
+    const GITHUB_SETTINGS_KEY = 'recipeGithubSettings';
+    const githubTokenInput    = document.getElementById('githubTokenInput');
+    const githubPullBtn       = document.getElementById('githubPullBtn');
+    const githubPushBtn       = document.getElementById('githubPushBtn');
+    const githubStatus        = document.getElementById('githubStatus');
+
+    // Restore saved token from localStorage
+    (function loadGithubSettings() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(GITHUB_SETTINGS_KEY) || '{}');
+        if (saved.token) githubTokenInput.value = saved.token;
+      } catch (_) {}
+    })();
+
+    function getAndSaveGithubSettings() {
+      const s = {
+        owner:    GITHUB_OWNER,
+        repo:     GITHUB_REPO,
+        branch:   GITHUB_BRANCH,
+        filePath: GITHUB_FILEPATH,
+        token:    githubTokenInput.value.trim()
+      };
+      try { localStorage.setItem(GITHUB_SETTINGS_KEY, JSON.stringify({ token: s.token })); } catch (_) {}
+      return s;
+    }
+
+    function setGithubStatus(msg, isError = false) {
+      githubStatus.textContent = msg;
+      githubStatus.style.color = isError ? 'var(--color-danger)' : 'var(--color-success)';
+    }
+
+    function strToBase64(str) {
+      // Handles full Unicode (emoji, accented chars, etc.)
+      const bytes = new TextEncoder().encode(str);
+      let binary = '';
+      bytes.forEach(b => { binary += String.fromCharCode(b); });
+      return btoa(binary);
+    }
+
+    function base64ToStr(b64) {
+      const binary = atob(b64.replace(/\n/g, ''));
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+      return new TextDecoder().decode(bytes);
+    }
+
+    function buildGithubHeaders(token, includeContent = false) {
+      const h = { Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+      if (token) h.Authorization = `Bearer ${token}`;
+      if (includeContent) h['Content-Type'] = 'application/json';
+      return h;
+    }
+
+    function githubContentsUrl(owner, repo, filePath) {
+      return `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/${filePath}`;
+    }
+
+    githubPullBtn.addEventListener('click', async () => {
+      const s = getAndSaveGithubSettings();
+      githubPullBtn.disabled = true;
+      setGithubStatus('Pulling recipes.json…');
+      try {
+        const headers = buildGithubHeaders(s.token);
+        const url = githubContentsUrl(s.owner, s.repo, s.filePath) + `?ref=${encodeURIComponent(s.branch)}`;
+        const res = await fetch(url, { headers });
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.message || `HTTP ${res.status}`);
+        }
+        const data = await res.json();
+        const jsonStr = base64ToStr(data.content);
+        const parsed = JSON.parse(jsonStr);
+        const recipesArray = Array.isArray(parsed) ? parsed : parsed.recipes;
+        if (!Array.isArray(recipesArray)) throw new Error('File does not contain a valid recipe array.');
+
+        // Fetch images stored as separate files in the repo
+        let imageCount = 0;
+        for (let i = 0; i < recipesArray.length; i++) {
+          const recipe = recipesArray[i];
+          if (recipe.imageFile) {
+            setGithubStatus(`Pulling images… (${i + 1} / ${recipesArray.length})`);
+            try {
+              const imgUrl = githubContentsUrl(s.owner, s.repo, recipe.imageFile) + `?ref=${encodeURIComponent(s.branch)}`;
+              const imgRes = await fetch(imgUrl, { headers });
+              if (imgRes.ok) {
+                const imgData = await imgRes.json();
+                const ext = recipe.imageFile.split('.').pop().toLowerCase();
+                const mimeMap = { png: 'image/png', webp: 'image/webp', gif: 'image/gif', jpg: 'image/jpeg', jpeg: 'image/jpeg' };
+                const mime = mimeMap[ext] || 'image/jpeg';
+                recipe.image = `data:${mime};base64,${imgData.content.replace(/\n/g, '')}`;
+                imageCount++;
+              }
+            } catch (_) { /* skip individual image failures */ }
+          }
+        }
+
+        recipesCollection = recipesArray;
+        pendingDeletionIds.clear();
+        dirtyImageIds.clear();
+        lastSyncedJsonStr = jsonStr; // baseline for change detection on next push
+        currentRecipeId = null;
+        renderRecipeList();
+        const imgMsg = imageCount > 0 ? ` with ${imageCount} image(s)` : '';
+        setGithubStatus(`Pulled ${recipesArray.length} recipe(s)${imgMsg} successfully.`);
+      } catch (err) {
+        setGithubStatus('Pull failed: ' + err.message, true);
+        console.error(err);
+      } finally {
+        githubPullBtn.disabled = false;
+      }
+    });
+
+    githubPushBtn.addEventListener('click', async () => {
+      const s = getAndSaveGithubSettings();
+      if (!s.token) {
+        setGithubStatus('A Personal Access Token with "contents: write" scope is required to push.', true);
+        return;
+      }
+      githubPushBtn.disabled = true;
+      setGithubStatus('Pushing to GitHub…');
+      try {
+        syncCurrentRecipeToCollection();
+        const headers = buildGithubHeaders(s.token, true);
+
+        const recipesToSave = recipesCollection.filter(r => !pendingDeletionIds.has(String(r.id)));
+        const serializedRecipes = [];
+
+        // Push each recipe's image only if it was changed locally
+        const dirtyCount = recipesToSave.filter(r => dirtyImageIds.has(String(r.id)) && r.image).length;
+        let pushedImages = 0;
+        for (let i = 0; i < recipesToSave.length; i++) {
+          const recipe = recipesToSave[i];
+          const serialized = { ...recipe };
+          delete serialized.image;
+
+          if (recipe.image && dirtyImageIds.has(String(recipe.id))) {
+            pushedImages++;
+            setGithubStatus(`Pushing new/changed images… (${pushedImages} / ${dirtyCount})`);
+            try {
+              const { data: imgBase64, ext } = extractImageData(recipe.image);
+              const imagePath = `images/${recipe.id}.${ext}`;
+              const imgUrl = githubContentsUrl(s.owner, s.repo, imagePath);
+
+              let imgSha;
+              const imgGetRes = await fetch(imgUrl + `?ref=${encodeURIComponent(s.branch)}`, { headers });
+              if (imgGetRes.ok) imgSha = (await imgGetRes.json()).sha;
+
+              const imgBody = { message: `Update image for recipe ${recipe.id}`, content: imgBase64, branch: s.branch };
+              if (imgSha) imgBody.sha = imgSha;
+
+              const imgPutRes = await fetch(imgUrl, { method: 'PUT', headers, body: JSON.stringify(imgBody) });
+              if (imgPutRes.ok) serialized.imageFile = imagePath;
+            } catch (_) { /* skip individual image failures */ }
+          }
+
+          serializedRecipes.push(serialized);
+        }
+
+        // Push recipes.json only if the content changed since last sync
+        const newJsonStr = JSON.stringify(serializedRecipes, null, 2);
+        let jsonPushed = false;
+        if (newJsonStr !== lastSyncedJsonStr) {
+          setGithubStatus('Pushing recipes.json…');
+          const url = githubContentsUrl(s.owner, s.repo, s.filePath);
+          let sha;
+          const getRes = await fetch(url + `?ref=${encodeURIComponent(s.branch)}`, { headers });
+          if (getRes.ok) {
+            sha = (await getRes.json()).sha;
+          } else if (getRes.status !== 404) {
+            const err = await getRes.json().catch(() => ({}));
+            throw new Error(err.message || `HTTP ${getRes.status}`);
+          }
+
+          const content = strToBase64(newJsonStr);
+          const body = {
+            message: `Update ${s.filePath} — ${serializedRecipes.length} recipe${serializedRecipes.length !== 1 ? 's' : ''}`,
+            content,
+            branch: s.branch
+          };
+          if (sha) body.sha = sha;
+
+          const putRes = await fetch(url, { method: 'PUT', headers, body: JSON.stringify(body) });
+          if (!putRes.ok) {
+            const err = await putRes.json().catch(() => ({}));
+            const msg = err.message || `HTTP ${putRes.status}`;
+            if (putRes.status === 403 || putRes.status === 401) {
+              throw new Error(msg + ' — check that your token has Contents: Read and write (fine-grained) or the repo scope (classic), and that the repository exists.');
+            }
+            if (putRes.status === 404) {
+              throw new Error('Repository not found. Create the repo on GitHub first, then push again.');
+            }
+            throw new Error(msg);
+          }
+          lastSyncedJsonStr = newJsonStr;
+          jsonPushed = true;
+        }
+
+        pendingDeletionIds.clear();
+        dirtyImageIds.clear();
+        renderRecipeList();
+        const msgs = [];
+        if (jsonPushed) msgs.push(`${serializedRecipes.length} recipe(s)`);
+        if (pushedImages > 0) msgs.push(`${pushedImages} new image(s)`);
+        if (msgs.length === 0) {
+          setGithubStatus('Nothing new to push — all data already up to date.');
+        } else {
+          setGithubStatus(`Pushed ${msgs.join(' and ')} to GitHub successfully.`);
+        }
+      } catch (err) {
+        setGithubStatus('Push failed: ' + err.message, true);
+        console.error(err);
+      } finally {
+        githubPushBtn.disabled = false;
+      }
+    });
+
+    // Auto-pull on load if a token is already saved
+    (function autoLoadFromGithub() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(GITHUB_SETTINGS_KEY) || '{}');
+        if (saved.token) githubPullBtn.click();
+      } catch (_) {}
+    })();
   </script>
 </body>
 </html>

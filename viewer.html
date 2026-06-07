@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #2563eb;
+      --color-gray-border: #e5e7eb;
+      --color-gray-text: #6b7280;
+      --color-bg: #f9fafb;
+      --radius: 14px;
+      --shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--color-bg);
+      color: #111;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: white;
+      border-bottom: 1px solid var(--color-gray-border);
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    #searchInput {
+      flex: 1;
+      min-width: 180px;
+      max-width: 420px;
+      padding: 8px 14px;
+      border: 1px solid var(--color-gray-border);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    #searchInput:focus { border-color: var(--color-primary); }
+
+    #recipeCount {
+      font-size: 13px;
+      color: var(--color-gray-text);
+      white-space: nowrap;
+    }
+
+    /* ── Auth banner ── */
+    #authBanner {
+      background: #fef3c7;
+      border-bottom: 1px solid #fde68a;
+      padding: 10px 32px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #92400e;
+    }
+    #authBanner input {
+      padding: 6px 12px;
+      border: 1px solid #fde68a;
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: inherit;
+      outline: none;
+      flex: 1;
+      min-width: 200px;
+      max-width: 320px;
+    }
+    #authBanner button {
+      padding: 6px 16px;
+      background: var(--color-primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    /* ── Status ── */
+    #statusMsg {
+      text-align: center;
+      padding: 60px 32px;
+      color: var(--color-gray-text);
+      font-size: 15px;
+    }
+
+    /* ── Grid ── */
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+      padding: 28px 32px;
+    }
+
+    /* ── Recipe Card ── */
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+      transform: translateY(-2px);
+    }
+
+    .card-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      background: #f3f4f6;
+    }
+    .card-image-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      color: #d1d5db;
+    }
+
+    .card-body {
+      padding: 18px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: var(--color-gray-text);
+    }
+    .card-meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card-origin {
+      font-size: 11px;
+      color: var(--color-primary);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .card-origin:hover { text-decoration: underline; }
+
+    .card-section-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--color-gray-text);
+      margin-bottom: 6px;
+    }
+
+    .card-ingredients {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .card-ingredients li {
+      list-style: disc;
+      margin-left: 16px;
+    }
+
+    .card-instructions {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .card-instructions li {
+      list-style: decimal;
+      margin-left: 16px;
+      margin-bottom: 2px;
+    }
+
+    .card-toggle {
+      font-size: 12px;
+      color: var(--color-primary);
+      cursor: pointer;
+      user-select: none;
+      margin-top: -4px;
+    }
+    .card-toggle:hover { text-decoration: underline; }
+
+    .card-collapsible {
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .card-collapsible.collapsed { max-height: 88px; }
+    .card-collapsible.expanded  { max-height: 2000px; }
+
+    /* ── Empty state ── */
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--color-gray-text);
+      font-size: 15px;
+    }
+
+    /* ── Filter bar ── */
+    #filterBar {
+      background: white;
+      border-bottom: 1px solid var(--color-gray-border);
+      padding: 10px 32px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .filter-group label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-gray-text);
+    }
+
+    .filter-group select,
+    .range-row input {
+      padding: 5px 10px;
+      border: 1px solid var(--color-gray-border);
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: inherit;
+      outline: none;
+      background: white;
+    }
+
+    .filter-group select:focus,
+    .range-row input:focus { border-color: var(--color-primary); }
+
+    .range-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .range-row input { width: 72px; }
+
+    .range-row span {
+      color: var(--color-gray-text);
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 14px 16px; }
+      #grid  { padding: 16px; gap: 16px; }
+      #grid  { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🍽️ Recipe Collection</h1>
+  <input type="search" id="searchInput" placeholder="Search recipes…" />
+  <span id="recipeCount"></span>
+</header>
+
+<div id="authBanner">
+  <span>Private repository — enter a GitHub token to load recipes:</span>
+  <input type="password" id="authTokenInput" placeholder="Personal Access Token" />
+  <button id="authRetryBtn">Load</button>
+</div>
+
+<div id="filterBar">
+  <div class="filter-group">
+    <label>Season</label>
+    <select id="filterSeason">
+      <option value="">All seasons</option>
+      <option value="spring">🌸 Spring</option>
+      <option value="summer">☀️ Summer</option>
+      <option value="fall">🍂 Fall / Autumn</option>
+      <option value="winter">❄️ Winter</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label>Calories (kcal)</label>
+    <div class="range-row">
+      <input type="number" id="filterCalMin" placeholder="Min" min="0">
+      <span>–</span>
+      <input type="number" id="filterCalMax" placeholder="Max" min="0">
+    </div>
+  </div>
+  <div class="filter-group">
+    <label>Protein (g)</label>
+    <div class="range-row">
+      <input type="number" id="filterProtMin" placeholder="Min" min="0">
+      <span>–</span>
+      <input type="number" id="filterProtMax" placeholder="Max" min="0">
+    </div>
+  </div>
+  <div class="filter-group">
+    <label>Carbs (g)</label>
+    <div class="range-row">
+      <input type="number" id="filterCarbMin" placeholder="Min" min="0">
+      <span>–</span>
+      <input type="number" id="filterCarbMax" placeholder="Max" min="0">
+    </div>
+  </div>
+</div>
+
+<div id="statusMsg">Loading recipes…</div>
+<div id="grid"></div>
+
+<script>
+  const GITHUB_OWNER    = 'hayatotakai';
+  const GITHUB_REPO     = 'recipe';
+  const GITHUB_BRANCH   = 'main';
+  const GITHUB_FILEPATH = 'recipes.json';
+
+  const RAW_BASE  = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}`;
+  const API_BASE  = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents`;
+
+  let allRecipes = [];
+  let authToken  = '';
+
+  // Try to reuse token saved by the editor
+  try {
+    const saved = JSON.parse(localStorage.getItem('recipeGithubSettings') || '{}');
+    if (saved.token) authToken = saved.token;
+  } catch (_) {}
+
+  // ── Fetch helpers ──────────────────────────────────────────────
+
+  async function fetchJson(url, token) {
+    const headers = { Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+    if (token) headers.Authorization = `Bearer ${token}`;
+    const res = await fetch(url, { headers });
+    if (!res.ok) throw Object.assign(new Error(res.statusText), { status: res.status });
+    return res.json();
+  }
+
+  async function loadRecipes(token) {
+    // Try unauthenticated raw URL first (fast, works for public repos)
+    try {
+      const res = await fetch(`${RAW_BASE}/${GITHUB_FILEPATH}`);
+      if (res.ok) return await res.json();
+    } catch (_) {}
+
+    // Fall back to GitHub API (supports private repos with token)
+    const data = await fetchJson(`${API_BASE}/${GITHUB_FILEPATH}?ref=${GITHUB_BRANCH}`, token);
+    const text = atob(data.content.replace(/\n/g, ''));
+    const bytes = new Uint8Array(text.length);
+    for (let i = 0; i < text.length; i++) bytes[i] = text.charCodeAt(i);
+    return JSON.parse(new TextDecoder().decode(bytes));
+  }
+
+  function imageUrl(imageFile) {
+    if (!imageFile) return null;
+    // Raw URL works for public repos; falls back to broken img for private (acceptable for a viewer)
+    return `${RAW_BASE}/${imageFile}`;
+  }
+
+  // ── Render ─────────────────────────────────────────────────────
+
+  function extractOrigin(url) {
+    if (!url) return '';
+    try { return new URL(url).hostname.replace(/^www\./, ''); } catch (_) { return url; }
+  }
+
+  function seasonEmoji(season) {
+    const s = (season || '').toLowerCase();
+    if (s.includes('spring'))              return '🌸';
+    if (s.includes('summer'))              return '☀️';
+    if (s.includes('fall') || s.includes('autumn')) return '🍂';
+    if (s.includes('winter'))              return '❄️';
+    return '🗓️';
+  }
+
+  function makeCard(recipe) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.search = [recipe.title, ...(recipe.ingredients || []), ...(recipe.instructions || [])].join(' ').toLowerCase();
+
+    // Image
+    const imgSrc = imageUrl(recipe.imageFile);
+    if (imgSrc) {
+      const img = document.createElement('img');
+      img.className = 'card-image';
+      img.src = imgSrc;
+      img.alt = recipe.title || '';
+      img.loading = 'lazy';
+      img.onerror = () => img.replaceWith(makePlaceholder());
+      card.appendChild(img);
+    } else {
+      card.appendChild(makePlaceholder());
+    }
+
+    // Body
+    const body = document.createElement('div');
+    body.className = 'card-body';
+
+    // Title
+    const title = document.createElement('div');
+    title.className = 'card-title';
+    title.textContent = recipe.title || 'Untitled Recipe';
+    body.appendChild(title);
+
+    // Meta
+    const meta = document.createElement('div');
+    meta.className = 'card-meta';
+    if (recipe.servings)  meta.innerHTML += `<span>🍽 ${recipe.servings} servings</span>`;
+    if (recipe.prepTime && recipe.prepTime !== '-') meta.innerHTML += `<span>⏱ Prep ${recipe.prepTime}</span>`;
+    if (recipe.cookTime && recipe.cookTime !== '-') meta.innerHTML += `<span>🔥 Cook ${recipe.cookTime}</span>`;
+    if (recipe.season)    meta.innerHTML += `<span>${seasonEmoji(recipe.season)} ${recipe.season}</span>`;
+    if (recipe.calories)  meta.innerHTML += `<span>⚡ ${recipe.calories} kcal</span>`;
+    if (recipe.protein)   meta.innerHTML += `<span>💪 ${recipe.protein}g protein</span>`;
+    if (recipe.carbs)     meta.innerHTML += `<span>🌾 ${recipe.carbs}g carbs</span>`;
+    if (meta.children.length) body.appendChild(meta);
+
+    // Origin link
+    if (recipe.originalUrl) {
+      const origin = document.createElement('a');
+      origin.className = 'card-origin';
+      origin.href = recipe.originalUrl;
+      origin.target = '_blank';
+      origin.rel = 'noopener noreferrer';
+      origin.textContent = '🔗 ' + extractOrigin(recipe.originalUrl);
+      body.appendChild(origin);
+    }
+
+    // Ingredients
+    if (recipe.ingredients?.length) {
+      const section = document.createElement('div');
+      const h = document.createElement('div');
+      h.className = 'card-section-title';
+      h.textContent = 'Ingredients';
+      section.appendChild(h);
+
+      const collapseWrap = document.createElement('div');
+      collapseWrap.className = 'card-collapsible ' + (recipe.ingredients.length > 5 ? 'collapsed' : 'expanded');
+
+      const ul = document.createElement('ul');
+      ul.className = 'card-ingredients';
+      recipe.ingredients.forEach(ing => {
+        const li = document.createElement('li');
+        li.textContent = ing;
+        ul.appendChild(li);
+      });
+      collapseWrap.appendChild(ul);
+      section.appendChild(collapseWrap);
+
+      if (recipe.ingredients.length > 5) {
+        const toggle = makeToggle(collapseWrap, recipe.ingredients.length);
+        section.appendChild(toggle);
+      }
+      body.appendChild(section);
+    }
+
+    // Instructions
+    if (recipe.instructions?.length) {
+      const section = document.createElement('div');
+      const h = document.createElement('div');
+      h.className = 'card-section-title';
+      h.textContent = 'Instructions';
+      section.appendChild(h);
+
+      const collapseWrap = document.createElement('div');
+      collapseWrap.className = 'card-collapsible ' + (recipe.instructions.length > 3 ? 'collapsed' : 'expanded');
+
+      const ol = document.createElement('ol');
+      ol.className = 'card-instructions';
+      recipe.instructions.forEach(step => {
+        const li = document.createElement('li');
+        li.textContent = step;
+        ol.appendChild(li);
+      });
+      collapseWrap.appendChild(ol);
+      section.appendChild(collapseWrap);
+
+      if (recipe.instructions.length > 3) {
+        const toggle = makeToggle(collapseWrap, recipe.instructions.length);
+        section.appendChild(toggle);
+      }
+      body.appendChild(section);
+    }
+
+    card.appendChild(body);
+    return card;
+  }
+
+  function makePlaceholder() {
+    const ph = document.createElement('div');
+    ph.className = 'card-image-placeholder';
+    ph.textContent = '🍴';
+    return ph;
+  }
+
+  function makeToggle(wrap, total) {
+    const toggle = document.createElement('div');
+    toggle.className = 'card-toggle';
+    toggle.textContent = `Show all ${total} →`;
+    toggle.addEventListener('click', () => {
+      const expanded = wrap.classList.contains('expanded');
+      wrap.classList.toggle('collapsed', expanded);
+      wrap.classList.toggle('expanded', !expanded);
+      toggle.textContent = expanded ? `Show all ${total} →` : '← Show less';
+    });
+    return toggle;
+  }
+
+  function renderGrid(recipes) {
+    const grid = document.getElementById('grid');
+    grid.innerHTML = '';
+    if (recipes.length === 0) {
+      const empty = document.createElement('div');
+      empty.className = 'no-results';
+      empty.textContent = 'No recipes found.';
+      grid.appendChild(empty);
+      return;
+    }
+    recipes.forEach(r => grid.appendChild(makeCard(r)));
+    document.getElementById('recipeCount').textContent = `${recipes.length} recipe${recipes.length !== 1 ? 's' : ''}`;
+  }
+
+  // ── Search & Filters ───────────────────────────────────────────
+
+  function applyFilters() {
+    const q       = document.getElementById('searchInput').value.trim().toLowerCase();
+    const season  = document.getElementById('filterSeason').value.toLowerCase();
+    const calMin  = parseFloat(document.getElementById('filterCalMin').value);
+    const calMax  = parseFloat(document.getElementById('filterCalMax').value);
+    const protMin = parseFloat(document.getElementById('filterProtMin').value);
+    const protMax = parseFloat(document.getElementById('filterProtMax').value);
+    const carbMin = parseFloat(document.getElementById('filterCarbMin').value);
+    const carbMax = parseFloat(document.getElementById('filterCarbMax').value);
+
+    const filtered = allRecipes.filter(r => {
+      if (q) {
+        const hay = [r.title, ...(r.ingredients || []), ...(r.instructions || [])].join(' ').toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      if (season) {
+        if (!(r.season || '').toLowerCase().includes(season)) return false;
+      }
+      if (!isNaN(calMin)  && r.calories != null && r.calories < calMin)  return false;
+      if (!isNaN(calMax)  && r.calories != null && r.calories > calMax)  return false;
+      if (!isNaN(protMin) && r.protein  != null && r.protein  < protMin) return false;
+      if (!isNaN(protMax) && r.protein  != null && r.protein  > protMax) return false;
+      if (!isNaN(carbMin) && r.carbs    != null && r.carbs    < carbMin) return false;
+      if (!isNaN(carbMax) && r.carbs    != null && r.carbs    > carbMax) return false;
+      return true;
+    });
+    renderGrid(filtered);
+  }
+
+  document.getElementById('searchInput').addEventListener('input', applyFilters);
+  ['filterSeason','filterCalMin','filterCalMax','filterProtMin','filterProtMax','filterCarbMin','filterCarbMax']
+    .forEach(id => document.getElementById(id).addEventListener('input', applyFilters));
+
+  // ── Auth retry ─────────────────────────────────────────────────
+
+  document.getElementById('authRetryBtn').addEventListener('click', async () => {
+    authToken = document.getElementById('authTokenInput').value.trim();
+    document.getElementById('authBanner').style.display = 'none';
+    await init(authToken);
+  });
+
+  // ── Init ───────────────────────────────────────────────────────
+
+  async function init(token) {
+    const statusMsg = document.getElementById('statusMsg');
+    statusMsg.style.display = 'block';
+    statusMsg.textContent = 'Loading recipes…';
+
+    try {
+      const data = await loadRecipes(token);
+      allRecipes = Array.isArray(data) ? data : (data.recipes || []);
+      statusMsg.style.display = 'none';
+      renderGrid(allRecipes);
+    } catch (err) {
+      if (err.status === 401 || err.status === 403 || err.status === 404) {
+        statusMsg.style.display = 'none';
+        const banner = document.getElementById('authBanner');
+        banner.style.display = 'flex';
+        if (token) banner.querySelector('span').textContent = 'Access denied — check your token and try again:';
+      } else {
+        statusMsg.textContent = 'Failed to load recipes: ' + err.message;
+      }
+      console.error(err);
+    }
+  }
+
+  init(authToken);
+</script>
+</body>
+</html>
