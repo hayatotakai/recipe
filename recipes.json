@@ -25,6 +25,10 @@
     "servings": 4,
     "prepTime": "10",
     "cookTime": "1 hr",
+    "season": null,
+    "calories": null,
+    "protein": null,
+    "carbs": null,
     "ingredients": [
       "56 g melted butter",
       "oats",
@@ -45,7 +49,7 @@
       "45min at 350F convection or 500f for 50 min"
     ],
     "originalUrl": null,
-    "lastModified": "2026-06-07T21:25:14.027Z",
+    "lastModified": "2026-06-07T21:38:26.508Z",
     "imageFile": "images/1770951290801.png"
   },
   {
