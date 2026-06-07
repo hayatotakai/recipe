@@ -1,0 +1,228 @@
+[
+  {
+    "id": 1770951652151,
+    "title": "Red Wine Reduction",
+    "servings": 4,
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "1/2 cup red wine",
+      "1/2 cup beef or veal stock",
+      "1 shallot, minced",
+      "1 tosp butter",
+      "1 tsp balsamic vinegar",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Saute shallots in butter, add wine and reduce by half. Add stock, reduce again until thick. Finish with a small knob of butter for gloss and balance."
+    ],
+    "originalUrl": null,
+    "lastModified": "2026-02-13T03:10:15.118Z",
+    "imageFile": null,
+    "pdfFile": "pdfs/red-wine-reduction-1770951652151.pdf"
+  },
+  {
+    "id": 1770951290801,
+    "title": "Apfel Kuchen",
+    "servings": 4,
+    "prepTime": "10",
+    "cookTime": "1 hr",
+    "ingredients": [
+      "56 g melted butter",
+      "oats",
+      "1 egg",
+      "1 tsp vanilla extract",
+      "10g sugar",
+      "170g plain yogurt (or 150g skyr + 5g milk)",
+      "93.3g flour",
+      "3.33g baking powder"
+    ],
+    "instructions": [
+      "Mix wet and dry ingredients",
+      "Slice apples into flat rings",
+      "Mix apples and batter",
+      "Save some batter and mix oats",
+      "Butter baking dish and pour apple batter mixture",
+      "Top with oat batter",
+      "45min at 350F convection or 500f for 50 min"
+    ],
+    "originalUrl": null,
+    "lastModified": "2026-02-13T03:00:23.837Z",
+    "imageFile": null,
+    "pdfFile": "pdfs/apfel-kuchen-1770951290801.pdf"
+  },
+  {
+    "id": 1770951167458,
+    "title": "elderflower gin fizz",
+    "servings": 1,
+    "prepTime": "5 min",
+    "cookTime": "-",
+    "ingredients": [
+      "1.5oz gin",
+      "0.75oz St. Germain",
+      "0.5oz fresh lemon juice",
+      "Sparkling water to top",
+      "Lemon Twist"
+    ],
+    "instructions": [],
+    "originalUrl": null,
+    "lastModified": "2026-02-13T02:56:46.936Z",
+    "imageFile": null,
+    "pdfFile": "pdfs/elderflower-gin-fizz-1770951167458.pdf"
+  },
+  {
+    "id": 1770951066118,
+    "title": "Burdock and Carrots",
+    "servings": 4,
+    "prepTime": "10 min",
+    "cookTime": "10 min",
+    "ingredients": [
+      "150g burdock",
+      "50g carrots",
+      "1 tbsp sesame oil",
+      "1 chili pepper",
+      "white sesame",
+      "1 tbsp soy sauce",
+      "1 tbsp mirin",
+      "1/2 tbsp sugar"
+    ],
+    "instructions": [
+      "Peel and cut the burdock into 5cm strips. Soak in water. peel and cut carrots.",
+      "in a pan, add sesame oil, and chili. Add dried burdock and carrots and cook until softened.",
+      "Add the soy sauce, mirin, and sugar. Cook for 5 more minuted until steam is gone.",
+      "Add white sesame"
+    ],
+    "originalUrl": "https://www.kikkoman.co.jp/homecook/search/recipe/00000638/",
+    "lastModified": "2026-02-13T02:54:43.157Z",
+    "imageFile": "images/burdock-and-carrots-1770951066118.png",
+    "pdfFile": "pdfs/burdock-and-carrots-1770951066118.pdf"
+  },
+  {
+    "id": 1770951041849,
+    "title": "Creme Brulee",
+    "servings": 4,
+    "prepTime": "30 min",
+    "cookTime": "40 min",
+    "ingredients": [
+      "2 cups heavy or light cream, or half-and-half",
+      "1 vanilla bean, split lengthwise, or 1 teaspoon vanilla extract",
+      "⅛ teaspoon salt",
+      "5 egg yolks",
+      "½ cup sugar, more for topping"
+    ],
+    "instructions": [
+      "Heat oven to 325 degrees. In a saucepan, combine cream, vanilla bean and salt and cook over low heat just until hot. Let sit for a few minutes, then discard vanilla bean. (If using vanilla extract, add it now.)",
+      "In a bowl, beat yolks and sugar together until light. Stir about a quarter of the cream into this mixture, then pour sugar-egg mixture into cream and stir. Pour into four 6-ounce ramekins and place ramekins in a baking dish; fill dish with boiling water halfway up the sides of the dishes. Bake for 30 to 40 minutes, or until centers are barely set. Cool completely. Refrigerate for several hours and up to a couple of days.",
+      "When ready to serve, top each custard with about a teaspoon of sugar in a thin layer. Place ramekins in a broiler 2 to 3 inches from heat source. Turn on broiler. Cook until sugar melts and browns or even blackens a bit, about 5 minutes. Serve within two hours."
+    ],
+    "originalUrl": "https://cooking.nytimes.com/recipes/9039-vanilla-creme-brulee",
+    "lastModified": "2026-02-13T03:06:03.466Z",
+    "imageFile": "images/creme-brulee-1770951041849.png",
+    "pdfFile": "pdfs/creme-brulee-1770951041849.pdf"
+  },
+  {
+    "id": 1770587819006,
+    "title": "Cheese Fondue",
+    "servings": 4,
+    "prepTime": "5",
+    "cookTime": "5",
+    "ingredients": [
+      "200g cheese",
+      "100cc white wine (sauvignon blanc)",
+      "1/2 tbsp potato starch",
+      "1/2 clove garlic"
+    ],
+    "instructions": [
+      "In a bowl, mix the potato starch and cheese.",
+      "Rub the garlic onto a pot",
+      "Add white to the pot and bring to a simmer. Lower heat.",
+      "Add cheese starch mix to pot in 3 parts. Mix well to avoid burning the cheese. If the mix is too runny, add potato starch water",
+      "Dip items of choice."
+    ],
+    "originalUrl": "https://macaro-ni.jp/92178",
+    "lastModified": "2026-02-08T22:08:03.758Z",
+    "imageFile": "images/cheese-fondue-1770587819006.jpg",
+    "pdfFile": "pdfs/cheese-fondue-1770587819006.pdf"
+  },
+  {
+    "id": 1770587684964,
+    "title": "Quiche",
+    "servings": 6,
+    "prepTime": "15 min",
+    "cookTime": "35 min",
+    "ingredients": [
+      "1 single pie crust unbaked",
+      "6 large eggs",
+      "3/4 cup milk or cream",
+      "3/4 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "1 cup cubed cooked ham",
+      "1 1/2 cups shredded cheddar cheese divided",
+      "3 tablespoons sliced green onions"
+    ],
+    "instructions": [
+      "Preheat oven to 375°F.",
+      "Unroll pie crust and press into a 9\" pie plate, crimping the top edges if desired.",
+      "In a large bowl, whisk together eggs, milk, salt and pepper.",
+      "Sprinkle ham, 1 cup of cheese, and green onions into the pie crust and pour the egg mixture over top. Sprinkle remaining ½ cup cheese on top of egg mixture.",
+      "Bake for 35-40 minutes until the center is completely set. Let cool for 5-10 minutes before slicing and serving."
+    ],
+    "originalUrl": "https://www.spendwithpennies.com/easy-quiche-recipe/#wprm-recipe-container-134487",
+    "lastModified": "2026-02-08T21:56:52.807Z",
+    "imageFile": "images/quiche-1770587684964.jpg",
+    "pdfFile": "pdfs/quiche-1770587684964.pdf"
+  },
+  {
+    "id": 1770587465013,
+    "title": "Quiche Crust",
+    "servings": 1,
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "ingredients": [
+      "1 large egg",
+      "2 + 1/2 tablespoons ice water",
+      "1 + 1/2 cups all-purpose flour",
+      "1/2 teaspoon sea salt",
+      "10 tablespoons unsalted butter, sliced into small cubes"
+    ],
+    "instructions": [
+      "In a small mixing bowl, whisk together the egg and ice water. Set the bowl aside",
+      "In the bowl of a food processor, add the flour and salt. Pulse briefly until mixed.  Add in the the cubed butter pieces and pulse until the mixture resembles coarse meal. Add in the egg/ice-water mixture. Pulse again until a lovely dough forms.",
+      "Transfer the dough onto a lightly-floured board. Roll out the quiche crust so that it fits the measurements of your quiche pan or dish. Lay the rolled out dough onto the top of the quiche pan. Using your hands, gently press the dough into place. With a paring knife, slice off any extra dough that’s hanging over the rim of the pan or dish.",
+      "Stick the quiche pan with the dough into the freezer for approximately 20-25 minutes (but if you leave it in there a bit longer, that’s fine too). For a flaky quiche crust it’s important that the crust is cold when it’s filled and cooked.",
+      "Your cold quiche crust is ready to be filled and baked!"
+    ],
+    "originalUrl": "https://www.confettiandbliss.com/flaky-quiche-crust/#tasty-recipes-18697-jump-target",
+    "lastModified": "2026-02-08T21:54:24.839Z",
+    "imageFile": "images/quiche-crust-1770587465013.jpg",
+    "pdfFile": "pdfs/quiche-crust-1770587465013.pdf"
+  },
+  {
+    "id": 1770586423260,
+    "title": "Cookies",
+    "servings": 26,
+    "prepTime": "20 min",
+    "cookTime": "40 min",
+    "ingredients": [
+      "2 1/4 cups all purpose floud",
+      "1 tsp baking sods",
+      "1/6 tsp salt",
+      "1 cup (2 sticks) butter metled, cooled",
+      "1 cup granulated sugar",
+      "1/2 cup firmly packed brown sugar",
+      "2 eggs, slightly beaten",
+      "1/2 tsp vanilla extract",
+      "2 cups semisweet chocolate chips"
+    ],
+    "instructions": [
+      "Preheat oven to 375°F. Combine four, baking soda and salt in medium bowl; set aside.",
+      "Beat butter, granulated sugar and brown sugar by hand in large bowl until combin Add eggs and vanilla; beat until well blended. Add flour mixture; mix until just combined Stir in chocolate morsels.",
+      "Drop cookie dough by rounded tablespoons onto ungreased cookie sheet about 1-1/2 inches apart.",
+      "Bake 12 to 14 minutes or until edges are crisp but centers are sill soft. Let stand 2 minut on cookie sheet before removing and cooling completely on wire racks."
+    ],
+    "originalUrl": "Blue Bonnet",
+    "lastModified": "2026-02-08T21:50:24.869Z",
+    "imageFile": "images/cookies-1770586423260.jpg",
+    "pdfFile": "pdfs/cookies-1770586423260.pdf"
+  }
+]
