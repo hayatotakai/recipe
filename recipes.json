@@ -43,72 +43,72 @@
       {
         "amount": "40",
         "unit": "sheet",
-        "name": "",
-        "nutritionId": null,
-        "nutritionMatch": null
+        "name": "市販餃子の皮",
+        "nutritionId": 401,
+        "nutritionMatch": "store-bought gyoza wrapper"
       },
       {
         "amount": "250",
         "unit": "g",
-        "name": "",
-        "nutritionId": null,
-        "nutritionMatch": null
+        "name": "豚ばら肉",
+        "nutritionId": 5,
+        "nutritionMatch": "Pork Belly"
       },
       {
         "amount": "250",
         "unit": "g",
-        "name": "",
-        "nutritionId": null,
-        "nutritionMatch": null
+        "name": "白菜",
+        "nutritionId": 31,
+        "nutritionMatch": "Napa Cabbage"
       },
       {
         "amount": "30",
         "unit": "g",
-        "name": "",
-        "nutritionId": null,
-        "nutritionMatch": null
+        "name": "ニラ",
+        "nutritionId": 402,
+        "nutritionMatch": "garlic chives"
       },
       {
         "amount": "1",
         "unit": "clove",
-        "name": "",
-        "nutritionId": null,
-        "nutritionMatch": null
+        "name": "にんにく",
+        "nutritionId": 26,
+        "nutritionMatch": "Garlic"
       },
       {
         "amount": "2",
         "unit": "tsp",
-        "name": "",
-        "nutritionId": null,
-        "nutritionMatch": null
+        "name": "しょうが",
+        "nutritionId": 44,
+        "nutritionMatch": "Ginger"
       },
       {
         "amount": "1.5",
         "unit": "tbsp",
-        "name": "",
-        "nutritionId": null,
-        "nutritionMatch": null
+        "name": "白葱",
+        "nutritionId": 38,
+        "nutritionMatch": "Green Onion / Scallion"
       },
       {
         "amount": "1",
         "unit": "tbsp",
-        "name": "",
-        "nutritionId": null,
-        "nutritionMatch": null
+        "name": "葱油",
+        "nutritionId": 403,
+        "nutritionMatch": "scallion oil"
       },
       {
         "amount": "1.5",
         "unit": "tbsp",
-        "name": "",
-        "nutritionId": null,
-        "nutritionMatch": null
+        "name": "醤油",
+        "nutritionId": 79,
+        "nutritionMatch": "Soy Sauce"
       },
       {
         "amount": "1.5",
         "unit": "tbsp",
-        "name": "",
-        "nutritionId": null,
-        "nutritionMatch": null
+        "name": "日本酒",
+        "nutritionId": 80,
+        "nutritionMatch": "Sake"
       },
       {
         "amount": "1/3",
@@ -204,10 +204,10 @@
       },
       {
         "amount": "1",
-        "unit": "",
-        "name": "tosp butter",
-        "nutritionId": 408,
-        "nutritionMatch": "Tops butter"
+        "unit": "tbsp",
+        "name": "butter",
+        "nutritionId": 61,
+        "nutritionMatch": "Butter"
       },
       {
         "amount": "1",
@@ -491,13 +491,6 @@
         "nutritionMatch": "vanilla bean"
       },
       {
-        "amount": "1",
-        "unit": "tsp",
-        "name": "vanilla extract",
-        "nutritionId": 283,
-        "nutritionMatch": "Vanilla Extract"
-      },
-      {
         "amount": "1/8",
         "unit": "tsp",
         "name": "salt",
@@ -510,6 +503,13 @@
         "name": "egg yolks",
         "nutritionId": 132,
         "nutritionMatch": "Egg Yolk"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "name": "sugar",
+        "nutritionId": 89,
+        "nutritionMatch": "Sugar (white)"
       }
     ]
   },
