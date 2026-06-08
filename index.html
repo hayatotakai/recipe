@@ -1640,7 +1640,10 @@
               if (imgSha) imgBody.sha = imgSha;
 
               const imgPutRes = await fetch(imgUrl, { method: 'PUT', headers, body: JSON.stringify(imgBody) });
-              if (imgPutRes.ok) serialized.imageFile = imagePath;
+              if (imgPutRes.ok) {
+                serialized.imageFile = imagePath;
+                recipe.imageFile = imagePath;  // keep in-memory object in sync
+              }
             } catch (_) { /* skip individual image failures */ }
           }
 
