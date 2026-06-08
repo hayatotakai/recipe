@@ -6,6 +6,9 @@
     "prepTime": "1 hr",
     "cookTime": "30 min",
     "season": null,
+    "calories": null,
+    "protein": null,
+    "carbs": null,
     "ingredients": [
       "40 sheet 市販餃子の皮",
       "250 g 豚ばら肉",
@@ -38,128 +41,8 @@
       "火を止めて餃子を盛り付け、酢醤油とラー油または市販のタレを添えて完成。"
     ],
     "originalUrl": "https://reihow.blog.fc2.com/blog-entry-345.html",
-    "lastModified": "2026-06-07T22:06:32.000Z",
-    "ingredientsParsed": [
-      {
-        "amount": "40",
-        "unit": "sheet",
-        "name": "市販餃子の皮",
-        "nutritionId": 401,
-        "nutritionMatch": "store-bought gyoza wrapper"
-      },
-      {
-        "amount": "250",
-        "unit": "g",
-        "name": "豚ばら肉",
-        "nutritionId": 5,
-        "nutritionMatch": "Pork Belly"
-      },
-      {
-        "amount": "250",
-        "unit": "g",
-        "name": "白菜",
-        "nutritionId": 31,
-        "nutritionMatch": "Napa Cabbage"
-      },
-      {
-        "amount": "30",
-        "unit": "g",
-        "name": "ニラ",
-        "nutritionId": 402,
-        "nutritionMatch": "garlic chives"
-      },
-      {
-        "amount": "1",
-        "unit": "clove",
-        "name": "にんにく",
-        "nutritionId": 26,
-        "nutritionMatch": "Garlic"
-      },
-      {
-        "amount": "2",
-        "unit": "tsp",
-        "name": "しょうが",
-        "nutritionId": 44,
-        "nutritionMatch": "Ginger"
-      },
-      {
-        "amount": "1.5",
-        "unit": "tbsp",
-        "name": "白葱",
-        "nutritionId": 38,
-        "nutritionMatch": "Green Onion / Scallion"
-      },
-      {
-        "amount": "1",
-        "unit": "tbsp",
-        "name": "葱油",
-        "nutritionId": 403,
-        "nutritionMatch": "scallion oil"
-      },
-      {
-        "amount": "1.5",
-        "unit": "tbsp",
-        "name": "醤油",
-        "nutritionId": 79,
-        "nutritionMatch": "Soy Sauce"
-      },
-      {
-        "amount": "1.5",
-        "unit": "tbsp",
-        "name": "日本酒",
-        "nutritionId": 80,
-        "nutritionMatch": "Sake"
-      },
-      {
-        "amount": "1/3",
-        "unit": "tsp",
-        "name": "塩",
-        "nutritionId": 90,
-        "nutritionMatch": "Salt"
-      },
-      {
-        "amount": "2",
-        "unit": "tsp",
-        "name": "砂糖",
-        "nutritionId": 89,
-        "nutritionMatch": "Sugar (white)"
-      },
-      {
-        "amount": "",
-        "unit": "",
-        "name": "胡椒",
-        "nutritionId": 272,
-        "nutritionMatch": "Black Pepper (ground)"
-      },
-      {
-        "amount": "1",
-        "unit": "tbsp",
-        "name": "胡麻油",
-        "nutritionId": 67,
-        "nutritionMatch": "Sesame Oil"
-      },
-      {
-        "amount": "",
-        "unit": "",
-        "name": "水",
-        "nutritionId": 404,
-        "nutritionMatch": "water"
-      },
-      {
-        "amount": "",
-        "unit": "",
-        "name": "胡麻油",
-        "nutritionId": 67,
-        "nutritionMatch": "Sesame Oil"
-      },
-      {
-        "amount": "",
-        "unit": "",
-        "name": "サラダ油",
-        "nutritionId": 68,
-        "nutritionMatch": "Vegetable Oil"
-      }
-    ]
+    "lastModified": "2026-06-08T03:06:18.680Z",
+    "imageFile": "images/1780869992122.png"
   },
   {
     "id": 1770951652151,
