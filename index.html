@@ -1585,6 +1585,19 @@
           }
         }
 
+        // Merge: preserve local-only fields that GitHub doesn't have yet
+        // (e.g. ingredientsParsed / imageFile set by Python scripts but not pushed)
+        if (recipesCollection.length > 0) {
+          const localMap = new Map(recipesCollection.map(r => [String(r.id), r]));
+          recipesArray.forEach(r => {
+            const local = localMap.get(String(r.id));
+            if (!local) return;
+            if (!r.ingredientsParsed && local.ingredientsParsed) r.ingredientsParsed = local.ingredientsParsed;
+            if (!r.imageFile  && local.imageFile)  r.imageFile  = local.imageFile;
+            if (!r.image      && local.image)      r.image      = local.image;
+          });
+        }
+
         recipesCollection = recipesArray;
         pendingDeletionIds.clear();
         dirtyImageIds.clear();
