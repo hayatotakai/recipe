@@ -1553,7 +1553,7 @@
       try {
         const headers = buildGithubHeaders(s.token);
         const url = githubContentsUrl(s.owner, s.repo, s.filePath) + `?ref=${encodeURIComponent(s.branch)}`;
-        const res = await fetch(url, { headers });
+        const res = await fetch(url, { headers, cache: 'no-store' });
         if (!res.ok) {
           const err = await res.json().catch(() => ({}));
           throw new Error(err.message || `HTTP ${res.status}`);
@@ -1633,7 +1633,7 @@
               const imgUrl = githubContentsUrl(s.owner, s.repo, imagePath);
 
               let imgSha;
-              const imgGetRes = await fetch(imgUrl + `?ref=${encodeURIComponent(s.branch)}`, { headers });
+              const imgGetRes = await fetch(imgUrl + `?ref=${encodeURIComponent(s.branch)}`, { headers, cache: 'no-store' });
               if (imgGetRes.ok) imgSha = (await imgGetRes.json()).sha;
 
               const imgBody = { message: `Update image for recipe ${recipe.id}`, content: imgBase64, branch: s.branch };
@@ -1657,7 +1657,7 @@
           setGithubStatus('Pushing recipes.json…');
           const url = githubContentsUrl(s.owner, s.repo, s.filePath);
           let sha;
-          const getRes = await fetch(url + `?ref=${encodeURIComponent(s.branch)}`, { headers });
+          const getRes = await fetch(url + `?ref=${encodeURIComponent(s.branch)}`, { headers, cache: 'no-store' });
           if (getRes.ok) {
             sha = (await getRes.json()).sha;
           } else if (getRes.status !== 404) {
