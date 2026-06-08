@@ -41,7 +41,7 @@ RECIPES_JSON   = Path(__file__).parent / "recipes.json"
 NUTRITION_JSON = Path(__file__).parent / "ingredients_nutrition.json"
 
 GITHUB_MODELS_BASE  = "https://models.inference.ai.azure.com"
-GITHUB_MODELS_MODEL = "gpt-4o"
+GITHUB_MODELS_MODEL = "Meta-Llama-3.1-405B-Instruct"
 OPENAI_MODEL        = "gpt-4o"
 ANTHROPIC_MODEL     = "claude-3-5-sonnet-20241022"
 
@@ -90,14 +90,14 @@ def extract_recipe_text(html):
 # ---------------------------------------------------------------------------
 
 def _detect_backend():
-    if os.environ.get("GITHUB_TOKEN"):
-        return "github", {"api_key": os.environ["GITHUB_TOKEN"],
-                          "base_url": GITHUB_MODELS_BASE,
-                          "model": GITHUB_MODELS_MODEL}
     if os.environ.get("OPENAI_API_KEY"):
         return "openai", {"api_key": os.environ["OPENAI_API_KEY"], "model": OPENAI_MODEL}
     if os.environ.get("ANTHROPIC_API_KEY"):
         return "anthropic", {"api_key": os.environ["ANTHROPIC_API_KEY"]}
+    if os.environ.get("GITHUB_TOKEN"):
+        return "github", {"api_key": os.environ["GITHUB_TOKEN"],
+                          "base_url": GITHUB_MODELS_BASE,
+                          "model": GITHUB_MODELS_MODEL}
     return "none", {}
 
 
@@ -139,13 +139,15 @@ def make_llm_caller():
         from openai import OpenAI
         client = OpenAI(api_key=kwargs["api_key"], base_url=kwargs.get("base_url"))
         model  = kwargs.get("model", OPENAI_MODEL)
+        # gpt-4o supports json_object mode; Llama/others do not — use prompt only
+        is_openai_model = model.startswith(("gpt-", "o1", "o3"))
 
         def call(messages):
-            resp = client.chat.completions.create(
-                model=model, messages=messages,
-                response_format={"type": "json_object"},
-                temperature=0.1,
-            )
+            kwargs_create = dict(model=model, messages=messages,
+                                 temperature=0.1, max_tokens=4096)
+            if is_openai_model:
+                kwargs_create["response_format"] = {"type": "json_object"}
+            resp = client.chat.completions.create(**kwargs_create)
             return resp.choices[0].message.content
 
     return call, labels[backend]
