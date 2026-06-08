@@ -353,13 +353,15 @@
   const GITHUB_OWNER    = 'hayatotakai';
   const GITHUB_REPO     = 'recipe';
   const GITHUB_BRANCH   = 'main';
-  const GITHUB_FILEPATH = 'recipes.json';
+  const GITHUB_FILEPATH    = 'recipes.json';
+  const NUTRITION_FILEPATH = 'ingredients_nutrition.json';
 
   const RAW_BASE  = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}`;
   const API_BASE  = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents`;
 
-  let allRecipes = [];
-  let authToken  = '';
+  let allRecipes   = [];
+  let authToken    = '';
+  let nutritionMap = {};  // id → per100g data
 
   // Try to reuse token saved by the editor
   try {
@@ -390,6 +392,85 @@
     const bytes = new Uint8Array(text.length);
     for (let i = 0; i < text.length; i++) bytes[i] = text.charCodeAt(i);
     return JSON.parse(new TextDecoder().decode(bytes));
+  }
+
+  async function loadNutritionDb(token) {
+    try {
+      const res = await fetch(`${RAW_BASE}/${NUTRITION_FILEPATH}`);
+      if (res.ok) return await res.json();
+    } catch (_) {}
+    try {
+      const data = await fetchJson(`${API_BASE}/${NUTRITION_FILEPATH}?ref=${GITHUB_BRANCH}`, token);
+      const text = atob(data.content.replace(/\n/g, ''));
+      const bytes = new Uint8Array(text.length);
+      for (let i = 0; i < text.length; i++) bytes[i] = text.charCodeAt(i);
+      return JSON.parse(new TextDecoder().decode(bytes));
+    } catch (_) { return []; }
+  }
+
+  // ── Nutrition calculation ──────────────────────────────────────
+
+  const UNIT_TO_G = {
+    'g': 1, 'gram': 1, 'grams': 1,
+    'kg': 1000,
+    'mg': 0.001,
+    'ml': 1, 'milliliter': 1, 'cc': 1,
+    'l': 1000, 'liter': 1000,
+    'tsp': 4.2,
+    'tbsp': 14.2,
+    'cup': 240,
+    'oz': 28.35,
+    'lb': 453.6,
+    'clove': 3,
+    'pinch': 0.5,
+    'go': 150,
+    'sheet': 8,
+    'slice': 20,
+    'piece': 80,
+  };
+
+  function parseFraction(s) {
+    if (!s) return NaN;
+    s = String(s).trim();
+    const m = s.match(/^(\d+(?:\.\d+)?)\/( \d+(?:\.\d+)?)$/);
+    if (m) return parseFloat(m[1]) / parseFloat(m[2]);
+    const mm = s.match(/^(\d+)\s+(\d+)\/(\d+)$/);
+    if (mm) return parseInt(mm[1]) + parseInt(mm[2]) / parseInt(mm[3]);
+    return parseFloat(s);
+  }
+
+  function toGrams(amount, unit) {
+    const n = parseFraction(amount);
+    if (!n || isNaN(n) || n <= 0) return null;
+    const factor = UNIT_TO_G[(unit || '').toLowerCase().trim()];
+    return factor != null ? n * factor : null;
+  }
+
+  function calcNutrition(recipe, nMap) {
+    const parsed = recipe.ingredientsParsed;
+    if (!parsed || !parsed.length) return null;
+    let cal = 0, pro = 0, carb = 0, fat = 0, hits = 0;
+    for (const ing of parsed) {
+      if (!ing.nutritionId) continue;
+      const n = nMap[ing.nutritionId];
+      if (!n) continue;
+      const g = toGrams(ing.amount, ing.unit);
+      if (g == null) continue;
+      const f = g / 100;
+      cal  += (n.calories || 0) * f;
+      pro  += (n.protein  || 0) * f;
+      carb += (n.carbs    || 0) * f;
+      fat  += ((n.saturatedFat || 0) + (n.unsaturatedFat || 0)) * f;
+      hits++;
+    }
+    if (!hits) return null;
+    const s = Math.max(recipe.servings || 1, 1);
+    return {
+      calories: Math.round(cal  / s),
+      protein:  Math.round(pro  / s * 10) / 10,
+      carbs:    Math.round(carb / s * 10) / 10,
+      fat:      Math.round(fat  / s * 10) / 10,
+    };
   }
 
   function imageUrl(imageFile) {
@@ -450,9 +531,11 @@
     if (recipe.prepTime && recipe.prepTime !== '-') meta.innerHTML += `<span>⏱ Prep ${recipe.prepTime}</span>`;
     if (recipe.cookTime && recipe.cookTime !== '-') meta.innerHTML += `<span>🔥 Cook ${recipe.cookTime}</span>`;
     if (recipe.season)    meta.innerHTML += `<span>${seasonEmoji(recipe.season)} ${recipe.season}</span>`;
-    if (recipe.calories)  meta.innerHTML += `<span>⚡ ${recipe.calories} kcal</span>`;
-    if (recipe.protein)   meta.innerHTML += `<span>💪 ${recipe.protein}g protein</span>`;
-    if (recipe.carbs)     meta.innerHTML += `<span>🌾 ${recipe.carbs}g carbs</span>`;
+    const n = recipe._nutrition;
+    if (n?.calories != null) meta.innerHTML += `<span>⚡ ${n.calories} kcal/serving</span>`;
+    if (n?.protein  != null) meta.innerHTML += `<span>💪 ${n.protein}g protein</span>`;
+    if (n?.carbs    != null) meta.innerHTML += `<span>🌾 ${n.carbs}g carbs</span>`;
+    if (n?.fat      != null) meta.innerHTML += `<span>🥑 ${n.fat}g fat</span>`;
     if (meta.children.length) body.appendChild(meta);
 
     // Origin link
@@ -580,12 +663,13 @@
       if (season) {
         if (!(r.season || '').toLowerCase().includes(season)) return false;
       }
-      if (!isNaN(calMin)  && r.calories != null && r.calories < calMin)  return false;
-      if (!isNaN(calMax)  && r.calories != null && r.calories > calMax)  return false;
-      if (!isNaN(protMin) && r.protein  != null && r.protein  < protMin) return false;
-      if (!isNaN(protMax) && r.protein  != null && r.protein  > protMax) return false;
-      if (!isNaN(carbMin) && r.carbs    != null && r.carbs    < carbMin) return false;
-      if (!isNaN(carbMax) && r.carbs    != null && r.carbs    > carbMax) return false;
+      const rn = r._nutrition;
+      if (!isNaN(calMin)  && rn?.calories != null && rn.calories < calMin)  return false;
+      if (!isNaN(calMax)  && rn?.calories != null && rn.calories > calMax)  return false;
+      if (!isNaN(protMin) && rn?.protein  != null && rn.protein  < protMin) return false;
+      if (!isNaN(protMax) && rn?.protein  != null && rn.protein  > protMax) return false;
+      if (!isNaN(carbMin) && rn?.carbs    != null && rn.carbs    < carbMin) return false;
+      if (!isNaN(carbMax) && rn?.carbs    != null && rn.carbs    > carbMax) return false;
       return true;
     });
     renderGrid(filtered);
@@ -611,8 +695,20 @@
     statusMsg.textContent = 'Loading recipes…';
 
     try {
-      const data = await loadRecipes(token);
+      const [data, nutDb] = await Promise.all([
+        loadRecipes(token),
+        loadNutritionDb(token),
+      ]);
       allRecipes = Array.isArray(data) ? data : (data.recipes || []);
+      // Build id → per100g lookup
+      nutritionMap = {};
+      for (const entry of (nutDb || [])) {
+        if (entry.id && entry.per100g) nutritionMap[entry.id] = entry.per100g;
+      }
+      // Pre-compute nutrition for each recipe
+      for (const recipe of allRecipes) {
+        recipe._nutrition = calcNutrition(recipe, nutritionMap);
+      }
       statusMsg.style.display = 'none';
       renderGrid(allRecipes);
     } catch (err) {

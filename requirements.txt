@@ -1,0 +1,9 @@
+# Core scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# OpenAI SDK — used for both OpenAI and GitHub Models backends
+openai>=1.30.0
+
+# Anthropic SDK — only needed if using Anthropic backend
+anthropic>=0.28.0

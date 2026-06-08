@@ -1,5 +1,167 @@
 [
   {
+    "id": 1780869992122,
+    "title": "鍋貼餃子 ： 焼き餃子",
+    "servings": 40,
+    "prepTime": "1 hr",
+    "cookTime": "30 min",
+    "season": null,
+    "ingredients": [
+      "40 sheet 市販餃子の皮",
+      "250 g 豚ばら肉",
+      "250 g 白菜",
+      "30 g ニラ",
+      "1 clove にんにく",
+      "2 tsp しょうが",
+      "1.5 tbsp 白葱",
+      "1 tbsp 葱油",
+      "1.5 tbsp 醤油",
+      "1.5 tbsp 日本酒",
+      "1/3 tsp 塩",
+      "2 tsp 砂糖",
+      "胡椒少々",
+      "1 tbsp 胡麻油",
+      "水",
+      "胡麻油",
+      "サラダ油"
+    ],
+    "ingredientsParsed": [
+      {
+        "amount": "40",
+        "unit": "sheet",
+        "name": "市販餃子の皮",
+        "nutritionId": 401,
+        "nutritionMatch": "store-bought gyoza wrapper"
+      },
+      {
+        "amount": "250",
+        "unit": "g",
+        "name": "豚ばら肉",
+        "nutritionId": 5,
+        "nutritionMatch": "Pork Belly"
+      },
+      {
+        "amount": "250",
+        "unit": "g",
+        "name": "白菜",
+        "nutritionId": 31,
+        "nutritionMatch": "Napa Cabbage"
+      },
+      {
+        "amount": "30",
+        "unit": "g",
+        "name": "ニラ",
+        "nutritionId": 402,
+        "nutritionMatch": "garlic chives"
+      },
+      {
+        "amount": "1",
+        "unit": "clove",
+        "name": "にんにく",
+        "nutritionId": 26,
+        "nutritionMatch": "Garlic"
+      },
+      {
+        "amount": "2",
+        "unit": "tsp",
+        "name": "しょうが",
+        "nutritionId": 44,
+        "nutritionMatch": "Ginger"
+      },
+      {
+        "amount": "1.5",
+        "unit": "tbsp",
+        "name": "白葱",
+        "nutritionId": 38,
+        "nutritionMatch": "Green Onion / Scallion"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "name": "葱油",
+        "nutritionId": 403,
+        "nutritionMatch": "scallion oil"
+      },
+      {
+        "amount": "1.5",
+        "unit": "tbsp",
+        "name": "醤油",
+        "nutritionId": 79,
+        "nutritionMatch": "Soy Sauce"
+      },
+      {
+        "amount": "1.5",
+        "unit": "tbsp",
+        "name": "日本酒",
+        "nutritionId": 80,
+        "nutritionMatch": "Sake"
+      },
+      {
+        "amount": "1/3",
+        "unit": "tsp",
+        "name": "塩",
+        "nutritionId": 90,
+        "nutritionMatch": "Salt"
+      },
+      {
+        "amount": "2",
+        "unit": "tsp",
+        "name": "砂糖",
+        "nutritionId": 89,
+        "nutritionMatch": "Sugar (white)"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "胡椒少々",
+        "nutritionId": 272,
+        "nutritionMatch": "Black Pepper (ground)"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "name": "胡麻油",
+        "nutritionId": 67,
+        "nutritionMatch": "Sesame Oil"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "水",
+        "nutritionId": 404,
+        "nutritionMatch": "water"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "胡麻油",
+        "nutritionId": 67,
+        "nutritionMatch": "Sesame Oil"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "サラダ油",
+        "nutritionId": 68,
+        "nutritionMatch": "Vegetable Oil"
+      }
+    ],
+    "instructions": [
+      "豚ばら肉を半凍りにして2ミリ角に切り、さらに叩いてボウルに入れ冷蔵庫で冷やす。",
+      "白菜を250g用意し、2～3ミリ角にみじん切りにして塩を振り15分ほど放置する。その後、水気をしっかり切る。",
+      "ニラを小口切りにし、にんにく、しょうが、白葱をすりおろす。",
+      "豚肉にあんの調味料とすりおろしたにんにく、しょうが、白葱を加え、一方向に素早く150回かき混ぜる。",
+      "白菜とニラを加え、均一に混ぜ合わせたらラップをかけて1～2時間冷蔵庫で冷やす。",
+      "餃子の皮にあんを12～13gずつ乗せて包む。皮の表面に粉が多い方を外側にする。",
+      "フライパンを中弱火にかけて油を大匙1.5引き、餃子を底面に油をつけながら並べる。",
+      "底がキツネ色になったら中火にし、餃子の上から湯をかけて蓋をする。湯がなくなるまで数分待つ。",
+      "蓋を開けて水分が少し残っていたら飛ばし、胡麻油を少量餃子の間に垂らして焼き目をつける。",
+      "火を止めて餃子を盛り付け、酢醤油とラー油または市販のタレを添えて完成。"
+    ],
+    "originalUrl": "https://reihow.blog.fc2.com/blog-entry-345.html",
+    "lastModified": "2026-06-07T22:06:32.000Z"
+  },
+  {
     "id": 1770951652151,
     "title": "Red Wine Reduction",
     "servings": 4,
@@ -17,7 +179,51 @@
       "Saute shallots in butter, add wine and reduce by half. Add stock, reduce again until thick. Finish with a small knob of butter for gloss and balance."
     ],
     "originalUrl": null,
-    "lastModified": "2026-06-07T21:24:12.128Z"
+    "lastModified": "2026-06-07T21:24:12.128Z",
+    "ingredientsParsed": [
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "name": "red wine",
+        "nutritionId": 313,
+        "nutritionMatch": "Red Wine"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "name": "beef or veal stock",
+        "nutritionId": 300,
+        "nutritionMatch": "Beef Broth"
+      },
+      {
+        "amount": "1",
+        "unit": "piece",
+        "name": "shallot",
+        "nutritionId": 152,
+        "nutritionMatch": "Shallot"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "name": "butter",
+        "nutritionId": 61,
+        "nutritionMatch": "Butter"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "name": "balsamic vinegar",
+        "nutritionId": 250,
+        "nutritionMatch": "Balsamic Vinegar"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "Salt and pepper",
+        "nutritionId": 90,
+        "nutritionMatch": "Salt"
+      }
+    ]
   },
   {
     "id": 1770951290801,
@@ -26,9 +232,6 @@
     "prepTime": "10",
     "cookTime": "1 hr",
     "season": null,
-    "calories": null,
-    "protein": null,
-    "carbs": null,
     "ingredients": [
       "56 g melted butter",
       "oats",
@@ -50,7 +253,65 @@
     ],
     "originalUrl": null,
     "lastModified": "2026-06-07T21:38:26.508Z",
-    "imageFile": "images/1770951290801.png"
+    "imageFile": "images/1770951290801.png",
+    "ingredientsParsed": [
+      {
+        "amount": "",
+        "unit": "",
+        "name": "56 g melted butter",
+        "nutritionId": 61,
+        "nutritionMatch": "Butter"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "oats",
+        "nutritionId": 55,
+        "nutritionMatch": "Oats"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 egg",
+        "nutritionId": 19,
+        "nutritionMatch": "Egg (whole)"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 tsp vanilla extract",
+        "nutritionId": 283,
+        "nutritionMatch": "Vanilla Extract"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "10g sugar",
+        "nutritionId": 89,
+        "nutritionMatch": "Sugar (white)"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "170g plain yogurt (or 150g skyr + 5g milk)",
+        "nutritionId": 142,
+        "nutritionMatch": "Yogurt (plain whole)"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "93.3g flour",
+        "nutritionId": 56,
+        "nutritionMatch": "All-Purpose Flour"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "3.33g baking powder",
+        "nutritionId": 286,
+        "nutritionMatch": "Baking Powder"
+      }
+    ]
   },
   {
     "id": 1770951167458,
@@ -69,7 +330,44 @@
     "originalUrl": null,
     "lastModified": "2026-02-13T02:56:46.936Z",
     "imageFile": null,
-    "pdfFile": "pdfs/elderflower-gin-fizz-1770951167458.pdf"
+    "pdfFile": "pdfs/elderflower-gin-fizz-1770951167458.pdf",
+    "ingredientsParsed": [
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1.5oz gin",
+        "nutritionId": null,
+        "nutritionMatch": null
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "0.75oz St. Germain",
+        "nutritionId": null,
+        "nutritionMatch": null
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "0.5oz fresh lemon juice",
+        "nutritionId": 399,
+        "nutritionMatch": "Lemon Juice (fresh)"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "Sparkling water to top",
+        "nutritionId": null,
+        "nutritionMatch": null
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "Lemon Twist",
+        "nutritionId": 49,
+        "nutritionMatch": "Lemon"
+      }
+    ]
   },
   {
     "id": 1770951066118,
@@ -95,7 +393,65 @@
     ],
     "originalUrl": "https://www.kikkoman.co.jp/homecook/search/recipe/00000638/",
     "lastModified": "2026-06-07T21:25:27.665Z",
-    "imageFile": "images/1770951066118.jpg"
+    "imageFile": "images/1770951066118.jpg",
+    "ingredientsParsed": [
+      {
+        "amount": "",
+        "unit": "",
+        "name": "150g burdock",
+        "nutritionId": 36,
+        "nutritionMatch": "Burdock Root"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "50g carrots",
+        "nutritionId": 24,
+        "nutritionMatch": "Carrot"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 tbsp sesame oil",
+        "nutritionId": 67,
+        "nutritionMatch": "Sesame Oil"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 chili pepper",
+        "nutritionId": 276,
+        "nutritionMatch": "Chili Flakes"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "white sesame",
+        "nutritionId": 77,
+        "nutritionMatch": "Sesame Seeds"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 tbsp soy sauce",
+        "nutritionId": 79,
+        "nutritionMatch": "Soy Sauce"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 tbsp mirin",
+        "nutritionId": 81,
+        "nutritionMatch": "Mirin"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1/2 tbsp sugar",
+        "nutritionId": 89,
+        "nutritionMatch": "Sugar (white)"
+      }
+    ]
   },
   {
     "id": 1770951041849,
@@ -118,7 +474,44 @@
     "originalUrl": "https://cooking.nytimes.com/recipes/9039-vanilla-creme-brulee",
     "lastModified": "2026-02-13T03:06:03.466Z",
     "imageFile": "images/1770951041849.jpg",
-    "pdfFile": "pdfs/creme-brulee-1770951041849.pdf"
+    "pdfFile": "pdfs/creme-brulee-1770951041849.pdf",
+    "ingredientsParsed": [
+      {
+        "amount": "",
+        "unit": "",
+        "name": "2 cups heavy or light cream, or half-and-half",
+        "nutritionId": 60,
+        "nutritionMatch": "Heavy Cream"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 vanilla bean, split lengthwise, or 1 teaspoon vanilla extract",
+        "nutritionId": 283,
+        "nutritionMatch": "Vanilla Extract"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "⅛ teaspoon salt",
+        "nutritionId": 90,
+        "nutritionMatch": "Salt"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "5 egg yolks",
+        "nutritionId": 132,
+        "nutritionMatch": "Egg Yolk"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "½ cup sugar, more for topping",
+        "nutritionId": 89,
+        "nutritionMatch": "Sugar (white)"
+      }
+    ]
   },
   {
     "id": 1770587819006,
@@ -141,7 +534,37 @@
     ],
     "originalUrl": "https://macaro-ni.jp/92178",
     "lastModified": "2026-06-07T21:24:03.425Z",
-    "imageFile": "images/1770587819006.jpg"
+    "imageFile": "images/1770587819006.jpg",
+    "ingredientsParsed": [
+      {
+        "amount": "",
+        "unit": "",
+        "name": "200g cheese",
+        "nutritionId": 62,
+        "nutritionMatch": "Cheddar Cheese"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "100cc white wine (sauvignon blanc)",
+        "nutritionId": 312,
+        "nutritionMatch": "White Wine"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1/2 tbsp potato starch",
+        "nutritionId": 58,
+        "nutritionMatch": "Cornstarch"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1/2 clove garlic",
+        "nutritionId": 26,
+        "nutritionMatch": "Garlic"
+      }
+    ]
   },
   {
     "id": 1770587684964,
@@ -168,7 +591,65 @@
     ],
     "originalUrl": "https://www.spendwithpennies.com/easy-quiche-recipe/#wprm-recipe-container-134487",
     "lastModified": "2026-06-07T21:24:04.634Z",
-    "imageFile": "images/1770587684964.png"
+    "imageFile": "images/1770587684964.png",
+    "ingredientsParsed": [
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 single pie crust unbaked",
+        "nutritionId": null,
+        "nutritionMatch": null
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "6 large eggs",
+        "nutritionId": 19,
+        "nutritionMatch": "Egg (whole)"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "3/4 cup milk or cream",
+        "nutritionId": 60,
+        "nutritionMatch": "Heavy Cream"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "3/4 teaspoon salt",
+        "nutritionId": 90,
+        "nutritionMatch": "Salt"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1/4 teaspoon black pepper",
+        "nutritionId": 272,
+        "nutritionMatch": "Black Pepper (ground)"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 cup cubed cooked ham",
+        "nutritionId": 108,
+        "nutritionMatch": "Ham (deli)"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 1/2 cups shredded cheddar cheese divided",
+        "nutritionId": 62,
+        "nutritionMatch": "Cheddar Cheese"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "3 tablespoons sliced green onions",
+        "nutritionId": 38,
+        "nutritionMatch": "Green Onion / Scallion"
+      }
+    ]
   },
   {
     "id": 1770587465013,
@@ -192,7 +673,44 @@
     ],
     "originalUrl": "https://www.confettiandbliss.com/flaky-quiche-crust/#tasty-recipes-18697-jump-target",
     "lastModified": "2026-06-07T21:24:08.896Z",
-    "imageFile": "images/1770587465013.png"
+    "imageFile": "images/1770587465013.png",
+    "ingredientsParsed": [
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 large egg",
+        "nutritionId": 19,
+        "nutritionMatch": "Egg (whole)"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "2 + 1/2 tablespoons ice water",
+        "nutritionId": 404,
+        "nutritionMatch": "water"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1 + 1/2 cups all-purpose flour",
+        "nutritionId": 56,
+        "nutritionMatch": "All-Purpose Flour"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "1/2 teaspoon sea salt",
+        "nutritionId": 90,
+        "nutritionMatch": "Salt"
+      },
+      {
+        "amount": "",
+        "unit": "",
+        "name": "10 tablespoons unsalted butter, sliced into small cubes",
+        "nutritionId": 385,
+        "nutritionMatch": "Butter (unsalted)"
+      }
+    ]
   },
   {
     "id": 1770586423260,
@@ -219,6 +737,71 @@
     ],
     "originalUrl": "Blue Bonnet",
     "lastModified": "2026-06-07T21:24:11.080Z",
-    "imageFile": "images/1770586423260.jpg"
+    "imageFile": "images/1770586423260.jpg",
+    "ingredientsParsed": [
+      {
+        "amount": "2 1/4",
+        "unit": "cup",
+        "name": "all purpose floud",
+        "nutritionId": 56,
+        "nutritionMatch": "All-Purpose Flour"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "name": "baking sods",
+        "nutritionId": 287,
+        "nutritionMatch": "Baking Soda"
+      },
+      {
+        "amount": "1/6",
+        "unit": "tsp",
+        "name": "salt",
+        "nutritionId": 90,
+        "nutritionMatch": "Salt"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "name": "butter metled, cooled",
+        "nutritionId": 61,
+        "nutritionMatch": "Butter"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "name": "granulated sugar",
+        "nutritionId": 89,
+        "nutritionMatch": "Sugar (white)"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "name": "firmly packed brown sugar",
+        "nutritionId": 292,
+        "nutritionMatch": "Brown Sugar"
+      },
+      {
+        "amount": "2",
+        "unit": "piece",
+        "name": "eggs, slightly beaten",
+        "nutritionId": 19,
+        "nutritionMatch": "Egg (whole)"
+      },
+      {
+        "amount": "1/2",
+        "unit": "tsp",
+        "name": "vanilla extract",
+        "nutritionId": 283,
+        "nutritionMatch": "Vanilla Extract"
+      },
+      {
+        "amount": "2",
+        "unit": "cup",
+        "name": "semisweet chocolate chips",
+        "nutritionId": 290,
+        "nutritionMatch": "Dark Chocolate (70%)"
+      }
+    ]
   }
 ]

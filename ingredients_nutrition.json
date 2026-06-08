@@ -1,0 +1,6062 @@
+[
+  {
+    "id": 1,
+    "name": "Chicken Breast",
+    "nameJa": "鶏むね肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 165,
+      "protein": 31.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 1.0,
+      "unsaturatedFat": 2.5,
+      "sodium": 74
+    }
+  },
+  {
+    "id": 2,
+    "name": "Chicken Thigh",
+    "nameJa": "鶏もも肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 209,
+      "protein": 26.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 3.3,
+      "unsaturatedFat": 6.2,
+      "sodium": 88
+    }
+  },
+  {
+    "id": 3,
+    "name": "Ground Beef (80/20)",
+    "nameJa": "合い挽き肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 254,
+      "protein": 17.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 7.7,
+      "unsaturatedFat": 10.7,
+      "sodium": 72
+    }
+  },
+  {
+    "id": 4,
+    "name": "Beef Ribeye",
+    "nameJa": "牛リブロース",
+    "category": "protein",
+    "per100g": {
+      "calories": 291,
+      "protein": 24.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 9.7,
+      "unsaturatedFat": 12.0,
+      "sodium": 67
+    }
+  },
+  {
+    "id": 5,
+    "name": "Pork Belly",
+    "nameJa": "豚バラ肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 518,
+      "protein": 9.3,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 19.6,
+      "unsaturatedFat": 28.3,
+      "sodium": 36
+    }
+  },
+  {
+    "id": 6,
+    "name": "Pork Loin",
+    "nameJa": "豚ロース",
+    "category": "protein",
+    "per100g": {
+      "calories": 242,
+      "protein": 27.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 5.6,
+      "unsaturatedFat": 7.4,
+      "sodium": 52
+    }
+  },
+  {
+    "id": 7,
+    "name": "Pork Shoulder",
+    "nameJa": "豚肩肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 215,
+      "protein": 20.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 5.8,
+      "unsaturatedFat": 7.9,
+      "sodium": 71
+    }
+  },
+  {
+    "id": 8,
+    "name": "Bacon",
+    "nameJa": "ベーコン",
+    "category": "protein",
+    "per100g": {
+      "calories": 541,
+      "protein": 37.0,
+      "carbs": 1.4,
+      "sugar": 0.0,
+      "saturatedFat": 19.0,
+      "unsaturatedFat": 23.0,
+      "sodium": 1717
+    }
+  },
+  {
+    "id": 9,
+    "name": "Lamb",
+    "nameJa": "ラム肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 294,
+      "protein": 25.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 10.0,
+      "unsaturatedFat": 10.5,
+      "sodium": 77
+    }
+  },
+  {
+    "id": 10,
+    "name": "Turkey Breast",
+    "nameJa": "七面鳥むね肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 135,
+      "protein": 30.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 1.0,
+      "sodium": 70
+    }
+  },
+  {
+    "id": 11,
+    "name": "Salmon",
+    "nameJa": "鮭",
+    "category": "protein",
+    "per100g": {
+      "calories": 208,
+      "protein": 20.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 3.1,
+      "unsaturatedFat": 8.1,
+      "sodium": 59
+    }
+  },
+  {
+    "id": 12,
+    "name": "Tuna",
+    "nameJa": "マグロ",
+    "category": "protein",
+    "per100g": {
+      "calories": 144,
+      "protein": 23.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.6,
+      "unsaturatedFat": 1.4,
+      "sodium": 45
+    }
+  },
+  {
+    "id": 13,
+    "name": "Cod",
+    "nameJa": "タラ",
+    "category": "protein",
+    "per100g": {
+      "calories": 82,
+      "protein": 18.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 54
+    }
+  },
+  {
+    "id": 14,
+    "name": "Mackerel",
+    "nameJa": "サバ",
+    "category": "protein",
+    "per100g": {
+      "calories": 205,
+      "protein": 19.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 4.6,
+      "unsaturatedFat": 8.1,
+      "sodium": 83
+    }
+  },
+  {
+    "id": 15,
+    "name": "Sardine",
+    "nameJa": "イワシ",
+    "category": "protein",
+    "per100g": {
+      "calories": 208,
+      "protein": 25.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 1.6,
+      "unsaturatedFat": 3.5,
+      "sodium": 307
+    }
+  },
+  {
+    "id": 16,
+    "name": "Shrimp",
+    "nameJa": "エビ",
+    "category": "protein",
+    "per100g": {
+      "calories": 99,
+      "protein": 24.0,
+      "carbs": 0.2,
+      "sugar": 0.0,
+      "saturatedFat": 0.3,
+      "unsaturatedFat": 0.4,
+      "sodium": 111
+    }
+  },
+  {
+    "id": 17,
+    "name": "Squid",
+    "nameJa": "イカ",
+    "category": "protein",
+    "per100g": {
+      "calories": 92,
+      "protein": 16.0,
+      "carbs": 3.1,
+      "sugar": 0.0,
+      "saturatedFat": 0.4,
+      "unsaturatedFat": 0.5,
+      "sodium": 230
+    }
+  },
+  {
+    "id": 18,
+    "name": "Clams",
+    "nameJa": "あさり",
+    "category": "protein",
+    "per100g": {
+      "calories": 74,
+      "protein": 13.0,
+      "carbs": 2.7,
+      "sugar": 0.0,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.3,
+      "sodium": 56
+    }
+  },
+  {
+    "id": 19,
+    "name": "Egg (whole)",
+    "nameJa": "卵",
+    "category": "protein",
+    "per100g": {
+      "calories": 155,
+      "protein": 13.0,
+      "carbs": 1.1,
+      "sugar": 1.1,
+      "saturatedFat": 3.3,
+      "unsaturatedFat": 6.3,
+      "sodium": 124
+    }
+  },
+  {
+    "id": 20,
+    "name": "Tofu (firm)",
+    "nameJa": "木綿豆腐",
+    "category": "protein",
+    "per100g": {
+      "calories": 76,
+      "protein": 8.0,
+      "carbs": 1.9,
+      "sugar": 0.7,
+      "saturatedFat": 0.7,
+      "unsaturatedFat": 2.5,
+      "sodium": 7
+    }
+  },
+  {
+    "id": 21,
+    "name": "Tofu (silken)",
+    "nameJa": "絹ごし豆腐",
+    "category": "protein",
+    "per100g": {
+      "calories": 55,
+      "protein": 4.8,
+      "carbs": 2.7,
+      "sugar": 0.6,
+      "saturatedFat": 0.4,
+      "unsaturatedFat": 1.5,
+      "sodium": 9
+    }
+  },
+  {
+    "id": 22,
+    "name": "Broccoli",
+    "nameJa": "ブロッコリー",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 34,
+      "protein": 2.8,
+      "carbs": 7.0,
+      "sugar": 1.7,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 33
+    }
+  },
+  {
+    "id": 23,
+    "name": "Spinach",
+    "nameJa": "ほうれん草",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 23,
+      "protein": 2.9,
+      "carbs": 3.6,
+      "sugar": 0.4,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 79
+    }
+  },
+  {
+    "id": 24,
+    "name": "Carrot",
+    "nameJa": "にんじん",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 41,
+      "protein": 0.9,
+      "carbs": 10.0,
+      "sugar": 4.7,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 69
+    }
+  },
+  {
+    "id": 25,
+    "name": "Onion",
+    "nameJa": "玉ねぎ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 40,
+      "protein": 1.1,
+      "carbs": 9.3,
+      "sugar": 4.2,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 26,
+    "name": "Garlic",
+    "nameJa": "にんにく",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 149,
+      "protein": 6.4,
+      "carbs": 33.0,
+      "sugar": 1.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 17
+    }
+  },
+  {
+    "id": 27,
+    "name": "Tomato",
+    "nameJa": "トマト",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 18,
+      "protein": 0.9,
+      "carbs": 3.9,
+      "sugar": 2.6,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 5
+    }
+  },
+  {
+    "id": 28,
+    "name": "Bell Pepper (red)",
+    "nameJa": "赤パプリカ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 31,
+      "protein": 1.0,
+      "carbs": 6.0,
+      "sugar": 4.2,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.2,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 29,
+    "name": "Zucchini",
+    "nameJa": "ズッキーニ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 17,
+      "protein": 1.2,
+      "carbs": 3.1,
+      "sugar": 2.5,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 8
+    }
+  },
+  {
+    "id": 30,
+    "name": "Cabbage",
+    "nameJa": "キャベツ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 25,
+      "protein": 1.3,
+      "carbs": 5.8,
+      "sugar": 3.2,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 18
+    }
+  },
+  {
+    "id": 31,
+    "name": "Napa Cabbage",
+    "nameJa": "白菜",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 13,
+      "protein": 1.2,
+      "carbs": 2.2,
+      "sugar": 1.2,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 9
+    }
+  },
+  {
+    "id": 32,
+    "name": "Eggplant",
+    "nameJa": "なす",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 25,
+      "protein": 1.0,
+      "carbs": 5.9,
+      "sugar": 3.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 33,
+    "name": "Potato",
+    "nameJa": "じゃがいも",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 77,
+      "protein": 2.0,
+      "carbs": 17.0,
+      "sugar": 0.8,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 6
+    }
+  },
+  {
+    "id": 34,
+    "name": "Sweet Potato",
+    "nameJa": "さつまいも",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 86,
+      "protein": 1.6,
+      "carbs": 20.0,
+      "sugar": 4.2,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 55
+    }
+  },
+  {
+    "id": 35,
+    "name": "Daikon Radish",
+    "nameJa": "大根",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 18,
+      "protein": 0.6,
+      "carbs": 4.1,
+      "sugar": 2.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 21
+    }
+  },
+  {
+    "id": 36,
+    "name": "Burdock Root",
+    "nameJa": "ごぼう",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 72,
+      "protein": 1.5,
+      "carbs": 17.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 5
+    }
+  },
+  {
+    "id": 37,
+    "name": "Lotus Root",
+    "nameJa": "れんこん",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 74,
+      "protein": 2.6,
+      "carbs": 17.0,
+      "sugar": 0.3,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 40
+    }
+  },
+  {
+    "id": 38,
+    "name": "Green Onion / Scallion",
+    "nameJa": "ねぎ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 32,
+      "protein": 1.8,
+      "carbs": 7.3,
+      "sugar": 2.3,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.2,
+      "sodium": 16
+    }
+  },
+  {
+    "id": 39,
+    "name": "Cucumber",
+    "nameJa": "きゅうり",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 15,
+      "protein": 0.7,
+      "carbs": 3.6,
+      "sugar": 1.7,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 40,
+    "name": "Corn",
+    "nameJa": "とうもろこし",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 86,
+      "protein": 3.3,
+      "carbs": 19.0,
+      "sugar": 3.2,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.9,
+      "sodium": 15
+    }
+  },
+  {
+    "id": 41,
+    "name": "Shiitake Mushroom (fresh)",
+    "nameJa": "生しいたけ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 34,
+      "protein": 2.2,
+      "carbs": 6.8,
+      "sugar": 2.4,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 9
+    }
+  },
+  {
+    "id": 42,
+    "name": "Enoki Mushroom",
+    "nameJa": "えのきたけ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 37,
+      "protein": 2.7,
+      "carbs": 7.8,
+      "sugar": 2.7,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 43,
+    "name": "Button Mushroom",
+    "nameJa": "マッシュルーム",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 22,
+      "protein": 3.1,
+      "carbs": 3.3,
+      "sugar": 2.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 5
+    }
+  },
+  {
+    "id": 44,
+    "name": "Ginger",
+    "nameJa": "しょうが",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 80,
+      "protein": 1.8,
+      "carbs": 18.0,
+      "sugar": 1.7,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 13
+    }
+  },
+  {
+    "id": 45,
+    "name": "Apple",
+    "nameJa": "りんご",
+    "category": "fruit",
+    "per100g": {
+      "calories": 52,
+      "protein": 0.3,
+      "carbs": 14.0,
+      "sugar": 10.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 46,
+    "name": "Banana",
+    "nameJa": "バナナ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 89,
+      "protein": 1.1,
+      "carbs": 23.0,
+      "sugar": 12.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 47,
+    "name": "Orange",
+    "nameJa": "オレンジ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 47,
+      "protein": 0.9,
+      "carbs": 12.0,
+      "sugar": 9.4,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 48,
+    "name": "Strawberry",
+    "nameJa": "いちご",
+    "category": "fruit",
+    "per100g": {
+      "calories": 32,
+      "protein": 0.7,
+      "carbs": 7.7,
+      "sugar": 4.9,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 49,
+    "name": "Lemon",
+    "nameJa": "レモン",
+    "category": "fruit",
+    "per100g": {
+      "calories": 29,
+      "protein": 1.1,
+      "carbs": 9.3,
+      "sugar": 2.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 50,
+    "name": "Avocado",
+    "nameJa": "アボカド",
+    "category": "fruit",
+    "per100g": {
+      "calories": 160,
+      "protein": 2.0,
+      "carbs": 9.0,
+      "sugar": 0.7,
+      "saturatedFat": 2.1,
+      "unsaturatedFat": 11.1,
+      "sodium": 7
+    }
+  },
+  {
+    "id": 51,
+    "name": "White Rice (cooked)",
+    "nameJa": "白米（炊いたもの）",
+    "category": "grain",
+    "per100g": {
+      "calories": 130,
+      "protein": 2.7,
+      "carbs": 28.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 52,
+    "name": "White Rice (dry)",
+    "nameJa": "白米（乾燥）",
+    "category": "grain",
+    "per100g": {
+      "calories": 365,
+      "protein": 6.7,
+      "carbs": 80.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 5
+    }
+  },
+  {
+    "id": 53,
+    "name": "Pasta (dry)",
+    "nameJa": "パスタ（乾燥）",
+    "category": "grain",
+    "per100g": {
+      "calories": 371,
+      "protein": 13.0,
+      "carbs": 75.0,
+      "sugar": 3.4,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.5,
+      "sodium": 6
+    }
+  },
+  {
+    "id": 54,
+    "name": "White Bread",
+    "nameJa": "食パン",
+    "category": "grain",
+    "per100g": {
+      "calories": 265,
+      "protein": 9.0,
+      "carbs": 49.0,
+      "sugar": 5.0,
+      "saturatedFat": 0.7,
+      "unsaturatedFat": 1.5,
+      "sodium": 491
+    }
+  },
+  {
+    "id": 55,
+    "name": "Oats",
+    "nameJa": "オートミール",
+    "category": "grain",
+    "per100g": {
+      "calories": 389,
+      "protein": 17.0,
+      "carbs": 66.0,
+      "sugar": 0.0,
+      "saturatedFat": 1.2,
+      "unsaturatedFat": 4.2,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 56,
+    "name": "All-Purpose Flour",
+    "nameJa": "薄力粉",
+    "category": "grain",
+    "per100g": {
+      "calories": 364,
+      "protein": 10.0,
+      "carbs": 76.0,
+      "sugar": 0.3,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 57,
+    "name": "Panko Breadcrumbs",
+    "nameJa": "パン粉",
+    "category": "grain",
+    "per100g": {
+      "calories": 395,
+      "protein": 12.0,
+      "carbs": 78.0,
+      "sugar": 4.6,
+      "saturatedFat": 0.4,
+      "unsaturatedFat": 1.0,
+      "sodium": 736
+    }
+  },
+  {
+    "id": 58,
+    "name": "Cornstarch",
+    "nameJa": "片栗粉",
+    "category": "grain",
+    "per100g": {
+      "calories": 381,
+      "protein": 0.3,
+      "carbs": 91.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 9
+    }
+  },
+  {
+    "id": 59,
+    "name": "Whole Milk",
+    "nameJa": "牛乳（全脂肪）",
+    "category": "dairy",
+    "per100g": {
+      "calories": 61,
+      "protein": 3.2,
+      "carbs": 4.8,
+      "sugar": 5.1,
+      "saturatedFat": 1.9,
+      "unsaturatedFat": 1.2,
+      "sodium": 43
+    }
+  },
+  {
+    "id": 60,
+    "name": "Heavy Cream",
+    "nameJa": "生クリーム",
+    "category": "dairy",
+    "per100g": {
+      "calories": 345,
+      "protein": 2.1,
+      "carbs": 2.8,
+      "sugar": 2.8,
+      "saturatedFat": 23.0,
+      "unsaturatedFat": 13.4,
+      "sodium": 38
+    }
+  },
+  {
+    "id": 61,
+    "name": "Butter",
+    "nameJa": "バター",
+    "category": "dairy",
+    "per100g": {
+      "calories": 717,
+      "protein": 0.9,
+      "carbs": 0.1,
+      "sugar": 0.1,
+      "saturatedFat": 51.0,
+      "unsaturatedFat": 30.0,
+      "sodium": 11
+    }
+  },
+  {
+    "id": 62,
+    "name": "Cheddar Cheese",
+    "nameJa": "チェダーチーズ",
+    "category": "dairy",
+    "per100g": {
+      "calories": 403,
+      "protein": 25.0,
+      "carbs": 1.3,
+      "sugar": 0.5,
+      "saturatedFat": 21.0,
+      "unsaturatedFat": 10.0,
+      "sodium": 621
+    }
+  },
+  {
+    "id": 63,
+    "name": "Parmesan Cheese",
+    "nameJa": "パルメザンチーズ",
+    "category": "dairy",
+    "per100g": {
+      "calories": 431,
+      "protein": 38.0,
+      "carbs": 4.0,
+      "sugar": 0.9,
+      "saturatedFat": 19.0,
+      "unsaturatedFat": 8.7,
+      "sodium": 1529
+    }
+  },
+  {
+    "id": 64,
+    "name": "Greek Yogurt (plain)",
+    "nameJa": "ギリシャヨーグルト",
+    "category": "dairy",
+    "per100g": {
+      "calories": 97,
+      "protein": 9.0,
+      "carbs": 3.6,
+      "sugar": 3.2,
+      "saturatedFat": 1.9,
+      "unsaturatedFat": 0.9,
+      "sodium": 36
+    }
+  },
+  {
+    "id": 65,
+    "name": "Cream Cheese",
+    "nameJa": "クリームチーズ",
+    "category": "dairy",
+    "per100g": {
+      "calories": 342,
+      "protein": 6.0,
+      "carbs": 4.1,
+      "sugar": 3.2,
+      "saturatedFat": 19.0,
+      "unsaturatedFat": 9.2,
+      "sodium": 321
+    }
+  },
+  {
+    "id": 66,
+    "name": "Olive Oil",
+    "nameJa": "オリーブオイル",
+    "category": "oil",
+    "per100g": {
+      "calories": 884,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 13.8,
+      "unsaturatedFat": 70.6,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 67,
+    "name": "Sesame Oil",
+    "nameJa": "ごま油",
+    "category": "oil",
+    "per100g": {
+      "calories": 884,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 14.2,
+      "unsaturatedFat": 69.2,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 68,
+    "name": "Vegetable Oil",
+    "nameJa": "植物油",
+    "category": "oil",
+    "per100g": {
+      "calories": 884,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 13.6,
+      "unsaturatedFat": 68.0,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 69,
+    "name": "Coconut Oil",
+    "nameJa": "ココナッツオイル",
+    "category": "oil",
+    "per100g": {
+      "calories": 892,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 82.5,
+      "unsaturatedFat": 9.5,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 70,
+    "name": "Chickpeas (cooked)",
+    "nameJa": "ひよこ豆（茹で）",
+    "category": "legume",
+    "per100g": {
+      "calories": 164,
+      "protein": 8.9,
+      "carbs": 27.0,
+      "sugar": 4.8,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 2.4,
+      "sodium": 7
+    }
+  },
+  {
+    "id": 71,
+    "name": "Lentils (cooked)",
+    "nameJa": "レンズ豆（茹で）",
+    "category": "legume",
+    "per100g": {
+      "calories": 116,
+      "protein": 9.0,
+      "carbs": 20.0,
+      "sugar": 1.8,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 72,
+    "name": "Black Beans (cooked)",
+    "nameJa": "黒豆（茹で）",
+    "category": "legume",
+    "per100g": {
+      "calories": 132,
+      "protein": 8.9,
+      "carbs": 24.0,
+      "sugar": 0.3,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 73,
+    "name": "Edamame",
+    "nameJa": "枝豆",
+    "category": "legume",
+    "per100g": {
+      "calories": 122,
+      "protein": 11.0,
+      "carbs": 8.9,
+      "sugar": 2.2,
+      "saturatedFat": 0.9,
+      "unsaturatedFat": 4.0,
+      "sodium": 6
+    }
+  },
+  {
+    "id": 74,
+    "name": "Almonds",
+    "nameJa": "アーモンド",
+    "category": "nut",
+    "per100g": {
+      "calories": 579,
+      "protein": 21.0,
+      "carbs": 22.0,
+      "sugar": 4.4,
+      "saturatedFat": 3.7,
+      "unsaturatedFat": 41.3,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 75,
+    "name": "Walnuts",
+    "nameJa": "くるみ",
+    "category": "nut",
+    "per100g": {
+      "calories": 654,
+      "protein": 15.0,
+      "carbs": 14.0,
+      "sugar": 2.6,
+      "saturatedFat": 6.1,
+      "unsaturatedFat": 57.2,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 76,
+    "name": "Peanuts",
+    "nameJa": "ピーナッツ",
+    "category": "nut",
+    "per100g": {
+      "calories": 567,
+      "protein": 26.0,
+      "carbs": 16.0,
+      "sugar": 4.0,
+      "saturatedFat": 6.9,
+      "unsaturatedFat": 35.7,
+      "sodium": 18
+    }
+  },
+  {
+    "id": 77,
+    "name": "Sesame Seeds",
+    "nameJa": "ごま",
+    "category": "nut",
+    "per100g": {
+      "calories": 573,
+      "protein": 18.0,
+      "carbs": 23.0,
+      "sugar": 0.3,
+      "saturatedFat": 7.8,
+      "unsaturatedFat": 40.8,
+      "sodium": 11
+    }
+  },
+  {
+    "id": 78,
+    "name": "Miso Paste",
+    "nameJa": "みそ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 199,
+      "protein": 12.0,
+      "carbs": 26.0,
+      "sugar": 6.2,
+      "saturatedFat": 1.4,
+      "unsaturatedFat": 3.2,
+      "sodium": 3728
+    }
+  },
+  {
+    "id": 79,
+    "name": "Soy Sauce",
+    "nameJa": "醤油",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 53,
+      "protein": 5.8,
+      "carbs": 4.9,
+      "sugar": 1.7,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 5493
+    }
+  },
+  {
+    "id": 80,
+    "name": "Sake",
+    "nameJa": "料理酒",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 134,
+      "protein": 0.5,
+      "carbs": 5.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 81,
+    "name": "Mirin",
+    "nameJa": "みりん",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 241,
+      "protein": 0.3,
+      "carbs": 54.0,
+      "sugar": 44.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 82,
+    "name": "Rice Vinegar",
+    "nameJa": "米酢",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 21,
+      "protein": 0.1,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 8
+    }
+  },
+  {
+    "id": 83,
+    "name": "Oyster Sauce",
+    "nameJa": "オイスターソース",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 51,
+      "protein": 0.8,
+      "carbs": 13.0,
+      "sugar": 7.1,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 2733
+    }
+  },
+  {
+    "id": 84,
+    "name": "Fish Sauce",
+    "nameJa": "ナンプラー",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 35,
+      "protein": 5.0,
+      "carbs": 3.6,
+      "sugar": 3.6,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 5765
+    }
+  },
+  {
+    "id": 85,
+    "name": "Tomato Paste",
+    "nameJa": "トマトペースト",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 82,
+      "protein": 3.8,
+      "carbs": 19.0,
+      "sugar": 12.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 59
+    }
+  },
+  {
+    "id": 86,
+    "name": "Ketchup",
+    "nameJa": "ケチャップ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 112,
+      "protein": 1.3,
+      "carbs": 27.0,
+      "sugar": 22.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 907
+    }
+  },
+  {
+    "id": 87,
+    "name": "Mayonnaise",
+    "nameJa": "マヨネーズ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 680,
+      "protein": 1.0,
+      "carbs": 0.6,
+      "sugar": 0.4,
+      "saturatedFat": 11.8,
+      "unsaturatedFat": 56.2,
+      "sodium": 635
+    }
+  },
+  {
+    "id": 88,
+    "name": "Honey",
+    "nameJa": "はちみつ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 304,
+      "protein": 0.3,
+      "carbs": 82.0,
+      "sugar": 82.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 89,
+    "name": "Sugar (white)",
+    "nameJa": "砂糖（上白糖）",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 387,
+      "protein": 0.0,
+      "carbs": 100.0,
+      "sugar": 100.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 90,
+    "name": "Salt",
+    "nameJa": "塩",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 38758
+    }
+  },
+  {
+    "id": 91,
+    "name": "Nori (dried)",
+    "nameJa": "焼きのり",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 35,
+      "protein": 5.8,
+      "carbs": 5.1,
+      "sugar": 0.3,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 48
+    }
+  },
+  {
+    "id": 92,
+    "name": "Wakame Seaweed (dried)",
+    "nameJa": "わかめ（乾燥）",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 45,
+      "protein": 3.0,
+      "carbs": 9.1,
+      "sugar": 0.3,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 872
+    }
+  },
+  {
+    "id": 93,
+    "name": "Dashi Stock (liquid)",
+    "nameJa": "だし汁",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 4,
+      "protein": 0.4,
+      "carbs": 0.7,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 181
+    }
+  },
+  {
+    "id": 94,
+    "name": "Shiitake Mushroom (dried)",
+    "nameJa": "干しシイタケ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 296,
+      "protein": 9.6,
+      "carbs": 63.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.3,
+      "unsaturatedFat": 0.7,
+      "sodium": 9
+    }
+  },
+  {
+    "id": 95,
+    "name": "Soy Milk",
+    "nameJa": "豆乳",
+    "category": "dairy",
+    "per100g": {
+      "calories": 33,
+      "protein": 2.9,
+      "carbs": 1.8,
+      "sugar": 1.2,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.6,
+      "sodium": 41
+    }
+  },
+  {
+    "id": 96,
+    "name": "Kimchi",
+    "nameJa": "キムチ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 15,
+      "protein": 1.1,
+      "carbs": 2.4,
+      "sugar": 1.6,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 747
+    }
+  },
+  {
+    "id": 97,
+    "name": "Matcha Powder",
+    "nameJa": "抹茶",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 324,
+      "protein": 30.0,
+      "carbs": 38.0,
+      "sugar": 3.0,
+      "saturatedFat": 1.0,
+      "unsaturatedFat": 4.6,
+      "sodium": 6
+    }
+  },
+  {
+    "id": 98,
+    "name": "Rice Flour (Mochiko)",
+    "nameJa": "もち粉",
+    "category": "grain",
+    "per100g": {
+      "calories": 366,
+      "protein": 6.4,
+      "carbs": 80.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.3,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 99,
+    "name": "Tofu (aburaage / fried)",
+    "nameJa": "油揚げ",
+    "category": "protein",
+    "per100g": {
+      "calories": 385,
+      "protein": 15.0,
+      "carbs": 0.4,
+      "sugar": 0.0,
+      "saturatedFat": 6.0,
+      "unsaturatedFat": 21.0,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 100,
+    "name": "Konjac (Konnyaku)",
+    "nameJa": "こんにゃく",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 5,
+      "protein": 0.1,
+      "carbs": 3.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 10
+    }
+  },
+  {
+    "id": 101,
+    "name": "Ground Chicken",
+    "nameJa": "鶏ひき肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 143,
+      "protein": 17.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 1.8,
+      "unsaturatedFat": 3.2,
+      "sodium": 80
+    }
+  },
+  {
+    "id": 102,
+    "name": "Ground Pork",
+    "nameJa": "豚ひき肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 263,
+      "protein": 18.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 7.7,
+      "unsaturatedFat": 10.6,
+      "sodium": 68
+    }
+  },
+  {
+    "id": 103,
+    "name": "Ground Turkey",
+    "nameJa": "七面鳥ひき肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 149,
+      "protein": 19.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 2.3,
+      "unsaturatedFat": 4.6,
+      "sodium": 81
+    }
+  },
+  {
+    "id": 104,
+    "name": "Chicken Wings",
+    "nameJa": "手羽先",
+    "category": "protein",
+    "per100g": {
+      "calories": 203,
+      "protein": 19.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 3.5,
+      "unsaturatedFat": 6.6,
+      "sodium": 91
+    }
+  },
+  {
+    "id": 105,
+    "name": "Chicken Drumstick",
+    "nameJa": "鶏ドラムスティック",
+    "category": "protein",
+    "per100g": {
+      "calories": 172,
+      "protein": 22.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 2.5,
+      "unsaturatedFat": 4.6,
+      "sodium": 82
+    }
+  },
+  {
+    "id": 106,
+    "name": "Pork Chop",
+    "nameJa": "ポークチョップ",
+    "category": "protein",
+    "per100g": {
+      "calories": 231,
+      "protein": 27.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 4.5,
+      "unsaturatedFat": 6.5,
+      "sodium": 65
+    }
+  },
+  {
+    "id": 107,
+    "name": "Pork Tenderloin",
+    "nameJa": "豚ヒレ肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 143,
+      "protein": 26.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 1.2,
+      "unsaturatedFat": 2.1,
+      "sodium": 55
+    }
+  },
+  {
+    "id": 108,
+    "name": "Ham (deli)",
+    "nameJa": "ハム",
+    "category": "protein",
+    "per100g": {
+      "calories": 145,
+      "protein": 17.0,
+      "carbs": 2.0,
+      "sugar": 1.5,
+      "saturatedFat": 2.7,
+      "unsaturatedFat": 4.3,
+      "sodium": 1203
+    }
+  },
+  {
+    "id": 109,
+    "name": "Sausage (pork)",
+    "nameJa": "ポークソーセージ",
+    "category": "protein",
+    "per100g": {
+      "calories": 301,
+      "protein": 11.0,
+      "carbs": 2.4,
+      "sugar": 0.0,
+      "saturatedFat": 10.6,
+      "unsaturatedFat": 14.6,
+      "sodium": 749
+    }
+  },
+  {
+    "id": 110,
+    "name": "Vienna Sausage",
+    "nameJa": "ウインナー",
+    "category": "protein",
+    "per100g": {
+      "calories": 296,
+      "protein": 11.0,
+      "carbs": 2.8,
+      "sugar": 0.5,
+      "saturatedFat": 9.8,
+      "unsaturatedFat": 14.2,
+      "sodium": 860
+    }
+  },
+  {
+    "id": 111,
+    "name": "Beef Brisket",
+    "nameJa": "牛ブリスケット",
+    "category": "protein",
+    "per100g": {
+      "calories": 271,
+      "protein": 26.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 7.3,
+      "unsaturatedFat": 9.5,
+      "sodium": 55
+    }
+  },
+  {
+    "id": 112,
+    "name": "Beef Tenderloin",
+    "nameJa": "牛ヒレ肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 179,
+      "protein": 28.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 3.1,
+      "unsaturatedFat": 3.7,
+      "sodium": 54
+    }
+  },
+  {
+    "id": 113,
+    "name": "Duck Breast",
+    "nameJa": "鴨むね肉",
+    "category": "protein",
+    "per100g": {
+      "calories": 201,
+      "protein": 23.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 4.2,
+      "unsaturatedFat": 7.3,
+      "sodium": 74
+    }
+  },
+  {
+    "id": 114,
+    "name": "Prosciutto",
+    "nameJa": "プロシュート",
+    "category": "protein",
+    "per100g": {
+      "calories": 246,
+      "protein": 26.0,
+      "carbs": 0.3,
+      "sugar": 0.3,
+      "saturatedFat": 5.5,
+      "unsaturatedFat": 8.0,
+      "sodium": 2195
+    }
+  },
+  {
+    "id": 115,
+    "name": "Salami",
+    "nameJa": "サラミ",
+    "category": "protein",
+    "per100g": {
+      "calories": 378,
+      "protein": 20.0,
+      "carbs": 1.6,
+      "sugar": 0.0,
+      "saturatedFat": 12.6,
+      "unsaturatedFat": 16.8,
+      "sodium": 1740
+    }
+  },
+  {
+    "id": 116,
+    "name": "Chicken Liver",
+    "nameJa": "鶏レバー",
+    "category": "protein",
+    "per100g": {
+      "calories": 119,
+      "protein": 17.0,
+      "carbs": 0.7,
+      "sugar": 0.0,
+      "saturatedFat": 1.5,
+      "unsaturatedFat": 2.6,
+      "sodium": 71
+    }
+  },
+  {
+    "id": 117,
+    "name": "Beef Liver",
+    "nameJa": "牛レバー",
+    "category": "protein",
+    "per100g": {
+      "calories": 135,
+      "protein": 21.0,
+      "carbs": 3.9,
+      "sugar": 0.0,
+      "saturatedFat": 1.6,
+      "unsaturatedFat": 2.4,
+      "sodium": 69
+    }
+  },
+  {
+    "id": 118,
+    "name": "Scallop",
+    "nameJa": "ホタテ",
+    "category": "protein",
+    "per100g": {
+      "calories": 88,
+      "protein": 17.0,
+      "carbs": 2.4,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 392
+    }
+  },
+  {
+    "id": 119,
+    "name": "Oyster",
+    "nameJa": "牡蠣",
+    "category": "protein",
+    "per100g": {
+      "calories": 68,
+      "protein": 7.1,
+      "carbs": 3.9,
+      "sugar": 0.0,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 1.1,
+      "sodium": 106
+    }
+  },
+  {
+    "id": 120,
+    "name": "Mussels",
+    "nameJa": "ムール貝",
+    "category": "protein",
+    "per100g": {
+      "calories": 86,
+      "protein": 12.0,
+      "carbs": 3.7,
+      "sugar": 0.0,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 0.8,
+      "sodium": 286
+    }
+  },
+  {
+    "id": 121,
+    "name": "Octopus",
+    "nameJa": "タコ",
+    "category": "protein",
+    "per100g": {
+      "calories": 82,
+      "protein": 15.0,
+      "carbs": 2.2,
+      "sugar": 0.0,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.3,
+      "sodium": 230
+    }
+  },
+  {
+    "id": 122,
+    "name": "Eel (Unagi)",
+    "nameJa": "うなぎ",
+    "category": "protein",
+    "per100g": {
+      "calories": 236,
+      "protein": 18.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 3.7,
+      "unsaturatedFat": 10.9,
+      "sodium": 74
+    }
+  },
+  {
+    "id": 123,
+    "name": "Sea Bass",
+    "nameJa": "スズキ",
+    "category": "protein",
+    "per100g": {
+      "calories": 97,
+      "protein": 18.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.6,
+      "unsaturatedFat": 1.8,
+      "sodium": 68
+    }
+  },
+  {
+    "id": 124,
+    "name": "Halibut",
+    "nameJa": "ハリバット",
+    "category": "protein",
+    "per100g": {
+      "calories": 91,
+      "protein": 19.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.3,
+      "unsaturatedFat": 0.8,
+      "sodium": 54
+    }
+  },
+  {
+    "id": 125,
+    "name": "Tilapia",
+    "nameJa": "ティラピア",
+    "category": "protein",
+    "per100g": {
+      "calories": 96,
+      "protein": 20.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 1.4,
+      "sodium": 52
+    }
+  },
+  {
+    "id": 126,
+    "name": "Anchovy (canned)",
+    "nameJa": "アンチョビ",
+    "category": "protein",
+    "per100g": {
+      "calories": 210,
+      "protein": 29.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 2.2,
+      "unsaturatedFat": 4.0,
+      "sodium": 3668
+    }
+  },
+  {
+    "id": 127,
+    "name": "Canned Tuna (in water)",
+    "nameJa": "ツナ缶（水煮）",
+    "category": "protein",
+    "per100g": {
+      "calories": 116,
+      "protein": 26.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.3,
+      "unsaturatedFat": 0.7,
+      "sodium": 337
+    }
+  },
+  {
+    "id": 128,
+    "name": "Surimi (Crab Stick)",
+    "nameJa": "かにかま",
+    "category": "protein",
+    "per100g": {
+      "calories": 95,
+      "protein": 7.5,
+      "carbs": 14.0,
+      "sugar": 3.5,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.5,
+      "sodium": 841
+    }
+  },
+  {
+    "id": 129,
+    "name": "Kamaboko (fish cake)",
+    "nameJa": "かまぼこ",
+    "category": "protein",
+    "per100g": {
+      "calories": 95,
+      "protein": 12.0,
+      "carbs": 9.7,
+      "sugar": 0.3,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.4,
+      "sodium": 1000
+    }
+  },
+  {
+    "id": 130,
+    "name": "Chikuwa (fish cake)",
+    "nameJa": "ちくわ",
+    "category": "protein",
+    "per100g": {
+      "calories": 121,
+      "protein": 12.0,
+      "carbs": 13.0,
+      "sugar": 2.5,
+      "saturatedFat": 0.4,
+      "unsaturatedFat": 0.8,
+      "sodium": 840
+    }
+  },
+  {
+    "id": 131,
+    "name": "Egg White",
+    "nameJa": "卵白",
+    "category": "protein",
+    "per100g": {
+      "calories": 52,
+      "protein": 11.0,
+      "carbs": 0.7,
+      "sugar": 0.7,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 166
+    }
+  },
+  {
+    "id": 132,
+    "name": "Egg Yolk",
+    "nameJa": "卵黄",
+    "category": "protein",
+    "per100g": {
+      "calories": 322,
+      "protein": 16.0,
+      "carbs": 3.6,
+      "sugar": 0.6,
+      "saturatedFat": 9.6,
+      "unsaturatedFat": 15.0,
+      "sodium": 48
+    }
+  },
+  {
+    "id": 133,
+    "name": "Quail Egg",
+    "nameJa": "うずらの卵",
+    "category": "protein",
+    "per100g": {
+      "calories": 158,
+      "protein": 13.0,
+      "carbs": 0.4,
+      "sugar": 0.4,
+      "saturatedFat": 3.6,
+      "unsaturatedFat": 7.0,
+      "sodium": 141
+    }
+  },
+  {
+    "id": 134,
+    "name": "Skim Milk",
+    "nameJa": "脱脂乳",
+    "category": "dairy",
+    "per100g": {
+      "calories": 34,
+      "protein": 3.4,
+      "carbs": 5.0,
+      "sugar": 5.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 42
+    }
+  },
+  {
+    "id": 135,
+    "name": "Condensed Milk (sweetened)",
+    "nameJa": "練乳",
+    "category": "dairy",
+    "per100g": {
+      "calories": 321,
+      "protein": 7.9,
+      "carbs": 54.0,
+      "sugar": 54.0,
+      "saturatedFat": 5.5,
+      "unsaturatedFat": 3.0,
+      "sodium": 127
+    }
+  },
+  {
+    "id": 136,
+    "name": "Mozzarella Cheese",
+    "nameJa": "モッツァレラ",
+    "category": "dairy",
+    "per100g": {
+      "calories": 280,
+      "protein": 28.0,
+      "carbs": 2.2,
+      "sugar": 1.0,
+      "saturatedFat": 11.0,
+      "unsaturatedFat": 6.8,
+      "sodium": 627
+    }
+  },
+  {
+    "id": 137,
+    "name": "Ricotta Cheese",
+    "nameJa": "リコッタ",
+    "category": "dairy",
+    "per100g": {
+      "calories": 174,
+      "protein": 11.0,
+      "carbs": 3.0,
+      "sugar": 0.3,
+      "saturatedFat": 8.3,
+      "unsaturatedFat": 4.5,
+      "sodium": 84
+    }
+  },
+  {
+    "id": 138,
+    "name": "Cottage Cheese",
+    "nameJa": "カッテージチーズ",
+    "category": "dairy",
+    "per100g": {
+      "calories": 98,
+      "protein": 11.0,
+      "carbs": 3.4,
+      "sugar": 2.7,
+      "saturatedFat": 1.4,
+      "unsaturatedFat": 0.9,
+      "sodium": 364
+    }
+  },
+  {
+    "id": 139,
+    "name": "Feta Cheese",
+    "nameJa": "フェタチーズ",
+    "category": "dairy",
+    "per100g": {
+      "calories": 264,
+      "protein": 14.0,
+      "carbs": 4.1,
+      "sugar": 4.1,
+      "saturatedFat": 14.6,
+      "unsaturatedFat": 6.3,
+      "sodium": 1116
+    }
+  },
+  {
+    "id": 140,
+    "name": "Brie Cheese",
+    "nameJa": "ブリーチーズ",
+    "category": "dairy",
+    "per100g": {
+      "calories": 334,
+      "protein": 21.0,
+      "carbs": 0.5,
+      "sugar": 0.5,
+      "saturatedFat": 17.4,
+      "unsaturatedFat": 10.0,
+      "sodium": 629
+    }
+  },
+  {
+    "id": 141,
+    "name": "Sour Cream",
+    "nameJa": "サワークリーム",
+    "category": "dairy",
+    "per100g": {
+      "calories": 193,
+      "protein": 2.4,
+      "carbs": 4.6,
+      "sugar": 4.3,
+      "saturatedFat": 11.7,
+      "unsaturatedFat": 6.0,
+      "sodium": 53
+    }
+  },
+  {
+    "id": 142,
+    "name": "Yogurt (plain whole)",
+    "nameJa": "プレーンヨーグルト（全脂肪）",
+    "category": "dairy",
+    "per100g": {
+      "calories": 61,
+      "protein": 3.5,
+      "carbs": 4.7,
+      "sugar": 4.7,
+      "saturatedFat": 2.0,
+      "unsaturatedFat": 1.0,
+      "sodium": 46
+    }
+  },
+  {
+    "id": 143,
+    "name": "Soy Milk (unsweetened)",
+    "nameJa": "無調整豆乳",
+    "category": "dairy",
+    "per100g": {
+      "calories": 33,
+      "protein": 2.9,
+      "carbs": 1.8,
+      "sugar": 1.2,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.6,
+      "sodium": 41
+    }
+  },
+  {
+    "id": 144,
+    "name": "Oat Milk",
+    "nameJa": "オーツミルク",
+    "category": "dairy",
+    "per100g": {
+      "calories": 47,
+      "protein": 1.0,
+      "carbs": 9.0,
+      "sugar": 4.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.8,
+      "sodium": 52
+    }
+  },
+  {
+    "id": 145,
+    "name": "Almond Milk (unsweetened)",
+    "nameJa": "アーモンドミルク（無糖）",
+    "category": "dairy",
+    "per100g": {
+      "calories": 15,
+      "protein": 0.6,
+      "carbs": 0.3,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 1.0,
+      "sodium": 72
+    }
+  },
+  {
+    "id": 146,
+    "name": "Coconut Milk (canned)",
+    "nameJa": "ココナッツミルク缶",
+    "category": "dairy",
+    "per100g": {
+      "calories": 197,
+      "protein": 2.3,
+      "carbs": 2.8,
+      "sugar": 2.8,
+      "saturatedFat": 16.3,
+      "unsaturatedFat": 1.8,
+      "sodium": 15
+    }
+  },
+  {
+    "id": 147,
+    "name": "Coconut Cream",
+    "nameJa": "ココナッツクリーム",
+    "category": "dairy",
+    "per100g": {
+      "calories": 330,
+      "protein": 3.3,
+      "carbs": 6.7,
+      "sugar": 6.7,
+      "saturatedFat": 27.9,
+      "unsaturatedFat": 1.5,
+      "sodium": 15
+    }
+  },
+  {
+    "id": 148,
+    "name": "Asparagus",
+    "nameJa": "アスパラガス",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 20,
+      "protein": 2.2,
+      "carbs": 3.9,
+      "sugar": 1.9,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 149,
+    "name": "Brussels Sprouts",
+    "nameJa": "芽キャベツ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 43,
+      "protein": 3.4,
+      "carbs": 9.0,
+      "sugar": 2.2,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 25
+    }
+  },
+  {
+    "id": 150,
+    "name": "Celery",
+    "nameJa": "セロリ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 16,
+      "protein": 0.7,
+      "carbs": 3.0,
+      "sugar": 1.8,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 80
+    }
+  },
+  {
+    "id": 151,
+    "name": "Leek",
+    "nameJa": "リーキ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 61,
+      "protein": 1.5,
+      "carbs": 14.0,
+      "sugar": 3.9,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 20
+    }
+  },
+  {
+    "id": 152,
+    "name": "Shallot",
+    "nameJa": "エシャロット",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 72,
+      "protein": 2.5,
+      "carbs": 17.0,
+      "sugar": 7.9,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 12
+    }
+  },
+  {
+    "id": 153,
+    "name": "Kale",
+    "nameJa": "ケール",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 49,
+      "protein": 4.3,
+      "carbs": 9.0,
+      "sugar": 2.3,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 38
+    }
+  },
+  {
+    "id": 154,
+    "name": "Bok Choy",
+    "nameJa": "チンゲン菜",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 13,
+      "protein": 1.5,
+      "carbs": 2.2,
+      "sugar": 1.2,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 65
+    }
+  },
+  {
+    "id": 155,
+    "name": "Arugula",
+    "nameJa": "ルッコラ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 25,
+      "protein": 2.6,
+      "carbs": 3.7,
+      "sugar": 2.1,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 27
+    }
+  },
+  {
+    "id": 156,
+    "name": "Romaine Lettuce",
+    "nameJa": "ロメインレタス",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 17,
+      "protein": 1.2,
+      "carbs": 3.3,
+      "sugar": 1.2,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 8
+    }
+  },
+  {
+    "id": 157,
+    "name": "Iceberg Lettuce",
+    "nameJa": "レタス",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 14,
+      "protein": 0.9,
+      "carbs": 3.0,
+      "sugar": 2.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 10
+    }
+  },
+  {
+    "id": 158,
+    "name": "Green Beans",
+    "nameJa": "いんげん豆（さや）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 31,
+      "protein": 1.8,
+      "carbs": 7.0,
+      "sugar": 3.3,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 6
+    }
+  },
+  {
+    "id": 159,
+    "name": "Snow Peas",
+    "nameJa": "さやえんどう",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 42,
+      "protein": 2.8,
+      "carbs": 7.6,
+      "sugar": 4.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 160,
+    "name": "Green Peas",
+    "nameJa": "グリーンピース",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 81,
+      "protein": 5.4,
+      "carbs": 14.0,
+      "sugar": 5.7,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 5
+    }
+  },
+  {
+    "id": 161,
+    "name": "Kabocha Squash",
+    "nameJa": "かぼちゃ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 45,
+      "protein": 1.2,
+      "carbs": 10.0,
+      "sugar": 2.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 162,
+    "name": "Butternut Squash",
+    "nameJa": "バターナッツかぼちゃ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 45,
+      "protein": 1.0,
+      "carbs": 12.0,
+      "sugar": 2.2,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 163,
+    "name": "Turnip",
+    "nameJa": "カブ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 28,
+      "protein": 0.9,
+      "carbs": 6.4,
+      "sugar": 3.8,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 67
+    }
+  },
+  {
+    "id": 164,
+    "name": "Beetroot",
+    "nameJa": "ビーツ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 43,
+      "protein": 1.6,
+      "carbs": 10.0,
+      "sugar": 6.8,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 78
+    }
+  },
+  {
+    "id": 165,
+    "name": "Taro Root",
+    "nameJa": "里芋",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 112,
+      "protein": 1.5,
+      "carbs": 26.0,
+      "sugar": 0.4,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 11
+    }
+  },
+  {
+    "id": 166,
+    "name": "Bamboo Shoots",
+    "nameJa": "たけのこ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 27,
+      "protein": 2.6,
+      "carbs": 5.2,
+      "sugar": 3.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 167,
+    "name": "Bean Sprouts",
+    "nameJa": "もやし",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 30,
+      "protein": 3.0,
+      "carbs": 5.9,
+      "sugar": 4.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 6
+    }
+  },
+  {
+    "id": 168,
+    "name": "Okra",
+    "nameJa": "オクラ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 33,
+      "protein": 1.9,
+      "carbs": 7.5,
+      "sugar": 1.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 7
+    }
+  },
+  {
+    "id": 169,
+    "name": "Cherry Tomato",
+    "nameJa": "ミニトマト",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 18,
+      "protein": 0.9,
+      "carbs": 3.9,
+      "sugar": 2.6,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 5
+    }
+  },
+  {
+    "id": 170,
+    "name": "Radish",
+    "nameJa": "ラディッシュ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 16,
+      "protein": 0.7,
+      "carbs": 3.4,
+      "sugar": 1.9,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 39
+    }
+  },
+  {
+    "id": 171,
+    "name": "Jalapeño Pepper",
+    "nameJa": "ハラペーニョ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 29,
+      "protein": 0.9,
+      "carbs": 6.5,
+      "sugar": 4.1,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.2,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 172,
+    "name": "Shishito Pepper",
+    "nameJa": "ししとう",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 27,
+      "protein": 1.6,
+      "carbs": 5.4,
+      "sugar": 3.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.2,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 173,
+    "name": "Mizuna",
+    "nameJa": "水菜",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 23,
+      "protein": 2.1,
+      "carbs": 3.6,
+      "sugar": 1.8,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 30
+    }
+  },
+  {
+    "id": 174,
+    "name": "Shiso (Perilla)",
+    "nameJa": "しそ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 37,
+      "protein": 3.9,
+      "carbs": 7.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 175,
+    "name": "Chrysanthemum Greens",
+    "nameJa": "春菊",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 22,
+      "protein": 2.3,
+      "carbs": 3.9,
+      "sugar": 0.3,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 73
+    }
+  },
+  {
+    "id": 176,
+    "name": "Myoga (Japanese Ginger)",
+    "nameJa": "みょうが",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 12,
+      "protein": 0.9,
+      "carbs": 2.6,
+      "sugar": 1.7,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 177,
+    "name": "Watercress",
+    "nameJa": "クレソン",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 11,
+      "protein": 2.3,
+      "carbs": 1.3,
+      "sugar": 0.2,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 41
+    }
+  },
+  {
+    "id": 178,
+    "name": "Swiss Chard",
+    "nameJa": "スイスチャード",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 19,
+      "protein": 1.8,
+      "carbs": 3.7,
+      "sugar": 1.1,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 213
+    }
+  },
+  {
+    "id": 179,
+    "name": "Fennel",
+    "nameJa": "フェンネル",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 31,
+      "protein": 1.2,
+      "carbs": 7.3,
+      "sugar": 3.9,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.2,
+      "sodium": 52
+    }
+  },
+  {
+    "id": 180,
+    "name": "Artichoke",
+    "nameJa": "アーティチョーク",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 47,
+      "protein": 3.3,
+      "carbs": 11.0,
+      "sugar": 1.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 94
+    }
+  },
+  {
+    "id": 181,
+    "name": "Purple Cabbage",
+    "nameJa": "紫キャベツ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 31,
+      "protein": 1.4,
+      "carbs": 7.4,
+      "sugar": 3.8,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 27
+    }
+  },
+  {
+    "id": 182,
+    "name": "Parsnip",
+    "nameJa": "パースニップ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 75,
+      "protein": 1.2,
+      "carbs": 18.0,
+      "sugar": 4.8,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 10
+    }
+  },
+  {
+    "id": 183,
+    "name": "Celery Root (Celeriac)",
+    "nameJa": "セロリアック",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 42,
+      "protein": 1.5,
+      "carbs": 9.2,
+      "sugar": 1.6,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 100
+    }
+  },
+  {
+    "id": 184,
+    "name": "Kohlrabi",
+    "nameJa": "コールラビ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 27,
+      "protein": 1.7,
+      "carbs": 6.2,
+      "sugar": 2.6,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 20
+    }
+  },
+  {
+    "id": 185,
+    "name": "Edamame (shelled)",
+    "nameJa": "枝豆（さやなし）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 121,
+      "protein": 11.9,
+      "carbs": 8.9,
+      "sugar": 2.2,
+      "saturatedFat": 0.9,
+      "unsaturatedFat": 4.0,
+      "sodium": 63
+    }
+  },
+  {
+    "id": 186,
+    "name": "Wasabi",
+    "nameJa": "わさび",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 109,
+      "protein": 4.8,
+      "carbs": 24.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 17
+    }
+  },
+  {
+    "id": 187,
+    "name": "Rapini (Broccoli Rabe)",
+    "nameJa": "菜の花",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 22,
+      "protein": 3.2,
+      "carbs": 2.9,
+      "sugar": 0.7,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 33
+    }
+  },
+  {
+    "id": 188,
+    "name": "Sugar Snap Peas",
+    "nameJa": "スナップえんどう",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 42,
+      "protein": 2.8,
+      "carbs": 7.6,
+      "sugar": 4.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 189,
+    "name": "Olives (black)",
+    "nameJa": "ブラックオリーブ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 115,
+      "protein": 0.8,
+      "carbs": 6.3,
+      "sugar": 0.5,
+      "saturatedFat": 1.4,
+      "unsaturatedFat": 8.2,
+      "sodium": 735
+    }
+  },
+  {
+    "id": 190,
+    "name": "Capers",
+    "nameJa": "ケッパー",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 23,
+      "protein": 2.4,
+      "carbs": 4.9,
+      "sugar": 0.4,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 2964
+    }
+  },
+  {
+    "id": 191,
+    "name": "Mango",
+    "nameJa": "マンゴー",
+    "category": "fruit",
+    "per100g": {
+      "calories": 60,
+      "protein": 0.8,
+      "carbs": 15.0,
+      "sugar": 14.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 192,
+    "name": "Pineapple",
+    "nameJa": "パイナップル",
+    "category": "fruit",
+    "per100g": {
+      "calories": 50,
+      "protein": 0.5,
+      "carbs": 13.0,
+      "sugar": 10.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 193,
+    "name": "Papaya",
+    "nameJa": "パパイヤ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 43,
+      "protein": 0.5,
+      "carbs": 11.0,
+      "sugar": 7.8,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 8
+    }
+  },
+  {
+    "id": 194,
+    "name": "Kiwi",
+    "nameJa": "キウイ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 61,
+      "protein": 1.1,
+      "carbs": 15.0,
+      "sugar": 9.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.3,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 195,
+    "name": "Watermelon",
+    "nameJa": "スイカ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 30,
+      "protein": 0.6,
+      "carbs": 7.6,
+      "sugar": 6.2,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 196,
+    "name": "Grape",
+    "nameJa": "ぶどう",
+    "category": "fruit",
+    "per100g": {
+      "calories": 67,
+      "protein": 0.6,
+      "carbs": 17.0,
+      "sugar": 16.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 197,
+    "name": "Blueberry",
+    "nameJa": "ブルーベリー",
+    "category": "fruit",
+    "per100g": {
+      "calories": 57,
+      "protein": 0.7,
+      "carbs": 14.0,
+      "sugar": 10.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.2,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 198,
+    "name": "Raspberry",
+    "nameJa": "ラズベリー",
+    "category": "fruit",
+    "per100g": {
+      "calories": 52,
+      "protein": 1.2,
+      "carbs": 12.0,
+      "sugar": 4.4,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.4,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 199,
+    "name": "Peach",
+    "nameJa": "もも",
+    "category": "fruit",
+    "per100g": {
+      "calories": 39,
+      "protein": 0.9,
+      "carbs": 10.0,
+      "sugar": 8.4,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 200,
+    "name": "Plum",
+    "nameJa": "プラム",
+    "category": "fruit",
+    "per100g": {
+      "calories": 46,
+      "protein": 0.7,
+      "carbs": 11.0,
+      "sugar": 9.9,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 201,
+    "name": "Pear",
+    "nameJa": "洋梨",
+    "category": "fruit",
+    "per100g": {
+      "calories": 57,
+      "protein": 0.4,
+      "carbs": 15.0,
+      "sugar": 9.8,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 202,
+    "name": "Nashi Pear",
+    "nameJa": "和梨",
+    "category": "fruit",
+    "per100g": {
+      "calories": 42,
+      "protein": 0.5,
+      "carbs": 11.0,
+      "sugar": 7.3,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 203,
+    "name": "Grapefruit",
+    "nameJa": "グレープフルーツ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 42,
+      "protein": 0.8,
+      "carbs": 11.0,
+      "sugar": 7.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 204,
+    "name": "Mandarin / Tangerine",
+    "nameJa": "みかん",
+    "category": "fruit",
+    "per100g": {
+      "calories": 53,
+      "protein": 0.8,
+      "carbs": 13.0,
+      "sugar": 11.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 205,
+    "name": "Fig",
+    "nameJa": "イチジク",
+    "category": "fruit",
+    "per100g": {
+      "calories": 74,
+      "protein": 0.8,
+      "carbs": 19.0,
+      "sugar": 16.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 206,
+    "name": "Date (Medjool)",
+    "nameJa": "デーツ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 277,
+      "protein": 1.8,
+      "carbs": 75.0,
+      "sugar": 66.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 207,
+    "name": "Pomegranate",
+    "nameJa": "ザクロ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 83,
+      "protein": 1.7,
+      "carbs": 19.0,
+      "sugar": 14.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 208,
+    "name": "Persimmon",
+    "nameJa": "柿",
+    "category": "fruit",
+    "per100g": {
+      "calories": 70,
+      "protein": 0.6,
+      "carbs": 19.0,
+      "sugar": 13.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 209,
+    "name": "Lychee",
+    "nameJa": "ライチ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 66,
+      "protein": 0.8,
+      "carbs": 17.0,
+      "sugar": 15.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 210,
+    "name": "Lime",
+    "nameJa": "ライム",
+    "category": "fruit",
+    "per100g": {
+      "calories": 30,
+      "protein": 0.7,
+      "carbs": 11.0,
+      "sugar": 1.7,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 211,
+    "name": "Brown Rice (cooked)",
+    "nameJa": "玄米（炊いたもの）",
+    "category": "grain",
+    "per100g": {
+      "calories": 111,
+      "protein": 2.6,
+      "carbs": 23.0,
+      "sugar": 0.4,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 212,
+    "name": "Soba Noodles (dry)",
+    "nameJa": "そば（乾燥）",
+    "category": "grain",
+    "per100g": {
+      "calories": 344,
+      "protein": 14.0,
+      "carbs": 71.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.9,
+      "sodium": 160
+    }
+  },
+  {
+    "id": 213,
+    "name": "Udon Noodles (cooked)",
+    "nameJa": "うどん（茹で）",
+    "category": "grain",
+    "per100g": {
+      "calories": 105,
+      "protein": 2.6,
+      "carbs": 22.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 290
+    }
+  },
+  {
+    "id": 214,
+    "name": "Somen Noodles (dry)",
+    "nameJa": "そうめん（乾燥）",
+    "category": "grain",
+    "per100g": {
+      "calories": 356,
+      "protein": 9.5,
+      "carbs": 72.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.4,
+      "sodium": 1050
+    }
+  },
+  {
+    "id": 215,
+    "name": "Ramen Noodles (dry)",
+    "nameJa": "ラーメン（乾燥）",
+    "category": "grain",
+    "per100g": {
+      "calories": 366,
+      "protein": 11.0,
+      "carbs": 72.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 2.0,
+      "sodium": 1200
+    }
+  },
+  {
+    "id": 216,
+    "name": "Glass Noodles / Harusame (dry)",
+    "nameJa": "春雨（乾燥）",
+    "category": "grain",
+    "per100g": {
+      "calories": 344,
+      "protein": 0.1,
+      "carbs": 86.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 7
+    }
+  },
+  {
+    "id": 217,
+    "name": "Mochi (rice cake)",
+    "nameJa": "もち",
+    "category": "grain",
+    "per100g": {
+      "calories": 235,
+      "protein": 4.0,
+      "carbs": 51.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 218,
+    "name": "Quinoa (cooked)",
+    "nameJa": "キヌア（茹で）",
+    "category": "grain",
+    "per100g": {
+      "calories": 120,
+      "protein": 4.4,
+      "carbs": 22.0,
+      "sugar": 0.9,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 1.5,
+      "sodium": 7
+    }
+  },
+  {
+    "id": 219,
+    "name": "Couscous (cooked)",
+    "nameJa": "クスクス（茹で）",
+    "category": "grain",
+    "per100g": {
+      "calories": 112,
+      "protein": 3.8,
+      "carbs": 23.0,
+      "sugar": 0.1,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 5
+    }
+  },
+  {
+    "id": 220,
+    "name": "Barley (cooked)",
+    "nameJa": "大麦（茹で）",
+    "category": "grain",
+    "per100g": {
+      "calories": 123,
+      "protein": 2.3,
+      "carbs": 28.0,
+      "sugar": 0.3,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 221,
+    "name": "Whole Wheat Flour",
+    "nameJa": "全粒粉",
+    "category": "grain",
+    "per100g": {
+      "calories": 340,
+      "protein": 13.0,
+      "carbs": 72.0,
+      "sugar": 0.4,
+      "saturatedFat": 0.3,
+      "unsaturatedFat": 1.6,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 222,
+    "name": "Bread Flour (strong)",
+    "nameJa": "強力粉",
+    "category": "grain",
+    "per100g": {
+      "calories": 366,
+      "protein": 12.0,
+      "carbs": 73.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.4,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 223,
+    "name": "Semolina",
+    "nameJa": "セモリナ粉",
+    "category": "grain",
+    "per100g": {
+      "calories": 360,
+      "protein": 13.0,
+      "carbs": 73.0,
+      "sugar": 0.8,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 224,
+    "name": "Buckwheat Flour",
+    "nameJa": "そば粉",
+    "category": "grain",
+    "per100g": {
+      "calories": 335,
+      "protein": 13.0,
+      "carbs": 71.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.4,
+      "unsaturatedFat": 2.5,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 225,
+    "name": "Polenta / Cornmeal",
+    "nameJa": "コーンミール",
+    "category": "grain",
+    "per100g": {
+      "calories": 362,
+      "protein": 8.0,
+      "carbs": 77.0,
+      "sugar": 0.6,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 3.0,
+      "sodium": 35
+    }
+  },
+  {
+    "id": 226,
+    "name": "Tortilla (flour)",
+    "nameJa": "フラワートルティーヤ",
+    "category": "grain",
+    "per100g": {
+      "calories": 310,
+      "protein": 8.0,
+      "carbs": 56.0,
+      "sugar": 3.0,
+      "saturatedFat": 2.2,
+      "unsaturatedFat": 4.5,
+      "sodium": 690
+    }
+  },
+  {
+    "id": 227,
+    "name": "Whole Wheat Bread",
+    "nameJa": "全粒粉パン",
+    "category": "grain",
+    "per100g": {
+      "calories": 247,
+      "protein": 13.0,
+      "carbs": 41.0,
+      "sugar": 5.0,
+      "saturatedFat": 0.6,
+      "unsaturatedFat": 2.5,
+      "sodium": 472
+    }
+  },
+  {
+    "id": 228,
+    "name": "Soybeans (cooked)",
+    "nameJa": "大豆（茹で）",
+    "category": "legume",
+    "per100g": {
+      "calories": 173,
+      "protein": 17.0,
+      "carbs": 10.0,
+      "sugar": 3.0,
+      "saturatedFat": 0.9,
+      "unsaturatedFat": 7.4,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 229,
+    "name": "White Beans (cooked)",
+    "nameJa": "白いんげん豆",
+    "category": "legume",
+    "per100g": {
+      "calories": 139,
+      "protein": 9.7,
+      "carbs": 25.0,
+      "sugar": 0.3,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 230,
+    "name": "Kidney Beans (cooked)",
+    "nameJa": "キドニービーンズ",
+    "category": "legume",
+    "per100g": {
+      "calories": 127,
+      "protein": 8.7,
+      "carbs": 22.0,
+      "sugar": 0.3,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 231,
+    "name": "Adzuki Beans (cooked)",
+    "nameJa": "小豆（茹で）",
+    "category": "legume",
+    "per100g": {
+      "calories": 128,
+      "protein": 7.5,
+      "carbs": 25.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 8
+    }
+  },
+  {
+    "id": 232,
+    "name": "Mung Beans (cooked)",
+    "nameJa": "緑豆（茹で）",
+    "category": "legume",
+    "per100g": {
+      "calories": 105,
+      "protein": 7.0,
+      "carbs": 19.0,
+      "sugar": 2.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 233,
+    "name": "Natto",
+    "nameJa": "納豆",
+    "category": "legume",
+    "per100g": {
+      "calories": 212,
+      "protein": 18.0,
+      "carbs": 14.0,
+      "sugar": 4.7,
+      "saturatedFat": 1.5,
+      "unsaturatedFat": 7.3,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 234,
+    "name": "Tempeh",
+    "nameJa": "テンペ",
+    "category": "legume",
+    "per100g": {
+      "calories": 193,
+      "protein": 19.0,
+      "carbs": 9.4,
+      "sugar": 0.0,
+      "saturatedFat": 1.4,
+      "unsaturatedFat": 7.7,
+      "sodium": 9
+    }
+  },
+  {
+    "id": 235,
+    "name": "Cashews",
+    "nameJa": "カシューナッツ",
+    "category": "nut",
+    "per100g": {
+      "calories": 553,
+      "protein": 18.0,
+      "carbs": 30.0,
+      "sugar": 5.9,
+      "saturatedFat": 7.8,
+      "unsaturatedFat": 34.1,
+      "sodium": 12
+    }
+  },
+  {
+    "id": 236,
+    "name": "Pistachios",
+    "nameJa": "ピスタチオ",
+    "category": "nut",
+    "per100g": {
+      "calories": 560,
+      "protein": 20.0,
+      "carbs": 28.0,
+      "sugar": 7.7,
+      "saturatedFat": 5.9,
+      "unsaturatedFat": 37.6,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 237,
+    "name": "Macadamia Nuts",
+    "nameJa": "マカダミアナッツ",
+    "category": "nut",
+    "per100g": {
+      "calories": 718,
+      "protein": 7.9,
+      "carbs": 14.0,
+      "sugar": 4.6,
+      "saturatedFat": 12.1,
+      "unsaturatedFat": 57.3,
+      "sodium": 5
+    }
+  },
+  {
+    "id": 238,
+    "name": "Hazelnuts",
+    "nameJa": "ヘーゼルナッツ",
+    "category": "nut",
+    "per100g": {
+      "calories": 628,
+      "protein": 15.0,
+      "carbs": 17.0,
+      "sugar": 4.3,
+      "saturatedFat": 4.5,
+      "unsaturatedFat": 52.1,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 239,
+    "name": "Pine Nuts",
+    "nameJa": "松の実",
+    "category": "nut",
+    "per100g": {
+      "calories": 673,
+      "protein": 14.0,
+      "carbs": 13.0,
+      "sugar": 3.6,
+      "saturatedFat": 4.9,
+      "unsaturatedFat": 56.5,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 240,
+    "name": "Pecans",
+    "nameJa": "ペカン",
+    "category": "nut",
+    "per100g": {
+      "calories": 691,
+      "protein": 9.2,
+      "carbs": 14.0,
+      "sugar": 3.9,
+      "saturatedFat": 6.2,
+      "unsaturatedFat": 56.1,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 241,
+    "name": "Brazil Nuts",
+    "nameJa": "ブラジルナッツ",
+    "category": "nut",
+    "per100g": {
+      "calories": 659,
+      "protein": 14.0,
+      "carbs": 12.0,
+      "sugar": 2.3,
+      "saturatedFat": 15.1,
+      "unsaturatedFat": 49.9,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 242,
+    "name": "Chia Seeds",
+    "nameJa": "チアシード",
+    "category": "nut",
+    "per100g": {
+      "calories": 486,
+      "protein": 17.0,
+      "carbs": 42.0,
+      "sugar": 0.0,
+      "saturatedFat": 3.3,
+      "unsaturatedFat": 29.3,
+      "sodium": 16
+    }
+  },
+  {
+    "id": 243,
+    "name": "Flaxseeds",
+    "nameJa": "亜麻仁",
+    "category": "nut",
+    "per100g": {
+      "calories": 534,
+      "protein": 18.0,
+      "carbs": 29.0,
+      "sugar": 1.6,
+      "saturatedFat": 3.7,
+      "unsaturatedFat": 38.1,
+      "sodium": 30
+    }
+  },
+  {
+    "id": 244,
+    "name": "Pumpkin Seeds",
+    "nameJa": "かぼちゃの種",
+    "category": "nut",
+    "per100g": {
+      "calories": 559,
+      "protein": 30.0,
+      "carbs": 11.0,
+      "sugar": 1.4,
+      "saturatedFat": 8.7,
+      "unsaturatedFat": 37.0,
+      "sodium": 7
+    }
+  },
+  {
+    "id": 245,
+    "name": "Sunflower Seeds",
+    "nameJa": "ひまわりの種",
+    "category": "nut",
+    "per100g": {
+      "calories": 584,
+      "protein": 21.0,
+      "carbs": 20.0,
+      "sugar": 2.6,
+      "saturatedFat": 4.5,
+      "unsaturatedFat": 43.7,
+      "sodium": 9
+    }
+  },
+  {
+    "id": 246,
+    "name": "Coconut (shredded, unsweetened)",
+    "nameJa": "ドライ ココナッツ（細切り）",
+    "category": "nut",
+    "per100g": {
+      "calories": 660,
+      "protein": 7.0,
+      "carbs": 24.0,
+      "sugar": 7.6,
+      "saturatedFat": 52.1,
+      "unsaturatedFat": 5.4,
+      "sodium": 37
+    }
+  },
+  {
+    "id": 247,
+    "name": "Tahini",
+    "nameJa": "タヒニ",
+    "category": "nut",
+    "per100g": {
+      "calories": 595,
+      "protein": 17.0,
+      "carbs": 21.0,
+      "sugar": 0.5,
+      "saturatedFat": 8.4,
+      "unsaturatedFat": 44.9,
+      "sodium": 115
+    }
+  },
+  {
+    "id": 248,
+    "name": "Peanut Butter",
+    "nameJa": "ピーナッツバター",
+    "category": "nut",
+    "per100g": {
+      "calories": 588,
+      "protein": 25.0,
+      "carbs": 20.0,
+      "sugar": 9.2,
+      "saturatedFat": 10.3,
+      "unsaturatedFat": 38.0,
+      "sodium": 459
+    }
+  },
+  {
+    "id": 249,
+    "name": "Almond Butter",
+    "nameJa": "アーモンドバター",
+    "category": "nut",
+    "per100g": {
+      "calories": 614,
+      "protein": 21.0,
+      "carbs": 19.0,
+      "sugar": 4.4,
+      "saturatedFat": 5.1,
+      "unsaturatedFat": 50.5,
+      "sodium": 7
+    }
+  },
+  {
+    "id": 250,
+    "name": "Balsamic Vinegar",
+    "nameJa": "バルサミコ酢",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 88,
+      "protein": 0.5,
+      "carbs": 17.0,
+      "sugar": 15.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 23
+    }
+  },
+  {
+    "id": 251,
+    "name": "Apple Cider Vinegar",
+    "nameJa": "りんご酢",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 21,
+      "protein": 0.0,
+      "carbs": 0.9,
+      "sugar": 0.9,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 5
+    }
+  },
+  {
+    "id": 252,
+    "name": "Ponzu Sauce",
+    "nameJa": "ポン酢",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 47,
+      "protein": 2.8,
+      "carbs": 7.1,
+      "sugar": 2.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 2476
+    }
+  },
+  {
+    "id": 253,
+    "name": "Teriyaki Sauce",
+    "nameJa": "てりやきソース",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 89,
+      "protein": 2.8,
+      "carbs": 18.0,
+      "sugar": 10.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 2677
+    }
+  },
+  {
+    "id": 254,
+    "name": "Hoisin Sauce",
+    "nameJa": "ホイシンソース",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 220,
+      "protein": 4.0,
+      "carbs": 47.0,
+      "sugar": 33.0,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 2.3,
+      "sodium": 1800
+    }
+  },
+  {
+    "id": 255,
+    "name": "Sriracha",
+    "nameJa": "スリラチャ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 93,
+      "protein": 3.0,
+      "carbs": 18.0,
+      "sugar": 10.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.4,
+      "sodium": 2300
+    }
+  },
+  {
+    "id": 256,
+    "name": "Worcestershire Sauce",
+    "nameJa": "ウスターソース",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 78,
+      "protein": 0.0,
+      "carbs": 20.0,
+      "sugar": 9.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 980
+    }
+  },
+  {
+    "id": 257,
+    "name": "Tonkatsu Sauce",
+    "nameJa": "とんかつソース",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 132,
+      "protein": 1.3,
+      "carbs": 31.0,
+      "sugar": 18.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 1170
+    }
+  },
+  {
+    "id": 258,
+    "name": "Dijon Mustard",
+    "nameJa": "ディジョンマスタード",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 66,
+      "protein": 3.7,
+      "carbs": 5.0,
+      "sugar": 2.3,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 2.5,
+      "sodium": 1084
+    }
+  },
+  {
+    "id": 259,
+    "name": "Mentsuyu (noodle broth)",
+    "nameJa": "めんつゆ（3倍濃縮）",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 98,
+      "protein": 5.2,
+      "carbs": 16.0,
+      "sugar": 12.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 3590
+    }
+  },
+  {
+    "id": 260,
+    "name": "Yuzu Kosho",
+    "nameJa": "柚子胡椒",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 54,
+      "protein": 2.0,
+      "carbs": 8.5,
+      "sugar": 0.0,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.5,
+      "sodium": 6000
+    }
+  },
+  {
+    "id": 261,
+    "name": "Shichimi Togarashi",
+    "nameJa": "七味唐辛子",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 270,
+      "protein": 10.0,
+      "carbs": 40.0,
+      "sugar": 0.0,
+      "saturatedFat": 3.5,
+      "unsaturatedFat": 12.0,
+      "sodium": 200
+    }
+  },
+  {
+    "id": 262,
+    "name": "Katsuobushi (bonito flakes)",
+    "nameJa": "かつお節",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 357,
+      "protein": 77.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.8,
+      "unsaturatedFat": 3.1,
+      "sodium": 130
+    }
+  },
+  {
+    "id": 263,
+    "name": "Umeboshi (pickled plum)",
+    "nameJa": "梅干し",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 33,
+      "protein": 0.9,
+      "carbs": 10.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.2,
+      "sodium": 8700
+    }
+  },
+  {
+    "id": 264,
+    "name": "Mentaiko (spiced roe)",
+    "nameJa": "明太子",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 126,
+      "protein": 21.0,
+      "carbs": 0.1,
+      "sugar": 0.0,
+      "saturatedFat": 1.4,
+      "unsaturatedFat": 3.3,
+      "sodium": 2347
+    }
+  },
+  {
+    "id": 265,
+    "name": "Dashi Powder (instant)",
+    "nameJa": "だしの素",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 223,
+      "protein": 25.0,
+      "carbs": 22.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.8,
+      "unsaturatedFat": 1.3,
+      "sodium": 9000
+    }
+  },
+  {
+    "id": 266,
+    "name": "Red Curry Paste",
+    "nameJa": "レッドカレーペースト",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 166,
+      "protein": 5.0,
+      "carbs": 21.0,
+      "sugar": 4.0,
+      "saturatedFat": 3.0,
+      "unsaturatedFat": 7.0,
+      "sodium": 2900
+    }
+  },
+  {
+    "id": 267,
+    "name": "Curry Powder",
+    "nameJa": "カレー粉",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 325,
+      "protein": 13.0,
+      "carbs": 55.0,
+      "sugar": 2.8,
+      "saturatedFat": 3.0,
+      "unsaturatedFat": 12.0,
+      "sodium": 52
+    }
+  },
+  {
+    "id": 268,
+    "name": "Cumin (ground)",
+    "nameJa": "クミン",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 375,
+      "protein": 18.0,
+      "carbs": 44.0,
+      "sugar": 2.3,
+      "saturatedFat": 1.5,
+      "unsaturatedFat": 20.8,
+      "sodium": 168
+    }
+  },
+  {
+    "id": 269,
+    "name": "Paprika",
+    "nameJa": "パプリカ（スパイス）",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 282,
+      "protein": 14.0,
+      "carbs": 54.0,
+      "sugar": 10.0,
+      "saturatedFat": 1.9,
+      "unsaturatedFat": 10.5,
+      "sodium": 68
+    }
+  },
+  {
+    "id": 270,
+    "name": "Turmeric (ground)",
+    "nameJa": "ターメリック",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 312,
+      "protein": 10.0,
+      "carbs": 68.0,
+      "sugar": 3.2,
+      "saturatedFat": 3.0,
+      "unsaturatedFat": 6.1,
+      "sodium": 38
+    }
+  },
+  {
+    "id": 271,
+    "name": "Cinnamon (ground)",
+    "nameJa": "シナモン",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 247,
+      "protein": 4.0,
+      "carbs": 81.0,
+      "sugar": 2.2,
+      "saturatedFat": 0.3,
+      "unsaturatedFat": 0.7,
+      "sodium": 10
+    }
+  },
+  {
+    "id": 272,
+    "name": "Black Pepper (ground)",
+    "nameJa": "黒胡椒",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 251,
+      "protein": 10.0,
+      "carbs": 64.0,
+      "sugar": 0.6,
+      "saturatedFat": 1.4,
+      "unsaturatedFat": 5.7,
+      "sodium": 20
+    }
+  },
+  {
+    "id": 273,
+    "name": "Garlic Powder",
+    "nameJa": "ガーリックパウダー",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 331,
+      "protein": 17.0,
+      "carbs": 73.0,
+      "sugar": 2.6,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.3,
+      "sodium": 60
+    }
+  },
+  {
+    "id": 274,
+    "name": "Onion Powder",
+    "nameJa": "オニオンパウダー",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 341,
+      "protein": 10.0,
+      "carbs": 80.0,
+      "sugar": 7.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 73
+    }
+  },
+  {
+    "id": 275,
+    "name": "Garam Masala",
+    "nameJa": "ガラムマサラ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 379,
+      "protein": 15.0,
+      "carbs": 56.0,
+      "sugar": 2.2,
+      "saturatedFat": 5.8,
+      "unsaturatedFat": 19.5,
+      "sodium": 56
+    }
+  },
+  {
+    "id": 276,
+    "name": "Chili Flakes",
+    "nameJa": "唐辛子フレーク",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 282,
+      "protein": 12.0,
+      "carbs": 50.0,
+      "sugar": 10.0,
+      "saturatedFat": 2.1,
+      "unsaturatedFat": 10.3,
+      "sodium": 30
+    }
+  },
+  {
+    "id": 277,
+    "name": "Rosemary (dried)",
+    "nameJa": "ローズマリー",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 331,
+      "protein": 4.9,
+      "carbs": 65.0,
+      "sugar": 0.0,
+      "saturatedFat": 3.0,
+      "unsaturatedFat": 11.7,
+      "sodium": 50
+    }
+  },
+  {
+    "id": 278,
+    "name": "Thyme (dried)",
+    "nameJa": "タイム",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 276,
+      "protein": 9.1,
+      "carbs": 64.0,
+      "sugar": 1.7,
+      "saturatedFat": 0.9,
+      "unsaturatedFat": 3.6,
+      "sodium": 55
+    }
+  },
+  {
+    "id": 279,
+    "name": "Oregano (dried)",
+    "nameJa": "オレガノ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 265,
+      "protein": 9.0,
+      "carbs": 69.0,
+      "sugar": 4.1,
+      "saturatedFat": 1.6,
+      "unsaturatedFat": 6.0,
+      "sodium": 25
+    }
+  },
+  {
+    "id": 280,
+    "name": "Basil (dried)",
+    "nameJa": "バジル（乾燥）",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 233,
+      "protein": 23.0,
+      "carbs": 48.0,
+      "sugar": 1.7,
+      "saturatedFat": 0.4,
+      "unsaturatedFat": 3.8,
+      "sodium": 76
+    }
+  },
+  {
+    "id": 281,
+    "name": "Bay Leaf",
+    "nameJa": "ローリエ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 313,
+      "protein": 7.6,
+      "carbs": 75.0,
+      "sugar": 0.0,
+      "saturatedFat": 2.3,
+      "unsaturatedFat": 6.0,
+      "sodium": 23
+    }
+  },
+  {
+    "id": 282,
+    "name": "Nutmeg (ground)",
+    "nameJa": "ナツメグ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 525,
+      "protein": 5.8,
+      "carbs": 49.0,
+      "sugar": 2.9,
+      "saturatedFat": 25.9,
+      "unsaturatedFat": 9.2,
+      "sodium": 16
+    }
+  },
+  {
+    "id": 283,
+    "name": "Vanilla Extract",
+    "nameJa": "バニラエッセンス",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 288,
+      "protein": 0.1,
+      "carbs": 13.0,
+      "sugar": 13.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 9
+    }
+  },
+  {
+    "id": 284,
+    "name": "Tomato Ketchup",
+    "nameJa": "ケチャップ（再掲・詳細）",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 112,
+      "protein": 1.3,
+      "carbs": 27.0,
+      "sugar": 22.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 907
+    }
+  },
+  {
+    "id": 285,
+    "name": "Furikake (rice seasoning)",
+    "nameJa": "ふりかけ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 314,
+      "protein": 24.0,
+      "carbs": 34.0,
+      "sugar": 10.0,
+      "saturatedFat": 3.5,
+      "unsaturatedFat": 8.5,
+      "sodium": 3500
+    }
+  },
+  {
+    "id": 286,
+    "name": "Baking Powder",
+    "nameJa": "ベーキングパウダー",
+    "category": "baking",
+    "per100g": {
+      "calories": 53,
+      "protein": 0.0,
+      "carbs": 28.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 10600
+    }
+  },
+  {
+    "id": 287,
+    "name": "Baking Soda",
+    "nameJa": "重曹",
+    "category": "baking",
+    "per100g": {
+      "calories": 0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 27360
+    }
+  },
+  {
+    "id": 288,
+    "name": "Active Dry Yeast",
+    "nameJa": "ドライイースト",
+    "category": "baking",
+    "per100g": {
+      "calories": 325,
+      "protein": 41.0,
+      "carbs": 41.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 1.2,
+      "sodium": 51
+    }
+  },
+  {
+    "id": 289,
+    "name": "Cocoa Powder (unsweetened)",
+    "nameJa": "ピュアココア",
+    "category": "baking",
+    "per100g": {
+      "calories": 228,
+      "protein": 20.0,
+      "carbs": 58.0,
+      "sugar": 1.8,
+      "saturatedFat": 3.9,
+      "unsaturatedFat": 8.7,
+      "sodium": 21
+    }
+  },
+  {
+    "id": 290,
+    "name": "Dark Chocolate (70%)",
+    "nameJa": "ダークチョコレート（70%）",
+    "category": "baking",
+    "per100g": {
+      "calories": 598,
+      "protein": 8.0,
+      "carbs": 46.0,
+      "sugar": 24.0,
+      "saturatedFat": 19.6,
+      "unsaturatedFat": 18.4,
+      "sodium": 20
+    }
+  },
+  {
+    "id": 291,
+    "name": "Milk Chocolate",
+    "nameJa": "ミルクチョコレート",
+    "category": "baking",
+    "per100g": {
+      "calories": 535,
+      "protein": 7.6,
+      "carbs": 60.0,
+      "sugar": 52.0,
+      "saturatedFat": 18.5,
+      "unsaturatedFat": 12.4,
+      "sodium": 79
+    }
+  },
+  {
+    "id": 292,
+    "name": "Brown Sugar",
+    "nameJa": "ブラウンシュガー",
+    "category": "baking",
+    "per100g": {
+      "calories": 380,
+      "protein": 0.1,
+      "carbs": 98.0,
+      "sugar": 97.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 28
+    }
+  },
+  {
+    "id": 293,
+    "name": "Powdered Sugar",
+    "nameJa": "粉砂糖",
+    "category": "baking",
+    "per100g": {
+      "calories": 389,
+      "protein": 0.0,
+      "carbs": 100.0,
+      "sugar": 98.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 294,
+    "name": "Maple Syrup",
+    "nameJa": "メープルシロップ",
+    "category": "baking",
+    "per100g": {
+      "calories": 260,
+      "protein": 0.0,
+      "carbs": 67.0,
+      "sugar": 60.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 12
+    }
+  },
+  {
+    "id": 295,
+    "name": "Honey (raw)",
+    "nameJa": "はちみつ（生）",
+    "category": "baking",
+    "per100g": {
+      "calories": 304,
+      "protein": 0.3,
+      "carbs": 82.0,
+      "sugar": 82.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 296,
+    "name": "Gelatin (unflavored)",
+    "nameJa": "ゼラチン（無糖）",
+    "category": "baking",
+    "per100g": {
+      "calories": 335,
+      "protein": 86.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 196
+    }
+  },
+  {
+    "id": 297,
+    "name": "Agar Agar",
+    "nameJa": "寒天",
+    "category": "baking",
+    "per100g": {
+      "calories": 26,
+      "protein": 0.6,
+      "carbs": 6.8,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 9
+    }
+  },
+  {
+    "id": 298,
+    "name": "Corn Syrup",
+    "nameJa": "コーンシロップ",
+    "category": "baking",
+    "per100g": {
+      "calories": 284,
+      "protein": 0.0,
+      "carbs": 77.0,
+      "sugar": 35.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 100
+    }
+  },
+  {
+    "id": 299,
+    "name": "Chicken Broth (low sodium)",
+    "nameJa": "チキンブロス",
+    "category": "pantry",
+    "per100g": {
+      "calories": 5,
+      "protein": 0.5,
+      "carbs": 0.2,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 100
+    }
+  },
+  {
+    "id": 300,
+    "name": "Beef Broth",
+    "nameJa": "ビーフブロス",
+    "category": "pantry",
+    "per100g": {
+      "calories": 7,
+      "protein": 1.0,
+      "carbs": 0.1,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 280
+    }
+  },
+  {
+    "id": 301,
+    "name": "Vegetable Broth",
+    "nameJa": "野菜ブロス",
+    "category": "pantry",
+    "per100g": {
+      "calories": 6,
+      "protein": 0.3,
+      "carbs": 1.2,
+      "sugar": 0.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 180
+    }
+  },
+  {
+    "id": 302,
+    "name": "Canned Tomatoes (diced)",
+    "nameJa": "トマト缶（カット）",
+    "category": "pantry",
+    "per100g": {
+      "calories": 24,
+      "protein": 1.2,
+      "carbs": 5.0,
+      "sugar": 3.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 250
+    }
+  },
+  {
+    "id": 303,
+    "name": "Tomato Sauce (plain)",
+    "nameJa": "トマトソース",
+    "category": "pantry",
+    "per100g": {
+      "calories": 29,
+      "protein": 1.3,
+      "carbs": 6.0,
+      "sugar": 4.5,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 346
+    }
+  },
+  {
+    "id": 304,
+    "name": "Marinara Sauce",
+    "nameJa": "マリナーラソース",
+    "category": "pantry",
+    "per100g": {
+      "calories": 53,
+      "protein": 1.6,
+      "carbs": 9.2,
+      "sugar": 5.8,
+      "saturatedFat": 0.3,
+      "unsaturatedFat": 2.3,
+      "sodium": 350
+    }
+  },
+  {
+    "id": 305,
+    "name": "Pesto (basil)",
+    "nameJa": "バジルペスト",
+    "category": "pantry",
+    "per100g": {
+      "calories": 451,
+      "protein": 5.0,
+      "carbs": 5.5,
+      "sugar": 1.6,
+      "saturatedFat": 7.0,
+      "unsaturatedFat": 31.0,
+      "sodium": 580
+    }
+  },
+  {
+    "id": 306,
+    "name": "Canned Corn",
+    "nameJa": "コーン缶",
+    "category": "pantry",
+    "per100g": {
+      "calories": 83,
+      "protein": 3.1,
+      "carbs": 17.0,
+      "sugar": 3.2,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 188
+    }
+  },
+  {
+    "id": 307,
+    "name": "Bread (Japanese milk bread)",
+    "nameJa": "コッペパン",
+    "category": "grain",
+    "per100g": {
+      "calories": 278,
+      "protein": 9.5,
+      "carbs": 49.0,
+      "sugar": 8.2,
+      "saturatedFat": 1.6,
+      "unsaturatedFat": 4.8,
+      "sodium": 480
+    }
+  },
+  {
+    "id": 308,
+    "name": "Croissant",
+    "nameJa": "クロワッサン",
+    "category": "grain",
+    "per100g": {
+      "calories": 406,
+      "protein": 8.2,
+      "carbs": 46.0,
+      "sugar": 8.0,
+      "saturatedFat": 14.3,
+      "unsaturatedFat": 9.4,
+      "sodium": 530
+    }
+  },
+  {
+    "id": 309,
+    "name": "Orange Juice (fresh)",
+    "nameJa": "オレンジジュース（生搾り）",
+    "category": "beverage",
+    "per100g": {
+      "calories": 45,
+      "protein": 0.7,
+      "carbs": 10.0,
+      "sugar": 8.4,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 310,
+    "name": "Apple Juice",
+    "nameJa": "りんごジュース",
+    "category": "beverage",
+    "per100g": {
+      "calories": 46,
+      "protein": 0.1,
+      "carbs": 11.0,
+      "sugar": 10.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 311,
+    "name": "Sake (cooking)",
+    "nameJa": "料理酒（再掲）",
+    "category": "beverage",
+    "per100g": {
+      "calories": 134,
+      "protein": 0.5,
+      "carbs": 5.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 312,
+    "name": "White Wine",
+    "nameJa": "白ワイン",
+    "category": "beverage",
+    "per100g": {
+      "calories": 82,
+      "protein": 0.1,
+      "carbs": 2.6,
+      "sugar": 1.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 5
+    }
+  },
+  {
+    "id": 313,
+    "name": "Red Wine",
+    "nameJa": "赤ワイン",
+    "category": "beverage",
+    "per100g": {
+      "calories": 85,
+      "protein": 0.1,
+      "carbs": 2.6,
+      "sugar": 0.6,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 314,
+    "name": "Lard",
+    "nameJa": "ラード",
+    "category": "oil",
+    "per100g": {
+      "calories": 902,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 39.2,
+      "unsaturatedFat": 55.8,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 315,
+    "name": "Ghee",
+    "nameJa": "ギー",
+    "category": "oil",
+    "per100g": {
+      "calories": 900,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 59.8,
+      "unsaturatedFat": 38.7,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 316,
+    "name": "Avocado Oil",
+    "nameJa": "アボカドオイル",
+    "category": "oil",
+    "per100g": {
+      "calories": 884,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 11.6,
+      "unsaturatedFat": 74.0,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 317,
+    "name": "Canola Oil",
+    "nameJa": "キャノーラ油",
+    "category": "oil",
+    "per100g": {
+      "calories": 884,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 7.4,
+      "unsaturatedFat": 79.3,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 318,
+    "name": "Ikura (salmon roe)",
+    "nameJa": "いくら",
+    "category": "protein",
+    "per100g": {
+      "calories": 272,
+      "protein": 33.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 4.4,
+      "unsaturatedFat": 10.7,
+      "sodium": 2400
+    }
+  },
+  {
+    "id": 319,
+    "name": "Tobiko (flying fish roe)",
+    "nameJa": "とびこ",
+    "category": "protein",
+    "per100g": {
+      "calories": 60,
+      "protein": 7.0,
+      "carbs": 1.5,
+      "sugar": 0.0,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 1.2,
+      "sodium": 325
+    }
+  },
+  {
+    "id": 320,
+    "name": "Aburaage (fried tofu pouch)",
+    "nameJa": "油揚げ（再掲）",
+    "category": "protein",
+    "per100g": {
+      "calories": 385,
+      "protein": 15.0,
+      "carbs": 0.4,
+      "sugar": 0.0,
+      "saturatedFat": 6.0,
+      "unsaturatedFat": 21.0,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 321,
+    "name": "Hanpen (white fish cake)",
+    "nameJa": "はんぺん",
+    "category": "protein",
+    "per100g": {
+      "calories": 93,
+      "protein": 9.9,
+      "carbs": 11.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 590
+    }
+  },
+  {
+    "id": 322,
+    "name": "Narutomaki (fish cake)",
+    "nameJa": "なると",
+    "category": "protein",
+    "per100g": {
+      "calories": 95,
+      "protein": 7.6,
+      "carbs": 11.0,
+      "sugar": 1.4,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.3,
+      "sodium": 1050
+    }
+  },
+  {
+    "id": 323,
+    "name": "Kimchi (extra hot)",
+    "nameJa": "キムチ（辛口）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 19,
+      "protein": 1.5,
+      "carbs": 3.0,
+      "sugar": 2.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 900
+    }
+  },
+  {
+    "id": 324,
+    "name": "Takuan (pickled daikon)",
+    "nameJa": "たくあん",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 38,
+      "protein": 1.0,
+      "carbs": 8.6,
+      "sugar": 5.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 1100
+    }
+  },
+  {
+    "id": 325,
+    "name": "Sauerkraut",
+    "nameJa": "ザワークラウト",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 19,
+      "protein": 0.9,
+      "carbs": 4.3,
+      "sugar": 1.8,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 661
+    }
+  },
+  {
+    "id": 326,
+    "name": "Pickled Ginger (gari)",
+    "nameJa": "ガリ（酢しょうが）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 60,
+      "protein": 0.2,
+      "carbs": 15.0,
+      "sugar": 13.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 680
+    }
+  },
+  {
+    "id": 327,
+    "name": "Sun-Dried Tomatoes",
+    "nameJa": "ドライトマト",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 258,
+      "protein": 14.0,
+      "carbs": 56.0,
+      "sugar": 38.0,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 2.5,
+      "sodium": 2095
+    }
+  },
+  {
+    "id": 328,
+    "name": "Roasted Red Pepper (jarred)",
+    "nameJa": "焼き赤パプリカ（瓶詰め）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 27,
+      "protein": 1.3,
+      "carbs": 5.5,
+      "sugar": 4.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 890
+    }
+  },
+  {
+    "id": 329,
+    "name": "Shirataki Noodles",
+    "nameJa": "しらたき",
+    "category": "grain",
+    "per100g": {
+      "calories": 10,
+      "protein": 0.2,
+      "carbs": 3.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 10
+    }
+  },
+  {
+    "id": 330,
+    "name": "Rice Cakes (plain)",
+    "nameJa": "ライスケーキ",
+    "category": "grain",
+    "per100g": {
+      "calories": 387,
+      "protein": 8.2,
+      "carbs": 82.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.4,
+      "unsaturatedFat": 1.1,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 331,
+    "name": "Canned Chickpeas",
+    "nameJa": "ひよこ豆缶",
+    "category": "legume",
+    "per100g": {
+      "calories": 120,
+      "protein": 5.4,
+      "carbs": 20.0,
+      "sugar": 2.9,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 1.1,
+      "sodium": 270
+    }
+  },
+  {
+    "id": 332,
+    "name": "Canned Black Beans",
+    "nameJa": "黒豆缶",
+    "category": "legume",
+    "per100g": {
+      "calories": 91,
+      "protein": 5.3,
+      "carbs": 16.0,
+      "sugar": 0.5,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.2,
+      "sodium": 230
+    }
+  },
+  {
+    "id": 333,
+    "name": "Pinto Beans (cooked)",
+    "nameJa": "ピントビーンズ",
+    "category": "legume",
+    "per100g": {
+      "calories": 143,
+      "protein": 9.0,
+      "carbs": 27.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 334,
+    "name": "Cream of Mushroom Soup (canned)",
+    "nameJa": "マッシュルームクリームスープ缶",
+    "category": "pantry",
+    "per100g": {
+      "calories": 67,
+      "protein": 1.6,
+      "carbs": 8.5,
+      "sugar": 1.3,
+      "saturatedFat": 1.6,
+      "unsaturatedFat": 2.3,
+      "sodium": 436
+    }
+  },
+  {
+    "id": 335,
+    "name": "Soy Sauce (low sodium)",
+    "nameJa": "醤油（減塩）",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 43,
+      "protein": 5.1,
+      "carbs": 4.5,
+      "sugar": 1.7,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 2600
+    }
+  },
+  {
+    "id": 336,
+    "name": "Tamari Soy Sauce",
+    "nameJa": "たまり醤油",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 60,
+      "protein": 10.0,
+      "carbs": 5.7,
+      "sugar": 1.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 4200
+    }
+  },
+  {
+    "id": 337,
+    "name": "White Miso",
+    "nameJa": "白みそ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 206,
+      "protein": 9.7,
+      "carbs": 32.0,
+      "sugar": 10.0,
+      "saturatedFat": 0.9,
+      "unsaturatedFat": 2.0,
+      "sodium": 2100
+    }
+  },
+  {
+    "id": 338,
+    "name": "Red Miso",
+    "nameJa": "赤みそ",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 186,
+      "protein": 14.0,
+      "carbs": 19.0,
+      "sugar": 3.5,
+      "saturatedFat": 1.7,
+      "unsaturatedFat": 3.9,
+      "sodium": 4800
+    }
+  },
+  {
+    "id": 339,
+    "name": "Doenjang (Korean fermented paste)",
+    "nameJa": "テンジャン",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 185,
+      "protein": 12.0,
+      "carbs": 19.0,
+      "sugar": 4.5,
+      "saturatedFat": 1.5,
+      "unsaturatedFat": 3.2,
+      "sodium": 4400
+    }
+  },
+  {
+    "id": 340,
+    "name": "Gochujang (Korean chili paste)",
+    "nameJa": "コチュジャン",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 181,
+      "protein": 6.5,
+      "carbs": 34.0,
+      "sugar": 8.5,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 2.0,
+      "sodium": 2390
+    }
+  },
+  {
+    "id": 341,
+    "name": "Fresh Basil",
+    "nameJa": "バジル（生）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 23,
+      "protein": 3.2,
+      "carbs": 2.7,
+      "sugar": 0.3,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 342,
+    "name": "Fresh Parsley",
+    "nameJa": "パセリ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 36,
+      "protein": 3.0,
+      "carbs": 6.3,
+      "sugar": 0.9,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 56
+    }
+  },
+  {
+    "id": 343,
+    "name": "Fresh Cilantro",
+    "nameJa": "コリアンダー（生）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 23,
+      "protein": 2.1,
+      "carbs": 3.7,
+      "sugar": 0.9,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.2,
+      "sodium": 46
+    }
+  },
+  {
+    "id": 344,
+    "name": "Fresh Mint",
+    "nameJa": "ミント（生）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 44,
+      "protein": 3.3,
+      "carbs": 8.4,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 31
+    }
+  },
+  {
+    "id": 345,
+    "name": "Fresh Dill",
+    "nameJa": "ディル（生）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 43,
+      "protein": 3.5,
+      "carbs": 7.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.4,
+      "sodium": 61
+    }
+  },
+  {
+    "id": 346,
+    "name": "Fresh Tarragon",
+    "nameJa": "タラゴン（生）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 49,
+      "protein": 3.7,
+      "carbs": 8.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 62
+    }
+  },
+  {
+    "id": 347,
+    "name": "Lemongrass",
+    "nameJa": "レモングラス",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 99,
+      "protein": 1.8,
+      "carbs": 25.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.4,
+      "sodium": 6
+    }
+  },
+  {
+    "id": 348,
+    "name": "Kaffir Lime Leaves",
+    "nameJa": "こぶみかんの葉",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 34,
+      "protein": 1.0,
+      "carbs": 7.8,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 7
+    }
+  },
+  {
+    "id": 349,
+    "name": "Mung Bean Sprouts",
+    "nameJa": "もやし（緑豆）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 30,
+      "protein": 3.0,
+      "carbs": 5.9,
+      "sugar": 4.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 6
+    }
+  },
+  {
+    "id": 350,
+    "name": "Soy Bean Sprouts",
+    "nameJa": "大豆もやし",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 37,
+      "protein": 4.3,
+      "carbs": 3.0,
+      "sugar": 1.5,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.7,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 351,
+    "name": "Microgreens (mixed)",
+    "nameJa": "マイクログリーン",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 32,
+      "protein": 3.0,
+      "carbs": 5.0,
+      "sugar": 1.5,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 20
+    }
+  },
+  {
+    "id": 352,
+    "name": "Blackcurrant",
+    "nameJa": "カシス",
+    "category": "fruit",
+    "per100g": {
+      "calories": 63,
+      "protein": 1.4,
+      "carbs": 15.0,
+      "sugar": 7.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.2,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 353,
+    "name": "Dried Cranberries",
+    "nameJa": "ドライクランベリー",
+    "category": "fruit",
+    "per100g": {
+      "calories": 308,
+      "protein": 0.1,
+      "carbs": 82.0,
+      "sugar": 73.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 354,
+    "name": "Raisins",
+    "nameJa": "レーズン",
+    "category": "fruit",
+    "per100g": {
+      "calories": 299,
+      "protein": 3.1,
+      "carbs": 79.0,
+      "sugar": 59.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 11
+    }
+  },
+  {
+    "id": 355,
+    "name": "Prunes (dried)",
+    "nameJa": "プルーン（乾燥）",
+    "category": "fruit",
+    "per100g": {
+      "calories": 240,
+      "protein": 2.2,
+      "carbs": 64.0,
+      "sugar": 38.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 356,
+    "name": "Apricot (fresh)",
+    "nameJa": "アプリコット",
+    "category": "fruit",
+    "per100g": {
+      "calories": 48,
+      "protein": 1.4,
+      "carbs": 11.0,
+      "sugar": 9.2,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 357,
+    "name": "Cherry (sweet)",
+    "nameJa": "さくらんぼ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 63,
+      "protein": 1.1,
+      "carbs": 16.0,
+      "sugar": 13.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 358,
+    "name": "Pomelo",
+    "nameJa": "ザボン",
+    "category": "fruit",
+    "per100g": {
+      "calories": 38,
+      "protein": 0.8,
+      "carbs": 10.0,
+      "sugar": 6.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 359,
+    "name": "Dragon Fruit",
+    "nameJa": "ドラゴンフルーツ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 60,
+      "protein": 1.2,
+      "carbs": 13.0,
+      "sugar": 8.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 360,
+    "name": "Passion Fruit",
+    "nameJa": "パッションフルーツ",
+    "category": "fruit",
+    "per100g": {
+      "calories": 97,
+      "protein": 2.2,
+      "carbs": 23.0,
+      "sugar": 11.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 28
+    }
+  },
+  {
+    "id": 361,
+    "name": "Seitan (wheat gluten)",
+    "nameJa": "グルテン肉・麩",
+    "category": "protein",
+    "per100g": {
+      "calories": 143,
+      "protein": 25.0,
+      "carbs": 4.5,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.5,
+      "sodium": 370
+    }
+  },
+  {
+    "id": 362,
+    "name": "Soba (cooked)",
+    "nameJa": "そば（茹で）",
+    "category": "grain",
+    "per100g": {
+      "calories": 99,
+      "protein": 4.8,
+      "carbs": 20.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 60
+    }
+  },
+  {
+    "id": 363,
+    "name": "Pasta (cooked)",
+    "nameJa": "パスタ（茹で）",
+    "category": "grain",
+    "per100g": {
+      "calories": 158,
+      "protein": 5.8,
+      "carbs": 31.0,
+      "sugar": 0.6,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 364,
+    "name": "Honey Mustard",
+    "nameJa": "ハニーマスタード",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 116,
+      "protein": 1.5,
+      "carbs": 23.0,
+      "sugar": 18.0,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 1.2,
+      "sodium": 520
+    }
+  },
+  {
+    "id": 365,
+    "name": "Ranch Dressing",
+    "nameJa": "ランチドレッシング",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 340,
+      "protein": 1.1,
+      "carbs": 7.0,
+      "sugar": 2.5,
+      "saturatedFat": 5.3,
+      "unsaturatedFat": 24.5,
+      "sodium": 540
+    }
+  },
+  {
+    "id": 366,
+    "name": "Caesar Dressing",
+    "nameJa": "シーザードレッシング",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 353,
+      "protein": 4.0,
+      "carbs": 8.0,
+      "sugar": 3.2,
+      "saturatedFat": 8.1,
+      "unsaturatedFat": 22.0,
+      "sodium": 800
+    }
+  },
+  {
+    "id": 367,
+    "name": "Sesame Dressing",
+    "nameJa": "ごまドレッシング",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 382,
+      "protein": 4.6,
+      "carbs": 22.0,
+      "sugar": 16.0,
+      "saturatedFat": 5.8,
+      "unsaturatedFat": 29.3,
+      "sodium": 1250
+    }
+  },
+  {
+    "id": 368,
+    "name": "Olive Tapenade",
+    "nameJa": "タプナード",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 240,
+      "protein": 2.0,
+      "carbs": 8.0,
+      "sugar": 1.5,
+      "saturatedFat": 3.5,
+      "unsaturatedFat": 20.0,
+      "sodium": 1200
+    }
+  },
+  {
+    "id": 369,
+    "name": "Cream of Tartar",
+    "nameJa": "クリームオブターター",
+    "category": "baking",
+    "per100g": {
+      "calories": 270,
+      "protein": 0.0,
+      "carbs": 68.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 52
+    }
+  },
+  {
+    "id": 370,
+    "name": "Shortening (vegetable)",
+    "nameJa": "ショートニング",
+    "category": "oil",
+    "per100g": {
+      "calories": 900,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 25.0,
+      "unsaturatedFat": 67.0,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 371,
+    "name": "Dried Shiitake (rehydrated)",
+    "nameJa": "干しシイタケ（水戻し）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 28,
+      "protein": 1.9,
+      "carbs": 5.8,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 372,
+    "name": "King Oyster Mushroom",
+    "nameJa": "エリンギ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 35,
+      "protein": 2.5,
+      "carbs": 7.0,
+      "sugar": 2.1,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 373,
+    "name": "Maitake Mushroom",
+    "nameJa": "まいたけ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 26,
+      "protein": 1.9,
+      "carbs": 5.8,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 374,
+    "name": "Nameko Mushroom",
+    "nameJa": "なめこ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 15,
+      "protein": 1.7,
+      "carbs": 4.7,
+      "sugar": 0.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 375,
+    "name": "Seaweed Salad (seasoned)",
+    "nameJa": "海藻サラダ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 70,
+      "protein": 1.5,
+      "carbs": 13.0,
+      "sugar": 7.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 830
+    }
+  },
+  {
+    "id": 376,
+    "name": "Mozuku Seaweed",
+    "nameJa": "もずく",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 4,
+      "protein": 0.2,
+      "carbs": 1.4,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 180
+    }
+  },
+  {
+    "id": 377,
+    "name": "Hijiki Seaweed (dried)",
+    "nameJa": "ひじき（乾燥）",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 180,
+      "protein": 10.0,
+      "carbs": 55.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.3,
+      "unsaturatedFat": 0.8,
+      "sodium": 680
+    }
+  },
+  {
+    "id": 378,
+    "name": "Tofu Skin (Yuba)",
+    "nameJa": "湯葉",
+    "category": "protein",
+    "per100g": {
+      "calories": 218,
+      "protein": 21.0,
+      "carbs": 4.1,
+      "sugar": 0.0,
+      "saturatedFat": 4.3,
+      "unsaturatedFat": 10.4,
+      "sodium": 4
+    }
+  },
+  {
+    "id": 379,
+    "name": "Konbu (kelp, dried)",
+    "nameJa": "昆布（乾燥）",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 148,
+      "protein": 5.1,
+      "carbs": 32.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.1,
+      "unsaturatedFat": 0.3,
+      "sodium": 2700
+    }
+  },
+  {
+    "id": 380,
+    "name": "Bonito Dashi Stock",
+    "nameJa": "かつおだし（液体）",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 3,
+      "protein": 0.4,
+      "carbs": 0.1,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 64
+    }
+  },
+  {
+    "id": 381,
+    "name": "Cheese (Gouda)",
+    "nameJa": "ゴーダチーズ",
+    "category": "dairy",
+    "per100g": {
+      "calories": 356,
+      "protein": 25.0,
+      "carbs": 2.2,
+      "sugar": 2.2,
+      "saturatedFat": 18.0,
+      "unsaturatedFat": 9.3,
+      "sodium": 819
+    }
+  },
+  {
+    "id": 382,
+    "name": "Cheese (Gruyere)",
+    "nameJa": "グリュイエールチーズ",
+    "category": "dairy",
+    "per100g": {
+      "calories": 413,
+      "protein": 30.0,
+      "carbs": 0.4,
+      "sugar": 0.1,
+      "saturatedFat": 19.9,
+      "unsaturatedFat": 11.1,
+      "sodium": 336
+    }
+  },
+  {
+    "id": 383,
+    "name": "Cheese (Blue / Gorgonzola)",
+    "nameJa": "ゴルゴンゾーラ",
+    "category": "dairy",
+    "per100g": {
+      "calories": 353,
+      "protein": 21.0,
+      "carbs": 2.3,
+      "sugar": 0.5,
+      "saturatedFat": 19.2,
+      "unsaturatedFat": 7.2,
+      "sodium": 1146
+    }
+  },
+  {
+    "id": 384,
+    "name": "Kefir (plain)",
+    "nameJa": "ケフィア",
+    "category": "dairy",
+    "per100g": {
+      "calories": 52,
+      "protein": 3.8,
+      "carbs": 4.0,
+      "sugar": 4.0,
+      "saturatedFat": 1.3,
+      "unsaturatedFat": 0.9,
+      "sodium": 41
+    }
+  },
+  {
+    "id": 385,
+    "name": "Butter (unsalted)",
+    "nameJa": "バター（無塩）",
+    "category": "dairy",
+    "per100g": {
+      "calories": 717,
+      "protein": 0.9,
+      "carbs": 0.1,
+      "sugar": 0.1,
+      "saturatedFat": 51.4,
+      "unsaturatedFat": 29.6,
+      "sodium": 2
+    }
+  },
+  {
+    "id": 386,
+    "name": "Cocoa Butter",
+    "nameJa": "カカオバター",
+    "category": "oil",
+    "per100g": {
+      "calories": 884,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 59.7,
+      "unsaturatedFat": 38.3,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 387,
+    "name": "Palm Oil",
+    "nameJa": "パーム油",
+    "category": "oil",
+    "per100g": {
+      "calories": 884,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 49.3,
+      "unsaturatedFat": 50.7,
+      "sodium": 0
+    }
+  },
+  {
+    "id": 388,
+    "name": "Chicken Stock (concentrate)",
+    "nameJa": "チキンコンソメ",
+    "category": "pantry",
+    "per100g": {
+      "calories": 45,
+      "protein": 4.8,
+      "carbs": 3.5,
+      "sugar": 0.5,
+      "saturatedFat": 0.8,
+      "unsaturatedFat": 1.2,
+      "sodium": 3800
+    }
+  },
+  {
+    "id": 389,
+    "name": "Demi-Glace Sauce",
+    "nameJa": "デミグラスソース",
+    "category": "pantry",
+    "per100g": {
+      "calories": 61,
+      "protein": 2.3,
+      "carbs": 8.0,
+      "sugar": 2.5,
+      "saturatedFat": 1.4,
+      "unsaturatedFat": 2.0,
+      "sodium": 520
+    }
+  },
+  {
+    "id": 390,
+    "name": "Bechamel / White Sauce",
+    "nameJa": "ホワイトソース",
+    "category": "pantry",
+    "per100g": {
+      "calories": 105,
+      "protein": 3.1,
+      "carbs": 9.0,
+      "sugar": 3.5,
+      "saturatedFat": 4.1,
+      "unsaturatedFat": 2.3,
+      "sodium": 220
+    }
+  },
+  {
+    "id": 391,
+    "name": "Nori Tsukudani (seasoned seaweed paste)",
+    "nameJa": "のりの佃煮",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 153,
+      "protein": 14.0,
+      "carbs": 17.0,
+      "sugar": 6.0,
+      "saturatedFat": 0.2,
+      "unsaturatedFat": 0.6,
+      "sodium": 3500
+    }
+  },
+  {
+    "id": 392,
+    "name": "Rayu (chili sesame oil)",
+    "nameJa": "ラー油",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 842,
+      "protein": 1.5,
+      "carbs": 5.0,
+      "sugar": 0.0,
+      "saturatedFat": 13.0,
+      "unsaturatedFat": 67.0,
+      "sodium": 250
+    }
+  },
+  {
+    "id": 393,
+    "name": "Tsuyu (concentrated dashi soy)",
+    "nameJa": "白だし",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 78,
+      "protein": 4.8,
+      "carbs": 10.0,
+      "sugar": 7.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 3200
+    }
+  },
+  {
+    "id": 394,
+    "name": "Doubanjiang (spicy bean paste)",
+    "nameJa": "豆板醤",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 75,
+      "protein": 5.5,
+      "carbs": 10.0,
+      "sugar": 4.0,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 2.3,
+      "sodium": 5500
+    }
+  },
+  {
+    "id": 395,
+    "name": "Tianmianjiang (sweet bean paste)",
+    "nameJa": "甜麺醤",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 220,
+      "protein": 5.5,
+      "carbs": 43.0,
+      "sugar": 20.0,
+      "saturatedFat": 0.4,
+      "unsaturatedFat": 1.5,
+      "sodium": 2350
+    }
+  },
+  {
+    "id": 396,
+    "name": "Red Bean Paste (anko)",
+    "nameJa": "あんこ（粒あん）",
+    "category": "baking",
+    "per100g": {
+      "calories": 239,
+      "protein": 5.6,
+      "carbs": 54.0,
+      "sugar": 46.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 397,
+    "name": "Kinako (roasted soybean flour)",
+    "nameJa": "きなこ",
+    "category": "baking",
+    "per100g": {
+      "calories": 451,
+      "protein": 37.0,
+      "carbs": 30.0,
+      "sugar": 12.0,
+      "saturatedFat": 2.4,
+      "unsaturatedFat": 18.0,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 398,
+    "name": "Shirogoma (white sesame paste)",
+    "nameJa": "白ねりごま",
+    "category": "baking",
+    "per100g": {
+      "calories": 605,
+      "protein": 18.0,
+      "carbs": 16.0,
+      "sugar": 0.0,
+      "saturatedFat": 8.3,
+      "unsaturatedFat": 42.0,
+      "sodium": 3
+    }
+  },
+  {
+    "id": 399,
+    "name": "Lemon Juice (fresh)",
+    "nameJa": "レモン果汁",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 22,
+      "protein": 0.4,
+      "carbs": 6.9,
+      "sugar": 2.5,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "id": 400,
+    "name": "Lime Juice (fresh)",
+    "nameJa": "ライム果汁",
+    "category": "seasoning",
+    "per100g": {
+      "calories": 25,
+      "protein": 0.4,
+      "carbs": 8.4,
+      "sugar": 1.7,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 1
+    }
+  },
+  {
+    "name": "store-bought gyoza wrapper",
+    "nameJa": "市販餃子の皮",
+    "category": "grain",
+    "per100g": {
+      "calories": 210,
+      "protein": 6.0,
+      "carbs": 42.0,
+      "sugar": 1.0,
+      "saturatedFat": 0.5,
+      "unsaturatedFat": 0.5,
+      "sodium": 300
+    },
+    "id": 401
+  },
+  {
+    "name": "garlic chives",
+    "nameJa": "ニラ",
+    "category": "vegetable",
+    "per100g": {
+      "calories": 30,
+      "protein": 2.0,
+      "carbs": 5.0,
+      "sugar": 1.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.1,
+      "sodium": 3
+    },
+    "id": 402
+  },
+  {
+    "name": "scallion oil",
+    "nameJa": "葱油",
+    "category": "oil",
+    "per100g": {
+      "calories": 900,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 15.0,
+      "unsaturatedFat": 85.0,
+      "sodium": 0
+    },
+    "id": 403
+  },
+  {
+    "name": "water",
+    "nameJa": "水",
+    "category": "beverage",
+    "per100g": {
+      "calories": 0,
+      "protein": 0.0,
+      "carbs": 0.0,
+      "sugar": 0.0,
+      "saturatedFat": 0.0,
+      "unsaturatedFat": 0.0,
+      "sodium": 0
+    },
+    "id": 404
+  }
+]
